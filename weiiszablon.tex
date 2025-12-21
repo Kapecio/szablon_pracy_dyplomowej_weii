@@ -12,12 +12,12 @@
 
 \usepackage{weiiszablon}
 
-\author{Imię Nazwisko}
+\author{Kacper Rychel}
 
 % np. EF-123456, EN-654321, ...
-\studentID{XX-??????}
+\studentID{EF-173701}
 
-\title{Temat pracy}
+\title{Robot mobilny z nawigacją autonomiczną oparty na Arduino}
 \titleEN{Temat pracy po angielsku}
 
 
@@ -27,20 +27,20 @@
 % 3 = doktorska		% PhD
 % 4 = praca inżynierska
 %%% na miejsce zera w linijce poniżej
-\newcommand{\rodzajPracyNo}{0}
+\newcommand{\rodzajPracyNo}{1}
 
 
 %%% promotor
-\supervisor{(tytuł naukowy przed) Imię i nazwisko opiekuna (stanowisko po)}
+\supervisor{Dr inż. Mariusz Mączka}
 %% przykład: dr hab. inż. Józef Nowak, prof. PRz
 
 %%% promotor ze stopniami naukowymi po angielsku
 \supervisorEN{Prof. Imię i nazwisko opiekuna, (academic degree)}
 
-\abstract{Treść streszczenia po polsku}
+\abstract{Cel pracy: Stworzenie robota mobilnego, który potrafi omijać przeszkody i poruszać się autonomicznie w środowisku. Zakres pracy: zaprojektowanie platformy robota z silnikami i czujnikami ultradźwiękowymi do detekcji przeszkód; zaprogramowanie algorytmu omijania przeszkód i nawigacji w środowisku; możliwość rozbudowy o funkcje śledzenia wyznaczonego celu lub powrotu do bazy. Testy robota w różnych scenariuszach, takich jak omijanie przeszkód czy poruszanie się po określonej trasie.}
 \abstractEN{Treść streszczenia po angielsku}
 
-\keywords{max. 5 słów kluczowych w 2 wierszach, oddzielanych przecinkami}
+\keywords{Arduino Uno, Robot mobilny, Czujnik HC-SR04, Czujnik Ultradźwiękowy Odległości}
 \keywordsEN{max. five keywords in English}
 
 
@@ -63,22 +63,20 @@
 
 1 $\div$ 2 stron wykaz ważniejszych symboli i oznaczeń (jeśli jest potrzebny).
 
-\section{Wstęp/wprowadzenie}
-1 $\div$ 5 stron charakterystyka problematyki w świetle aktualnego stanu wiedzy i~techniki, ze wskazaniem na zagadnienia istotne z punktu widzenia realizowanej pracy.
-Na trzeciej stronie można zamieścić podziękowania dla osób, które przyczyniły się do powstania pracy dyplomowej.
-Na kolejnej stronie nieparzystej rozpoczyna się spis treści.
-Po spisie treści zalecane jest umieszczenie wykazu użytych symboli, oznaczeń i~akronimów.
-Od tego miejsca rozpoczyna się numeracja rozdziałów.
-Na następnej stronie umieszcza się wprowadzenie do pracy (scharakteryzowanie problematyki pracy, uzasadnienie wyboru tematyki) oraz przedstawia: cel i/lub tezę pracy, zakres pracy, przyjęte założenia itp.
-Ostatni akapit wstępu musi zawierać zwięzłe sformułowanie celu i zakresu pracy. 
-\\
-\textcolor{red}{
-Uwaga: \\
-Jeżeli decydujesz się wykorzystywać \LaTeX{}a, ignoruj ogólny dokument dotyczący formatowania pracy dyplomowej na WEiI -- jest przeznaczony dla użytkowników innych edytorów tekstu. Korzystaj z załączonego arkusza stylu, stosuj formatowanie znaczeniowe (nie wymuszaj formatowania), a wynikowa praca będzie zgodna z wymaganiami.
-Zachęcamy do używania \LaTeX{}a, czas poświęcony na jego przyswojenie, zwróci się z~nawiązką nawet w trakcie tworzenia pracy dyplomowej. \\
-Niniejszy tekst, wykorzystujący  styl \texttt{weiiszablon.sty} zawiera informacje o formatowaniu, wielkości czcionek, wyrównania\ldots, ale \textbf{uwaga}, sama treść nie jest istotna (np. opis wielkości czcionek), 
-formatowanie wykona się automatycznie, tu te zapisy są tylko po to, aby dostarczyć dokument zawierający jak najwięcej przykładów użycia \LaTeX{}a.
-}
+\section{Wprowadzenie}
+Roboty mobilne stanowią obecnie jeden z najintensywniej rozwijających się obszarów robotyki oraz inżynierii mechatronicznej. Ich rosnące znaczenie wynika z szerokiego spektrum zastosowań obejmujących przemysł, logistykę, eksplorację środowisk niebezpiecznych, systemy autonomiczne oraz edukację techniczną. Zgodnie z definicją Międzynarodowej Federacji Robotyki robot mobilny jest systemem mechatronicznym zdolnym do samodzielnego przemieszczania się w przestrzeni oraz realizacji określonych zadań bez stałego połączenia z infrastrukturą stacjonarną [1]. Współczesny rozwój technologii mikroprocesorowych oraz dostępność platform open-source znacząco ułatwiły projektowanie i implementację tego typu systemów. Jak zauważa Monk, popularyzacja mikrokontrolerów, takich jak Arduino, umożliwiła szybkie prototypowanie rozwiązań robotycznych nawet w warunkach dydaktycznych i amatorskich [2].
+
+Kluczowym zagadnieniem w robotyce mobilnej jest autonomia, rozumiana jako zdolność robota do samodzielnego podejmowania decyzji na podstawie danych pochodzących z czujników. Autonomiczne systemy mobilne muszą integrować warstwy percepcji, planowania oraz sterowania ruchem. Według Siegwart’a, Nourbakhsha i Scaramuzzy autonomia robota opiera się na ścisłej współpracy tych trzech elementów, nawet w przypadku prostych algorytmów reaktywnych [3]. W konstrukcjach edukacyjnych i prototypowych stosuje się zazwyczaj uproszczone algorytmy decyzyjne, których celem jest zapewnienie podstawowych funkcji, takich jak unikanie przeszkód czy poruszanie się w nieznanym środowisku.
+
+Istotnym elementem systemów autonomicznych są czujniki umożliwiające detekcję otoczenia. W robotach niskokosztowych powszechnie stosowane są czujniki ultradźwiękowe, które wykorzystują zjawisko odbicia fali akustycznej do pomiaru odległości od przeszkody. Czujnik HC-SR04, często wykorzystywany w projektach edukacyjnych, umożliwia pomiar odległości w zakresie od kilku do kilkuset centymetrów przy stosunkowo niewielkim koszcie oraz prostej integracji z mikrokontrolerem [4]. Zgodnie z dokumentacją techniczną producenta, dokładność pomiaru jest wystarczająca dla podstawowych algorytmów nawigacyjnych, choć należy uwzględnić podatność czujnika na zakłócenia wynikające z charakterystyki powierzchni odbijających falę ultradźwiękową [5].
+
+Ruch robota mobilnego realizowany jest najczęściej przy wykorzystaniu napędu różnicowego, składającego się z dwóch niezależnie sterowanych silników prądu stałego. Taki układ umożliwia zmianę kierunku jazdy oraz skręcanie poprzez regulację prędkości obrotowej poszczególnych kół. Jak wskazują Jones, Flynn i Seiger, napęd różnicowy jest jednym z najprostszych i najbardziej rozpowszechnionych rozwiązań w robotach mobilnych ze względu na niewielką złożoność mechaniczną i sterowniczą [6]. Do sterowania silnikami prądu stałego stosuje się układy typu mostek H, takie jak L293D, które pozwalają na zmianę kierunku obrotów oraz regulację prędkości za pomocą sygnału modulowanego szerokością impulsu PWM. Horowitz i Hill podkreślają, że mostki H stanowią podstawowy element układów wykonawczych w systemach sterowania napędem o małej mocy [7].
+
+Centralnym elementem sterującym robota mobilnego jest mikrokontroler, który odpowiada za przetwarzanie danych sensorycznych oraz generowanie sygnałów sterujących elementami wykonawczymi. Platforma Arduino UNO, oparta na mikrokontrolerze ATmega328P, jest jedną z najczęściej wykorzystywanych w projektach edukacyjnych i badawczych ze względu na dostępność dokumentacji, bibliotek programistycznych oraz wsparcie społeczności open-source [2][8]. Zastosowanie gotowych bibliotek umożliwia szybkie wdrażanie algorytmów sterowania ruchem oraz obsługi czujników bez konieczności implementowania niskopoziomowych mechanizmów sprzętowych.
+
+Projekty polegające na budowie autonomicznych robotów mobilnych mają istotne znaczenie dydaktyczne, gdyż umożliwiają integrację wiedzy z zakresu elektroniki, programowania, automatyki oraz mechaniki w jednym, spójnym systemie. Jak zauważa Corke, robotyka stanowi naturalne środowisko do kształcenia kompetencji inżynierskich, łącząc teorię z praktycznym rozwiązywaniem rzeczywistych problemów technicznych [9]. Z tego względu realizacja projektu autonomicznego robota mobilnego stanowi wartościowe zagadnienie pracy dyplomowej o charakterze inżynierskim.
+
+Rozwój autonomicznych robotów mobilnych oraz ich rosnące znaczenie w edukacji i przemyśle stanowi bezpośrednie uzasadnienie wyboru tematyki pracy. Celem niniejszej pracy jest zaprojektowanie i wykonanie autonomicznego robota mobilnego opartego na mikrokontrolerze Arduino UNO, zdolnego do samodzielnego poruszania się oraz unikania przeszkód na podstawie pomiarów odległości. Zakres pracy obejmuje analizę teoretyczną zagadnień związanych z robotyką mobilną, projekt i realizację układu sprzętowego, implementację algorytmu sterowania oraz przeprowadzenie testów funkcjonalnych opracowanego rozwiązania.
 
 \section{Tekst zasadniczy -- I}
 
