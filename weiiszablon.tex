@@ -58,49 +58,295 @@
 \blankpage
 
 \section{Wprowadzenie}
-Roboty mobilne stanowią obecnie jeden z najintensywniej rozwijających się obszarów robotyki oraz inżynierii mechatronicznej. Ich rosnące znaczenie wynika z szerokiego spektrum zastosowań obejmujących przemysł, logistykę, eksplorację środowisk niebezpiecznych, systemy autonomiczne oraz edukację techniczną. Zgodnie z definicją Międzynarodowej Federacji Robotyki robot mobilny jest systemem mechatronicznym zdolnym do samodzielnego przemieszczania się w przestrzeni oraz realizacji określonych zadań bez stałego połączenia z infrastrukturą stacjonarną [1]. Współczesny rozwój technologii mikroprocesorowych oraz dostępność platform open-source znacząco ułatwiły projektowanie i implementację tego typu systemów. Jak zauważa Monk, popularyzacja mikrokontrolerów, takich jak Arduino, umożliwiła szybkie prototypowanie rozwiązań robotycznych nawet w warunkach dydaktycznych i amatorskich [2].
 
-Kluczowym zagadnieniem w robotyce mobilnej jest autonomia, rozumiana jako zdolność robota do samodzielnego podejmowania decyzji na podstawie danych pochodzących z czujników. Autonomiczne systemy mobilne muszą integrować warstwy percepcji, planowania oraz sterowania ruchem. Według Siegwart’a, Nourbakhsha i Scaramuzzy autonomia robota opiera się na ścisłej współpracy tych trzech elementów, nawet w przypadku prostych algorytmów reaktywnych [3]. W konstrukcjach edukacyjnych i prototypowych stosuje się zazwyczaj uproszczone algorytmy decyzyjne, których celem jest zapewnienie podstawowych funkcji, takich jak unikanie przeszkód czy poruszanie się w nieznanym środowisku.
+Roboty mobilne należą do najbardziej dynamicznie rozwijających się obszarów współczesnej robotyki oraz inżynierii mechatronicznej. Ich znaczenie systematycznie rośnie wraz z postępem technologii obliczeniowych, czujnikowych oraz energetycznych, co przekłada się na coraz szerszy zakres zastosowań. Roboty mobilne wykorzystywane są obecnie m.in. w przemyśle, logistyce, eksploracji środowisk niebezpiecznych, systemach autonomicznych, a także w dydaktyce technicznej. Zgodnie z definicją Międzynarodowej Federacji Robotyki, robot mobilny jest systemem mechatronicznym zdolnym do samodzielnego przemieszczania się w przestrzeni oraz realizacji określonych zadań bez stałego połączenia z infrastrukturą stacjonarną \cite{ifr2023}.
 
-Istotnym elementem systemów autonomicznych są czujniki umożliwiające detekcję otoczenia. W robotach niskokosztowych powszechnie stosowane są czujniki ultradźwiękowe, które wykorzystują zjawisko odbicia fali akustycznej do pomiaru odległości od przeszkody. Czujnik HC-SR04, często wykorzystywany w projektach edukacyjnych, umożliwia pomiar odległości w zakresie od kilku do kilkuset centymetrów przy stosunkowo niewielkim koszcie oraz prostej integracji z mikrokontrolerem [4]. Zgodnie z dokumentacją techniczną producenta, dokładność pomiaru jest wystarczająca dla podstawowych algorytmów nawigacyjnych, choć należy uwzględnić podatność czujnika na zakłócenia wynikające z charakterystyki powierzchni odbijających falę ultradźwiękową [5].
+Rozwój mikrokontrolerów oraz popularyzacja platform open-source istotnie obniżyły próg wejścia w projektowanie systemów robotycznych. Jak zauważa Monk, dostępność tanich i dobrze udokumentowanych platform, takich jak Arduino, umożliwia szybkie prototypowanie rozwiązań robotycznych również w warunkach edukacyjnych i amatorskich \cite{monk2016}. Dzięki temu możliwe stało się praktyczne łączenie zagadnień z zakresu elektroniki, programowania oraz automatyki w jednym projekcie.
 
-Ruch robota mobilnego realizowany jest najczęściej przy wykorzystaniu napędu różnicowego, składającego się z dwóch niezależnie sterowanych silników prądu stałego. Taki układ umożliwia zmianę kierunku jazdy oraz skręcanie poprzez regulację prędkości obrotowej poszczególnych kół. Jak wskazują Jones, Flynn i Seiger, napęd różnicowy jest jednym z najprostszych i najbardziej rozpowszechnionych rozwiązań w robotach mobilnych ze względu na niewielką złożoność mechaniczną i sterowniczą [6]. Do sterowania silnikami prądu stałego stosuje się układy typu mostek H, takie jak L293D, które pozwalają na zmianę kierunku obrotów oraz regulację prędkości za pomocą sygnału modulowanego szerokością impulsu PWM. Horowitz i Hill podkreślają, że mostki H stanowią podstawowy element układów wykonawczych w systemach sterowania napędem o małej mocy [7].
+Autonomia robota mobilnego rozumiana jest jako zdolność do samodzielnego podejmowania decyzji na podstawie informacji pozyskiwanych z czujników. System autonomiczny integruje procesy percepcji otoczenia, podejmowania decyzji oraz sterowania ruchem. Siegwart, Nourbakhsh i Scaramuzza wskazują, że nawet w przypadku prostych algorytmów reaktywnych niezbędna jest spójna współpraca tych elementów, aby robot mógł funkcjonować w sposób przewidywalny i bezpieczny \cite{siegwart2011}. W konstrukcjach edukacyjnych stosuje się zazwyczaj uproszczone algorytmy decyzyjne, których celem jest realizacja podstawowych funkcji autonomii, takich jak unikanie przeszkód czy eksploracja nieznanego środowiska.
 
-Centralnym elementem sterującym robota mobilnego jest mikrokontroler, który odpowiada za przetwarzanie danych sensorycznych oraz generowanie sygnałów sterujących elementami wykonawczymi. Platforma Arduino UNO, oparta na mikrokontrolerze ATmega328P, jest jedną z najczęściej wykorzystywanych w projektach edukacyjnych i badawczych ze względu na dostępność dokumentacji, bibliotek programistycznych oraz wsparcie społeczności open-source [2][8]. Zastosowanie gotowych bibliotek umożliwia szybkie wdrażanie algorytmów sterowania ruchem oraz obsługi czujników bez konieczności implementowania niskopoziomowych mechanizmów sprzętowych.
+Istotną rolę w systemach autonomicznych odgrywają czujniki umożliwiające pozyskiwanie informacji o otoczeniu. W robotach niskokosztowych powszechnie wykorzystuje się czujniki ultradźwiękowe, które pozwalają na pomiar odległości na podstawie czasu przelotu fali akustycznej. Popularnym rozwiązaniem w projektach edukacyjnych jest moduł HC-SR04, który charakteryzuje się niewielkim kosztem, prostą obsługą oraz łatwą integracją z mikrokontrolerami \cite{elecfreaks}. Dokumentacja producenta wskazuje, że dokładność pomiaru jest wystarczająca dla podstawowych algorytmów nawigacyjnych, choć należy uwzględnić wpływ właściwości powierzchni odbijających oraz warunków środowiskowych \cite{cytron2018}.
 
-Projekty polegające na budowie autonomicznych robotów mobilnych mają istotne znaczenie dydaktyczne, gdyż umożliwiają integrację wiedzy z zakresu elektroniki, programowania, automatyki oraz mechaniki w jednym, spójnym systemie. Jak zauważa Corke, robotyka stanowi naturalne środowisko do kształcenia kompetencji inżynierskich, łącząc teorię z praktycznym rozwiązywaniem rzeczywistych problemów technicznych [9]. Z tego względu realizacja projektu autonomicznego robota mobilnego stanowi wartościowe zagadnienie pracy dyplomowej o charakterze inżynierskim.
+Ruch robota mobilnego realizowany jest najczęściej za pomocą napędu różnicowego, składającego się z dwóch niezależnie sterowanych silników prądu stałego. Taki układ umożliwia realizację manewrów poprzez różnicowanie prędkości obrotowych kół. Jak wskazują Jones, Flynn i Seiger, napęd różnicowy cechuje się niewielką złożonością mechaniczną i sterowniczą, co czyni go jednym z najczęściej stosowanych rozwiązań w robotach mobilnych \cite{jones1999}. Do sterowania silnikami prądu stałego stosuje się układy typu mostek H, takie jak L293D, umożliwiające zmianę kierunku obrotów oraz regulację prędkości z wykorzystaniem sygnału PWM. Horowitz i Hill podkreślają, że tego typu układy stanowią podstawowy element wykonawczy w systemach sterowania napędami niskiej mocy \cite{horowitz2015}.
 
-Rozwój autonomicznych robotów mobilnych oraz ich rosnące znaczenie w edukacji i przemyśle stanowi bezpośrednie uzasadnienie wyboru tematyki pracy. Celem niniejszej pracy jest zaprojektowanie i wykonanie autonomicznego robota mobilnego opartego na mikrokontrolerze Arduino UNO, zdolnego do samodzielnego poruszania się oraz unikania przeszkód na podstawie pomiarów odległości. Zakres pracy obejmuje analizę teoretyczną zagadnień związanych z robotyką mobilną, projekt i realizację układu sprzętowego, implementację algorytmu sterowania oraz przeprowadzenie testów funkcjonalnych opracowanego rozwiązania.
+Centralnym elementem sterującym robota mobilnego jest mikrokontroler, odpowiedzialny za przetwarzanie danych sensorycznych oraz generowanie sygnałów sterujących elementami wykonawczymi. Platforma Arduino UNO, oparta na mikrokontrolerze ATmega328P, należy do najczęściej wykorzystywanych w projektach edukacyjnych ze względu na bogatą dokumentację techniczną, dostępność bibliotek programistycznych oraz szerokie wsparcie społeczności open-source \cite{arduino2022}. Zastosowanie gotowych bibliotek znacząco skraca czas implementacji algorytmów sterowania oraz obsługi czujników.
+
+Realizacja projektów polegających na budowie autonomicznych robotów mobilnych ma istotne znaczenie dydaktyczne. Umożliwia ona praktyczną integrację wiedzy z zakresu elektroniki, programowania, automatyki oraz mechaniki w jednym spójnym systemie. Corke podkreśla, że robotyka stanowi naturalne środowisko kształcenia kompetencji inżynierskich, łącząc teorię z rozwiązywaniem rzeczywistych problemów technicznych \cite{corke2017}. Z tego względu tematyka autonomicznych robotów mobilnych jest często podejmowana w pracach dyplomowych o charakterze inżynierskim.
+
+Celem niniejszej pracy jest zaprojektowanie i wykonanie autonomicznego robota mobilnego opartego na platformie Arduino UNO, zdolnego do samodzielnego poruszania się oraz unikania przeszkód na podstawie pomiarów odległości. Zakres pracy obejmuje analizę teoretyczną zagadnień robotyki mobilnej, projekt i realizację układu sprzętowego, implementację algorytmu sterowania oraz przeprowadzenie testów funkcjonalnych opracowanego rozwiązania.
+
 
 \section{Przegląd stanu wiedzy i techniki w zakresie robotów mobilnych}
-Rozwój robotów mobilnych w ostatnich dekadach doprowadził do wykształcenia się licznych podejść konstrukcyjnych i algorytmicznych, których dobór zależy od przeznaczenia robota, środowiska pracy oraz dostępnych zasobów sprzętowych. W literaturze przedmiotu podkreśla się, że mimo znacznego postępu w dziedzinie autonomii i sztucznej inteligencji, wciąż istotną rolę odgrywają proste, deterministyczne rozwiązania, szczególnie w systemach o charakterze edukacyjnym i prototypowym [10].
 
-Jednym z podstawowych zagadnień w robotyce mobilnej jest modelowanie ruchu robota. W przypadku najczęściej stosowanego napędu różnicowego ruch robota opisywany jest za pomocą kinematyki nieliniowej, w której prędkość liniowa oraz kątowa platformy wynikają bezpośrednio z prędkości obrotowych kół napędowych. Jak wskazuje Campion, Bastin i D’Andrea-Novel, model kinematyczny robota z napędem różnicowym jest prosty w implementacji, lecz jednocześnie wprowadza ograniczenia w postaci braku możliwości ruchu bocznego [11]. Ograniczenie to wymusza stosowanie odpowiednich strategii planowania trajektorii oraz manewrowania w środowiskach o ograniczonej przestrzeni.
+Postęp technologiczny w obszarze robotyki mobilnej, obserwowany w ostatnich dekadach, doprowadził do wykształcenia się wielu zróżnicowanych podejść konstrukcyjnych oraz algorytmicznych. Dobór konkretnego rozwiązania zależy przede wszystkim od przeznaczenia robota, charakterystyki środowiska pracy oraz dostępnych zasobów sprzętowych i obliczeniowych. Jak podkreśla się w literaturze przedmiotu, pomimo dynamicznego rozwoju systemów autonomicznych i algorytmów sztucznej inteligencji, w dalszym ciągu istotną rolę odgrywają rozwiązania proste i deterministyczne, szczególnie w systemach o charakterze edukacyjnym oraz prototypowym \cite{educationalRoboticsOverview}.
 
-W praktycznych realizacjach, szczególnie w systemach o niewielkiej mocy obliczeniowej, sterowanie ruchem robota realizowane jest w oparciu o regulatory dyskretne, często bez jawnego wykorzystania modelu dynamicznego. Zastosowanie modulacji szerokości impulsu PWM umożliwia płynną regulację prędkości silników prądu stałego, natomiast zmiana kierunku obrotów realizowana jest poprzez odpowiednie przełączanie mostka H. Jak zauważają Horowitz i Hill, takie podejście, mimo swojej prostoty, jest w pełni wystarczające dla systemów, w których nie jest wymagana wysoka precyzja pozycjonowania [7].
+Jednym z podstawowych zagadnień w robotyce mobilnej jest modelowanie ruchu robota, stanowiące fundament projektowania algorytmów sterowania oraz nawigacji. W przypadku najczęściej spotykanego napędu różnicowego ruch robota opisywany jest za pomocą nieliniowego modelu kinematycznego, w którym prędkość liniowa oraz prędkość kątowa platformy są bezpośrednio zależne od prędkości obrotowych kół napędowych. Campion, Bastin oraz D’Andrea-Novel wskazują, że model kinematyczny robota z napędem różnicowym cechuje się prostotą implementacji, jednak wprowadza istotne ograniczenie w postaci braku możliwości realizacji ruchu bocznego \cite{campionDifferentialDrive}. Ograniczenie to wymusza stosowanie odpowiednich strategii planowania trajektorii oraz manewrowania, zwłaszcza w środowiskach o ograniczonej przestrzeni roboczej.
 
-Istotnym elementem wpływającym na skuteczność autonomii robota mobilnego jest sposób przetwarzania danych sensorycznych. W systemach niskokosztowych dominują rozwiązania oparte na pojedynczych lub kilku czujnikach odległości, których wskazania wykorzystywane są bezpośrednio do podejmowania decyzji ruchowych. W literaturze określa się to podejście mianem nawigacji reaktywnej, w której robot nie buduje globalnej reprezentacji środowiska, lecz reaguje na aktualnie wykryte przeszkody [6]. Metody te, choć nieoptymalne z punktu widzenia długości trajektorii czy efektywności ruchu, cechują się dużą odpornością na zmiany otoczenia oraz niewielkimi wymaganiami obliczeniowymi.
+W praktycznych realizacjach robotów mobilnych, szczególnie w systemach dysponujących niewielką mocą obliczeniową, sterowanie ruchem realizowane jest zazwyczaj w oparciu o regulatory dyskretne, bez jawnego uwzględniania pełnego modelu dynamicznego. Regulacja prędkości silników prądu stałego odbywa się najczęściej przy użyciu modulacji szerokości impulsu PWM, natomiast zmiana kierunku obrotów realizowana jest poprzez odpowiednie sterowanie mostkiem H. Jak zauważają Horowitz i Hill, takie podejście, mimo swojej prostoty, jest w pełni wystarczające w systemach, w których nie jest wymagana wysoka precyzja pozycjonowania ani zaawansowana regulacja momentu obrotowego \cite{horowitz2015}.
 
-Czujniki ultradźwiękowe, takie jak HC-SR04, są powszechnie wykorzystywane w tego typu algorytmach ze względu na prostotę zasady działania oraz łatwość integracji z mikrokontrolerami. Jak wskazują badania porównawcze czujników odległości, dokładność pomiarów ultradźwiękowych jest wystarczająca dla wykrywania przeszkód o rozmiarach porównywalnych z wymiarami robota, jednak maleje w przypadku powierzchni pochłaniających fale akustyczne lub ustawionych pod dużym kątem względem osi pomiaru [12]. Z tego względu w literaturze zaleca się stosowanie odpowiednich marginesów bezpieczeństwa w algorytmach decyzyjnych oraz filtrację wyników pomiarów [13].
+Istotnym elementem wpływającym na skuteczność autonomii robota mobilnego jest sposób pozyskiwania oraz przetwarzania danych sensorycznych. W systemach niskokosztowych dominują rozwiązania wykorzystujące pojedyncze lub kilka czujników odległości, których wskazania są bezpośrednio wykorzystywane do podejmowania decyzji ruchowych. Takie podejście określane jest w literaturze mianem nawigacji reaktywnej, w której robot nie buduje globalnej reprezentacji środowiska, lecz reaguje wyłącznie na aktualnie wykryte przeszkody \cite{reactiveNavigation}. Metody te, choć nieoptymalne z punktu widzenia długości trajektorii czy efektywności ruchu, charakteryzują się dużą odpornością na zmiany otoczenia oraz niewielkimi wymaganiami obliczeniowymi.
 
-W bardziej zaawansowanych systemach mobilnych stosuje się techniki lokalizacji i mapowania jednoczesnego (SLAM), wykorzystujące czujniki lidarowe, kamery lub systemy inercyjne. Metody te pozwalają na tworzenie map środowiska oraz precyzyjne określanie położenia robota, jednak wymagają znacznie większych zasobów obliczeniowych oraz złożonego oprogramowania [14]. Jak podkreśla Thrun, implementacja algorytmów SLAM w systemach edukacyjnych jest często nieuzasadniona ze względu na stopień skomplikowania, który może przesłaniać podstawowe zagadnienia inżynierskie [15].
+W algorytmach nawigacji reaktywnej powszechnie stosowane są czujniki ultradźwiękowe, takie jak moduł HC-SR04, cenione za prostą zasadę działania oraz łatwość integracji z popularnymi mikrokontrolerami. Badania porównawcze czujników odległości wskazują, że dokładność pomiarów ultradźwiękowych jest wystarczająca do wykrywania przeszkód o rozmiarach porównywalnych z wymiarami robota, jednak ulega pogorszeniu w przypadku powierzchni pochłaniających fale akustyczne lub ustawionych pod znacznym kątem względem osi pomiaru \cite{ultrasonicSensorComparison}. Z tego względu w literaturze zaleca się stosowanie odpowiednich marginesów bezpieczeństwa w algorytmach decyzyjnych oraz filtrację wyników pomiarów w celu zwiększenia odporności systemu na błędne odczyty \cite{sensorFiltering}.
 
-Z tego względu w projektach dydaktycznych oraz pracach inżynierskich często koncentruje się na rozwiązaniach kompromisowych, łączących prostotę implementacji z funkcjonalnością umożliwiającą demonstrację kluczowych zagadnień robotyki mobilnej. Budowa autonomicznego robota mobilnego opartego na platformie Arduino, wyposażonego w czujniki ultradźwiękowe i napęd różnicowy, wpisuje się w ten nurt, umożliwiając praktyczną realizację algorytmów sterowania oraz analizę ich ograniczeń.
+W bardziej zaawansowanych systemach robotów mobilnych stosowane są techniki lokalizacji i mapowania jednoczesnego (SLAM), wykorzystujące dane z czujników lidarowych, kamer wizyjnych oraz jednostek inercyjnych. Metody te umożliwiają jednoczesną budowę mapy otoczenia oraz precyzyjne określanie położenia robota, jednak wiążą się z wysokimi wymaganiami obliczeniowymi oraz znaczną złożonością implementacyjną \cite{slamOverview}. Jak podkreśla Thrun, implementacja algorytmów SLAM w systemach edukacyjnych jest często nieuzasadniona, gdyż poziom skomplikowania może przesłaniać podstawowe zagadnienia inżynierskie, takie jak sterowanie ruchem czy integracja czujników \cite{thrunSLAM}.
 
-Podsumowując, aktualny stan wiedzy i techniki w zakresie robotów mobilnych obejmuje zarówno zaawansowane systemy autonomiczne stosowane w przemyśle i badaniach naukowych, jak i uproszczone rozwiązania edukacyjne, które odgrywają istotną rolę w procesie kształcenia inżynierów. Analiza literatury wskazuje, że nawet proste konstrukcje mobilne pozwalają na realizację kluczowych funkcji autonomii, takich jak percepcja otoczenia, podejmowanie decyzji oraz sterowanie ruchem, stanowiąc solidną podstawę do dalszego rozwoju bardziej złożonych systemów robotycznych.
+Z tego względu w projektach dydaktycznych oraz pracach inżynierskich często stosuje się rozwiązania kompromisowe, łączące prostotę implementacji z funkcjonalnością pozwalającą na demonstrację kluczowych zagadnień robotyki mobilnej. Budowa autonomicznego robota mobilnego opartego na platformie Arduino, wyposażonego w napęd różnicowy oraz czujniki ultradźwiękowe, wpisuje się w ten nurt, umożliwiając praktyczną realizację algorytmów sterowania oraz analizę ich ograniczeń.
+
+Podsumowując, aktualny stan wiedzy i techniki w zakresie robotów mobilnych obejmuje zarówno zaawansowane systemy autonomiczne stosowane w przemyśle i badaniach naukowych, jak i uproszczone konstrukcje edukacyjne. Analiza literatury wskazuje, że nawet proste platformy mobilne pozwalają na realizację kluczowych funkcji autonomii, takich jak percepcja otoczenia, podejmowanie decyzji oraz sterowanie ruchem, stanowiąc solidną podstawę do dalszego rozwoju bardziej złożonych systemów robotycznych.
+
+
+\subsection{Klasyfikacja i architektura robotów mobilnych}
+
+Roboty mobilne mogą być klasyfikowane według wielu różnych kryteriów, co wynika z dużej różnorodności ich konstrukcji, przeznaczenia oraz środowisk pracy. W literaturze przedmiotu podkreśla się, że brak jednej uniwersalnej klasyfikacji robotów mobilnych jest konsekwencją interdyscyplinarnego charakteru tej dziedziny, łączącej zagadnienia z zakresu mechaniki, elektroniki, informatyki oraz teorii sterowania \cite{mobileRoboticsClassification}. Najczęściej spotykane podejścia klasyfikacyjne obejmują podział ze względu na mechanizm lokomocji, stopień autonomii, środowisko eksploatacji oraz zakres realizowanych zadań.
+
+Jednym z podstawowych i najbardziej intuicyjnych kryteriów klasyfikacji robotów mobilnych jest sposób ich poruszania się. W tym ujęciu wyróżnia się roboty kołowe, gąsienicowe, kroczące oraz konstrukcje hybrydowe. Roboty kołowe, wyposażone w jedno lub więcej kół napędowych, charakteryzują się wysoką sprawnością energetyczną, niewielkimi stratami energii wynikającymi z oporów toczenia oraz prostotą konstrukcji mechanicznej. Jak wskazuje Siegwart, łatwość sterowania oraz stosunkowo niski koszt wykonania sprawiają, że roboty kołowe dominują w zastosowaniach edukacyjnych, przemysłowych oraz badawczych \cite{siegwart2011}. Ich istotnym ograniczeniem jest jednak ograniczona zdolność poruszania się po nierównym lub nieuporządkowanym terenie, co zawęża zakres potencjalnych zastosowań.
+
+Alternatywę dla konstrukcji kołowych stanowią roboty gąsienicowe, które dzięki większej powierzchni styku z podłożem cechują się lepszą przyczepnością oraz zdolnością pokonywania przeszkód terenowych. Z tego względu znajdują one zastosowanie w robotach eksploracyjnych, ratowniczych oraz wojskowych, gdzie wymagana jest wysoka stabilność ruchu w trudnych warunkach środowiskowych. Jak zauważa Borenstein, zwiększone opory ruchu oraz większa złożoność mechaniczna układów gąsienicowych prowadzą do wyższego zużycia energii oraz utrudniają precyzyjne sterowanie ruchem w porównaniu z robotami kołowymi \cite{borensteinMobilePlatforms}.
+
+Najbardziej złożoną grupę robotów mobilnych pod względem konstrukcyjnym i algorytmicznym stanowią roboty kroczące. Ich lokomocja opiera się na sekwencyjnym przemieszczaniu kończyn, co umożliwia poruszanie się w terenie niedostępnym dla robotów kołowych i gąsienicowych, takim jak schody, gruzowiska czy obszary o znacznych nierównościach. Jak podkreślają Raibert oraz Siciliano, projektowanie robotów kroczących wymaga zaawansowanego modelowania dynamiki, precyzyjnego sterowania ruchem oraz znacznych zasobów obliczeniowych \cite{leggedRobotsControl}. Z tego względu konstrukcje tego typu rzadko znajdują zastosowanie w projektach dydaktycznych i prototypowych o ograniczonym budżecie.
+
+Istotnym kryterium klasyfikacji robotów mobilnych, niezależnym od mechanizmu lokomocji, jest stopień autonomii systemu. W tym ujęciu wyróżnia się roboty zdalnie sterowane, półautonomiczne oraz autonomiczne. Roboty zdalnie sterowane wymagają stałej ingerencji operatora i nie podejmują samodzielnych decyzji, natomiast roboty autonomiczne są zdolne do samodzielnej analizy danych sensorycznych, planowania działań oraz realizacji zadań bez bezpośredniego nadzoru człowieka. Jak wskazuje Arkin, poziom autonomii robota jest ściśle powiązany z zastosowanymi algorytmami decyzyjnymi oraz architekturą systemu sterowania \cite{reactiveNavigation}.
+
+Z punktu widzenia architektury systemowej robot mobilny stanowi złożony system mechatroniczny, który można opisać jako zbiór współpracujących ze sobą warstw funkcjonalnych. Najczęściej wyróżnia się warstwę sensoryczną, odpowiedzialną za pozyskiwanie informacji o stanie robota i jego otoczeniu, warstwę decyzyjną, w której realizowane są algorytmy sterowania i nawigacji, oraz warstwę wykonawczą, obejmującą układy napędowe i elementy wykonawcze. Taki podział funkcjonalny jest powszechnie stosowany w literaturze i umożliwia modularne oraz skalowalne projektowanie systemów robotycznych \cite{jones1999}.
+
+Warstwa sensoryczna obejmuje zestaw czujników, takich jak czujniki odległości, enkodery, czujniki inercyjne czy kamery wizyjne, których zadaniem jest dostarczanie informacji o położeniu robota, jego ruchu oraz otoczeniu. Rodzaj i jakość danych sensorycznych w istotny sposób wpływają na możliwości percepcyjne systemu oraz skuteczność podejmowanych decyzji. W systemach niskokosztowych warstwa ta jest zazwyczaj ograniczona do podstawowych czujników odległości, co determinuje zastosowanie uproszczonych algorytmów nawigacyjnych.
+
+Warstwa decyzyjna stanowi centralny element architektury robota mobilnego. W prostych konstrukcjach realizowana jest bezpośrednio na mikrokontrolerze, który przetwarza dane sensoryczne i generuje sygnały sterujące w czasie rzeczywistym. W bardziej zaawansowanych systemach warstwa ta może być rozproszona pomiędzy kilka jednostek obliczeniowych, takich jak komputery jednopłytkowe lub procesory dedykowane, co umożliwia implementację złożonych algorytmów planowania trajektorii, lokalizacji czy uczenia maszynowego \cite{advancedRobotArchitectures}. Rozwiązania te zwiększają jednak złożoność systemu oraz zapotrzebowanie na energię.
+
+Warstwa wykonawcza obejmuje elementy odpowiedzialne za fizyczną realizację ruchu robota, w tym silniki, przekładnie mechaniczne oraz układy sterujące. Jej projekt musi uwzględniać wymagania mechaniczne i elektryczne, a także ograniczenia wynikające z zastosowanego źródła zasilania. Jak podkreślają Jones i Flynn, prawidłowa integracja warstwy wykonawczej z pozostałymi warstwami systemu jest kluczowa dla zapewnienia stabilnego, przewidywalnego i bezpiecznego zachowania robota mobilnego \cite{jones1999}.
+
+Podsumowując, klasyfikacja oraz architektura robotów mobilnych stanowią fundament analizy i projektowania tego typu systemów. Wybór konkretnego rozwiązania konstrukcyjnego i architektonicznego jest zawsze kompromisem pomiędzy funkcjonalnością, złożonością, kosztami oraz przeznaczeniem robota. W kontekście prac inżynierskich i projektów dydaktycznych szczególnie istotne są rozwiązania proste, modularne i łatwe do modyfikacji, które umożliwiają praktyczne poznanie podstawowych zasad działania robotów mobilnych oraz stanowią punkt wyjścia do dalszego rozwoju bardziej zaawansowanych systemów.
+
+\subsection{Modelowanie ruchu i kinematyka robotów mobilnych}
+
+Modelowanie ruchu robota mobilnego stanowi jeden z kluczowych etapów projektowania systemów sterowania oraz nawigacji, gdyż umożliwia formalny, matematyczny opis zależności pomiędzy sygnałami sterującymi a rzeczywistym ruchem platformy. W literaturze robotyki mobilnej wyróżnia się dwa podstawowe podejścia do opisu ruchu: modelowanie kinematyczne oraz dynamiczne. Model kinematyczny koncentruje się na zależnościach geometrycznych i prędkościowych, pomijając wpływ sił oraz momentów działających na robota, natomiast model dynamiczny uwzględnia masę, bezwładność oraz oddziaływania z otoczeniem \cite{robotKinematicsDynamics}. W przypadku większości robotów edukacyjnych i prototypowych stosuje się modele kinematyczne, które zapewniają wystarczającą dokładność przy znacznie mniejszej złożoności obliczeniowej.
+
+Najczęściej spotykanym rozwiązaniem konstrukcyjnym w robotach mobilnych jest napęd różnicowy, składający się z dwóch niezależnie sterowanych kół napędowych umieszczonych po przeciwnych stronach platformy oraz jednego lub więcej elementów podparcia biernego. Ruch robota wyposażonego w taki napęd może być opisany za pomocą zestawu równań kinematycznych, w których prędkość liniowa oraz prędkość kątowa platformy są bezpośrednią funkcją prędkości obrotowych lewego i prawego koła. Jak wskazują Campion, Bastin oraz D’Andrea-Novel, model ten cechuje się prostotą formalną oraz intuicyjnością, co czyni go szczególnie przydatnym w projektach dydaktycznych oraz na wczesnych etapach prototypowania \cite{campionDifferentialDrive}.
+
+Formalny opis kinematyki robota z napędem różnicowym prowadzi do nieliniowego układu równań, w którym pozycja robota opisywana jest zazwyczaj za pomocą współrzędnych płaskich oraz kąta orientacji względem przyjętego układu odniesienia. Nieliniowość modelu wynika z faktu, że orientacja robota wpływa bezpośrednio na kierunek jego ruchu postępowego. W praktyce oznacza to konieczność ciągłego uwzględniania aktualnego położenia i orientacji robota podczas sterowania ruchem, nawet w przypadku realizacji prostych manewrów, takich jak jazda po łuku lub zmiana kierunku jazdy \cite{mobileRobotNonlinearModel}.
+
+Istotnym ograniczeniem wynikającym z kinematyki napędu różnicowego jest brak możliwości realizacji ruchu bocznego. Robot nie jest w stanie przemieszczać się w kierunku prostopadłym do osi swojej orientacji bez wcześniejszego wykonania obrotu. W literaturze ograniczenia tego typu określane są mianem ograniczeń nieholonomicznych i mają one istotny wpływ na projektowanie algorytmów sterowania oraz nawigacji \cite{nonholonomicConstraints}. Ograniczenia nieholonomiczne powodują, że trajektorie ruchu robota muszą spełniać określone warunki ciągłości i gładkości, co komplikuje planowanie ruchu w środowiskach o ograniczonej przestrzeni.
+
+Konsekwencją występowania ograniczeń nieholonomicznych jest konieczność stosowania odpowiednich strategii manewrowania, szczególnie podczas omijania przeszkód. W prostych systemach autonomicznych często wykorzystuje się sekwencje ruchów elementarnych, takich jak jazda do przodu, obrót w miejscu oraz cofanie, które w połączeniu umożliwiają realizację bardziej złożonych manewrów. Jak podkreśla Thrun, takie podejście jest wystarczające w środowiskach o niewielkiej złożoności i stanowi rozsądny kompromis pomiędzy prostotą implementacji a funkcjonalnością systemu \cite{thrunSLAM}.
+
+W praktycznych realizacjach robotów mobilnych model kinematyczny wykorzystywany jest głównie pośrednio, jako podstawa do projektowania algorytmów sterowania niskiego poziomu. Zamiast ciągłego rozwiązywania równań ruchu stosuje się sterowanie dyskretne, w którym decyzje podejmowane są w kolejnych krokach czasowych na podstawie aktualnych danych sensorycznych. Takie podejście jest szczególnie korzystne w systemach opartych na mikrokontrolerach o ograniczonej mocy obliczeniowej, gdzie kluczowe znaczenie ma krótki czas reakcji oraz stabilność działania \cite{embeddedMotorControl}.
+
+W literaturze podkreśla się również, że w robotach edukacyjnych dokładność modelu kinematycznego ma często znaczenie drugorzędne w porównaniu z jego czytelnością i łatwością interpretacji. Błędy wynikające z poślizgu kół, nierówności podłoża czy niedokładności wykonania mechanicznego są zazwyczaj akceptowalne, o ile algorytm sterowania wykazuje odpowiednią odporność na zakłócenia \cite{educationalRobotsModeling}. Z tego względu w wielu konstrukcjach rezygnuje się z enkoderów oraz sprzężenia zwrotnego pozycji na rzecz prostych algorytmów otwartej pętli, opartych na czasie trwania ruchu oraz zadanej prędkości.
+
+Ograniczenia kinematyczne robotów kołowych mają również bezpośredni wpływ na sposób planowania trajektorii. W systemach o wyższym stopniu zaawansowania stosuje się algorytmy planowania ruchu uwzględniające nieholonomiczność, takie jak planowanie w przestrzeni konfiguracyjnej czy metody oparte na krzywych Dubinsa. Jak zauważa LaValle, metody te wymagają precyzyjnego modelu robota oraz znacznych zasobów obliczeniowych, co w praktyce ogranicza ich zastosowanie w prostych platformach mobilnych \cite{lavallePlanningAlgorithms}.
+
+Z tego względu w systemach o charakterze edukacyjnym i prototypowym często rezygnuje się z planowania globalnego na rzecz lokalnych algorytmów decyzyjnych, bazujących na bieżących pomiarach sensorycznych. Podejście to, mimo że nie gwarantuje optymalności trajektorii, umożliwia skuteczne poruszanie się robota w nieznanym środowisku i jest zgodne z ograniczeniami sprzętowymi oraz obliczeniowymi prostych platform mobilnych.
+
+
+\subsection{Układy napędowe i sterowanie silnikami}
+
+Układ napędowy robota mobilnego stanowi podstawowy element warstwy wykonawczej systemu, bezpośrednio odpowiedzialny za realizację poleceń generowanych przez warstwę decyzyjną. Jego zadaniem jest przekształcenie sygnałów sterujących w rzeczywisty ruch platformy przy zachowaniu możliwie wysokiej sprawności energetycznej, stabilności działania oraz przewidywalnego zachowania robota. W praktycznych realizacjach robotów mobilnych, w szczególności w konstrukcjach edukacyjnych i prototypowych, najczęściej stosowane są silniki prądu stałego z magnesami trwałymi, które łączą prostotę sterowania z korzystnymi parametrami mechanicznymi i niewielkimi wymaganiami sprzętowymi.
+
+Silniki prądu stałego charakteryzują się w przybliżeniu liniową zależnością momentu obrotowego od prądu twornika oraz zależnością prędkości obrotowej od napięcia zasilania. Właściwości te umożliwiają stosunkowo łatwą regulację prędkości obrotowej bez konieczności stosowania złożonych algorytmów regulacji. W robotach mobilnych silniki te zazwyczaj współpracują z przekładniami redukcyjnymi, które zwiększają dostępny moment obrotowy kosztem prędkości. Jest to szczególnie istotne w przypadku niewielkich platform mobilnych, które muszą pokonywać opory toczenia, nierówności podłoża lub niewielkie przeszkody terenowe.
+
+Regulacja prędkości obrotowej silników prądu stałego realizowana jest najczęściej przy wykorzystaniu modulacji szerokości impulsu PWM (Pulse Width Modulation). Metoda ta polega na okresowym załączaniu i wyłączaniu napięcia zasilającego silnik z ustaloną częstotliwością oraz zmiennym współczynnikiem wypełnienia. Ze względu na indukcyjność uzwojeń silnika oraz jego bezwładność mechaniczną sygnał PWM postrzegany jest jako napięcie o wartości średniej proporcjonalnej do wypełnienia impulsu. Jak podkreślają Horowitz i Hill, modulacja PWM umożliwia efektywną regulację prędkości przy minimalnych stratach mocy, co czyni ją standardowym rozwiązaniem w systemach sterowania napędami niskonapięciowymi \cite{horowitz2015}.
+
+Istotnym zagadnieniem w sterowaniu napędem robota mobilnego jest możliwość zmiany kierunku obrotów silnika. Wymaga to zastosowania układu umożliwiającego odwrócenie polaryzacji napięcia zasilającego, co najczęściej realizowane jest za pomocą mostka H. Układ ten składa się z zestawu elementów przełączających, takich jak tranzystory bipolarne lub MOSFET, które pozwalają na sterowanie kierunkiem przepływu prądu przez silnik. W rozwiązaniach edukacyjnych powszechnie stosowane są scalone układy mostków H, integrujące elementy mocy oraz podstawowe zabezpieczenia w jednej obudowie.
+
+Jednym z najczęściej wykorzystywanych układów tego typu jest L293D, który umożliwia niezależne sterowanie dwoma silnikami prądu stałego. Układ ten pozwala na realizację zmiany kierunku obrotów poprzez odpowiednie stany logiczne na wejściach sterujących, natomiast regulacja prędkości realizowana jest przez doprowadzenie sygnału PWM do wejścia aktywującego. Takie rozwiązanie jest szczególnie korzystne w robotach z napędem różnicowym, gdyż umożliwia prostą i czytelną implementację sterowania ruchem bez konieczności projektowania własnych układów mocy, co znacząco skraca czas realizacji projektu.
+
+W robotach mobilnych o niewielkich rozmiarach istotne znaczenie ma również sposób zasilania układu napędowego. Silniki prądu stałego charakteryzują się stosunkowo dużymi prądami rozruchowymi, które mogą prowadzić do chwilowych spadków napięcia oraz zakłóceń pracy układów logicznych. Z tego względu w literaturze zaleca się separację zasilania części wykonawczej i logicznej lub stosowanie odpowiednich filtrów oraz kondensatorów buforujących \cite{motorPowerSupplyIssues}. W prostych konstrukcjach edukacyjnych zagadnienie to bywa często pomijane, jednak jego uwzględnienie znacząco poprawia stabilność i niezawodność całego systemu.
+
+Sterowanie silnikami w robotach mobilnych może być realizowane zarówno w pętli otwartej, jak i zamkniętej. W systemach edukacyjnych i prototypowych dominującym rozwiązaniem jest sterowanie w pętli otwartej, w którym prędkość oraz czas trwania ruchu ustalane są na podstawie zadanych wartości sygnału PWM. Brak sprzężenia zwrotnego z enkoderów oznacza, że system nie kompensuje odchyłek wynikających z poślizgu kół, nierówności podłoża czy różnic parametrów silników. Jak zauważają Horowitz i Hill, w wielu zastosowaniach tego typu uproszczenie jest w pełni akceptowalne i nie wpływa istotnie na funkcjonalność systemu \cite{horowitz2015}.
+
+W bardziej zaawansowanych konstrukcjach stosuje się enkodery obrotowe, które umożliwiają pomiar prędkości oraz kąta obrotu kół. Pozwala to na implementację regulatorów prędkości, najczęściej typu PID, oraz na dokładniejsze sterowanie ruchem robota. Należy jednak podkreślić, że zastosowanie sprzężenia zwrotnego wiąże się ze wzrostem złożoności zarówno sprzętowej, jak i programowej, co może być niepożądane w projektach o charakterze dydaktycznym.
+
+Z punktu widzenia architektury systemowej układ napędowy stanowi interfejs pomiędzy warstwą decyzyjną a fizycznym ruchem robota. Prostota jego realizacji ma istotne znaczenie dla przejrzystości projektu oraz możliwości dalszej rozbudowy systemu. W konstrukcjach opartych na mikrokontrolerach, takich jak Arduino, wykorzystanie standardowych bibliotek do obsługi PWM oraz gotowych sterowników silników pozwala skoncentrować się na zagadnieniach algorytmicznych, zamiast na niskopoziomowych detalach sprzętowych.
+
+\subsection{Percepcja otoczenia i przetwarzanie danych sensorycznych}
+
+Percepcja otoczenia stanowi jeden z fundamentalnych elementów autonomii robota mobilnego, gdyż to na jej podstawie system podejmuje decyzje dotyczące ruchu oraz reakcji na zmieniające się warunki środowiskowe. W przeciwieństwie do systemów sterowanych zdalnie, robot autonomiczny musi samodzielnie interpretować sygnały pochodzące z czujników i przekształcać je w działania zgodne z przyjętą strategią sterowania. W literaturze przedmiotu podkreśla się, że jakość procesu percepcji ma bezpośredni wpływ na bezpieczeństwo oraz skuteczność poruszania się robota, niezależnie od stopnia zaawansowania zastosowanych algorytmów decyzyjnych \cite{jones1999}.
+
+W systemach niskokosztowych, takich jak konstrukcje edukacyjne i prototypowe, dominują rozwiązania oparte na prostych czujnikach odległości, których wskazania wykorzystywane są bezpośrednio do podejmowania decyzji ruchowych. Takie podejście określane jest mianem nawigacji reaktywnej. Robot nie tworzy wówczas globalnej reprezentacji środowiska ani nie planuje trajektorii w dłuższym horyzoncie czasowym, lecz reaguje wyłącznie na bieżące bodźce sensoryczne. Brak pamięci długoterminowej znacząco upraszcza implementację systemu oraz ogranicza zapotrzebowanie na zasoby obliczeniowe, co ma istotne znaczenie w przypadku mikrokontrolerów o niewielkiej mocy obliczeniowej.
+
+Nawigacja reaktywna opiera się zazwyczaj na zbiorze reguł decyzyjnych typu „jeżeli–wtedy”, które wiążą określone wartości pomiarów sensorycznych z konkretnymi manewrami ruchowymi. Przykładem może być inicjowanie zmiany kierunku jazdy po wykryciu przeszkody w odległości mniejszej niż zdefiniowany próg bezpieczeństwa. Jak wskazują Jones, Flynn i Seiger, tego rodzaju algorytmy cechują się dużą odpornością na zmiany otoczenia, ponieważ decyzje podejmowane są na podstawie aktualnych danych, bez konieczności utrzymywania i aktualizacji złożonych struktur danych \cite{jones1999}. Jednocześnie brak globalnej wiedzy o środowisku może prowadzić do zachowań nieoptymalnych, takich jak oscylacje toru jazdy lub wielokrotne powracanie robota w te same obszary.
+
+Wśród czujników wykorzystywanych w systemach reaktywnych szczególnie szerokie zastosowanie znajdują czujniki ultradźwiękowe. Ich zasada działania polega na emisji krótkiego impulsu fali akustycznej o wysokiej częstotliwości oraz pomiarze czasu, po którym sygnał powraca do odbiornika po odbiciu od przeszkody. Znając prędkość rozchodzenia się dźwięku w powietrzu, możliwe jest wyznaczenie odległości do obiektu. Popularnym przykładem tego typu rozwiązania jest moduł HC-SR04, który ze względu na niski koszt, prostotę obsługi oraz szeroką dostępność stał się standardem w projektach edukacyjnych.
+
+Badania porównawcze czujników odległości wskazują, że czujniki ultradźwiękowe zapewniają wystarczającą dokładność pomiaru dla podstawowych zadań unikania przeszkód, szczególnie w zakresie odległości od kilkunastu do kilkudziesięciu centymetrów \cite{ultrasonicComparison}. Skuteczność tych czujników zależy jednak w dużym stopniu od właściwości powierzchni odbijającej falę akustyczną. Powierzchnie miękkie, porowate lub ustawione pod znacznym kątem względem osi pomiaru mogą powodować osłabienie lub rozproszenie sygnału odbitego, prowadząc do błędnych odczytów. Na dokładność pomiarów wpływają również warunki środowiskowe, takie jak temperatura powietrza czy obecność zakłóceń akustycznych.
+
+Z tego względu istotnym elementem przetwarzania danych sensorycznych jest odpowiednia filtracja wyników pomiarów. W prostych systemach stosuje się najczęściej uśrednianie kilku kolejnych odczytów lub odrzucanie wartości skrajnych, które mogą być skutkiem chwilowych zakłóceń. W literaturze zaleca się także wprowadzanie progów decyzyjnych, zwiększających odporność algorytmu sterowania na pojedyncze błędne pomiary \cite{sensorFiltering}. Przykładowo, decyzja o zmianie kierunku ruchu może być podejmowana dopiero po kilkukrotnym potwierdzeniu obecności przeszkody w określonym zakresie odległości.
+
+W bardziej rozbudowanych rozwiązaniach możliwe jest łączenie danych pochodzących z kilku czujników odległości, rozmieszczonych w różnych kierunkach wokół robota. Takie podejście pozwala na uzyskanie bardziej kompletnej informacji o otoczeniu bez konieczności stosowania zaawansowanych czujników, takich jak lidary czy systemy wizyjne. Integracja wielu źródeł danych sensorycznych, określana mianem fuzji sensorycznej, może istotnie zwiększyć niezawodność procesu percepcji, jednak wiąże się ze wzrostem złożoności algorytmów decyzyjnych oraz wymaga starannego doboru parametrów czasowych.
+
+W kontekście mikrokontrolerów, takich jak Arduino UNO, przetwarzanie danych sensorycznych musi być realizowane w sposób efektywny czasowo. Pomiar odległości z wykorzystaniem czujnika ultradźwiękowego wymaga precyzyjnego odmierzania czasu trwania impulsu powrotnego, co realizowane jest z wykorzystaniem liczników sprzętowych lub mechanizmów przerwań. Odpowiednia organizacja programu, obejmująca cykliczny odczyt czujników oraz sekwencyjne podejmowanie decyzji, ma kluczowe znaczenie dla zapewnienia reakcji robota w czasie zbliżonym do rzeczywistego.
+
+Należy również zwrócić uwagę na kompromis pomiędzy częstotliwością odczytu czujników a stabilnością działania algorytmu sterowania. Zbyt częste pomiary mogą prowadzić do nadmiernej liczby decyzji ruchowych i niestabilności toru jazdy, natomiast zbyt rzadkie odczyty zwiększają ryzyko kolizji z przeszkodami. W literaturze podkreśla się konieczność doboru parametrów czasowych w sposób dostosowany do prędkości robota oraz dynamiki środowiska pracy.
+
+\subsection{Zaawansowane metody lokalizacji i nawigacji}
+
+Postęp w zakresie mocy obliczeniowej systemów wbudowanych oraz rosnąca dostępność zaawansowanych czujników pomiarowych przyczyniły się do dynamicznego rozwoju metod lokalizacji i nawigacji robotów mobilnych. W odróżnieniu od podejść reaktywnych, które bazują wyłącznie na bieżących pomiarach sensorycznych, metody zaawansowane zakładają istnienie wewnętrznej reprezentacji środowiska oraz ciągłą estymację położenia robota w czasie. Centralnym zagadnieniem w tym obszarze jest problem jednoczesnej lokalizacji i mapowania, znany w literaturze jako SLAM (Simultaneous Localization and Mapping).
+
+Algorytmy SLAM umożliwiają stopniowe tworzenie mapy nieznanego środowiska przy jednoczesnym określaniu pozycji robota względem tej mapy. Złożoność tego problemu wynika z faktu, że zarówno dane sensoryczne, jak i modele ruchu obarczone są niepewnością, której kumulacja prowadzi do narastania błędów lokalizacji. Jak podkreśla Thrun, SLAM stanowi jedno z fundamentalnych wyzwań współczesnej robotyki mobilnej, łącząc elementy probabilistyki, estymacji stanu oraz sztucznej inteligencji \cite{thrunSLAM}.
+
+W praktycznych implementacjach algorytmy SLAM wykorzystują dane pochodzące z wielu źródeł sensorycznych. Najczęściej stosowane są czujniki lidarowe, dostarczające precyzyjnych informacji o geometrii otoczenia, kamery wizyjne umożliwiające analizę cech wizualnych środowiska oraz jednostki inercyjne (IMU), pozwalające na estymację przyspieszeń i prędkości kątowych robota. Fuzja danych z różnych czujników zwiększa dokładność lokalizacji oraz poprawia odporność systemu na zakłócenia lub chwilową utratę sygnału z jednego z kanałów pomiarowych \cite{siegwart2011}.
+
+W literaturze wyróżnia się kilka klas algorytmów SLAM, różniących się sposobem reprezentacji niepewności oraz złożonością obliczeniową. Do najwcześniej stosowanych należą metody oparte na filtrze Kalmana oraz jego rozszerzeniach, takich jak rozszerzony filtr Kalmana (EKF), które znajdują zastosowanie głównie w systemach o ograniczonej liczbie stanów. Algorytmy cząsteczkowe, w tym FastSLAM, umożliwiają lepsze odwzorowanie nieliniowości oraz wielomodalności rozkładów prawdopodobieństwa, jednak wiążą się ze znacznym wzrostem zapotrzebowania na moc obliczeniową. W nowoczesnych systemach autonomicznych coraz częściej stosuje się metody grafowe, charakteryzujące się wysoką dokładnością estymacji, kosztem złożonej implementacji oraz dużych wymagań sprzętowych.
+
+Poza lokalizacją i mapowaniem istotnym elementem zaawansowanej nawigacji jest planowanie ruchu. W systemach dysponujących mapą środowiska wykorzystuje się algorytmy planowania globalnego, których zadaniem jest wyznaczenie trajektorii pomiędzy pozycją początkową a celem. Do najczęściej stosowanych należą algorytmy grafowe, takie jak Dijkstra czy A*, a także algorytmy losowe, w tym RRT (Rapidly-exploring Random Trees). Jak zauważają Siegwart i współautorzy, planowanie globalne umożliwia efektywne omijanie przeszkód oraz minimalizację długości trajektorii, jednak jego skuteczność jest ściśle uzależniona od jakości mapy oraz dokładności lokalizacji robota \cite{siegwart2011}.
+
+Uzupełnieniem planowania globalnego są algorytmy planowania lokalnego, odpowiedzialne za reagowanie na dynamiczne zmiany w otoczeniu, takie jak pojawienie się przeszkód ruchomych lub nieprzewidziane zakłócenia. W praktycznych systemach autonomicznych często stosuje się architektury hybrydowe, w których plan globalny stanowi punkt odniesienia, natomiast algorytmy lokalne realizują bieżącą korektę ruchu. Takie podejście zwiększa skuteczność działania robota w złożonych środowiskach, lecz jednocześnie prowadzi do znacznego wzrostu złożoności całego systemu sterowania.
+
+Pomimo licznych zalet, implementacja zaawansowanych metod lokalizacji i nawigacji w systemach edukacyjnych oraz niskokosztowych napotyka na istotne ograniczenia. Algorytmy SLAM wymagają nie tylko znacznych zasobów obliczeniowych, lecz także precyzyjnych czujników oraz starannej kalibracji, co może utrudniać analizę działania systemu i przesłaniać podstawowe cele dydaktyczne. Jak zauważa Thrun, nadmierna złożoność rozwiązań może ograniczać ich przydatność w kontekście nauczania podstaw robotyki mobilnej \cite{thrunSLAM}.
+
+Z tego względu w projektach edukacyjnych oraz pracach inżynierskich często świadomie rezygnuje się z implementacji pełnych algorytmów SLAM na rzecz uproszczonych metod nawigacji. Takie podejście umożliwia koncentrację na zagadnieniach integracji czujników, projektowania algorytmów sterowania ruchem oraz eksperymentalnej analizie zachowania robota w rzeczywistym środowisku. Jednocześnie znajomość zaawansowanych metod lokalizacji i nawigacji stanowi istotne zaplecze teoretyczne, pozwalające właściwie ocenić możliwości oraz ograniczenia prostych rozwiązań stosowanych w systemach o ograniczonych zasobach.
 
 
 \clearpage
 
 \addcontentsline{toc}{section}{Literatura}
 
-\begin{thebibliography}{4}
-\bibitem{str} http://weii.portal.prz.edu.pl/pl/materialy-do-pobrania. Dostęp 5.01.2015.
-\bibitem{Jakubczyk1997} Jakubczyk T., Klette A.: Pomiary w akustyce. WNT, Warszawa 1997.
-\bibitem{Barski2011} Barski S.: Modele transmitancji. Elektronika praktyczna, nr 7/2011, str. 15-18.
-\bibitem{dokum} Czujnik S200. Dokumentacja techniczno-ruchowa. Lumel, Zielona Góra, 2001.
-\bibitem{Pawluk2001} Pawluk K.: Jak pisać teksty techniczne poprawnie, Wiadomości Elektrotechniczne, Nr 12, 2001, str. 513-515.
+\begin{thebibliography}{99}
+
+\bibitem{ifr2023}
+International Federation of Robotics:
+World Robotics 2023 – Service Robots.
+IFR, Frankfurt am Main, 2023.
+
+\bibitem{monk2016}
+Monk S.:
+Programming Arduino: Getting Started with Sketches.
+McGraw-Hill Education, New York, 2016.
+
+\bibitem{siegwart2011}
+Siegwart R., Nourbakhsh I. R., Scaramuzza D.:
+Introduction to Autonomous Mobile Robots.
+MIT Press, Cambridge, 2011.
+
+\bibitem{elecfreaks}
+Elecfreaks:
+HC-SR04 Ultrasonic Sensor User Manual.
+Dokumentacja techniczna, 2022.
+
+\bibitem{cytron2018}
+Cytron Technologies:
+L293D Motor Driver Datasheet.
+Dokumentacja techniczna, 2018.
+
+\bibitem{jones1999}
+Jones J. L., Flynn A. M.:
+Mobile Robots: Inspiration to Implementation.
+A K Peters, Natick, 1999.
+
+\bibitem{horowitz2015}
+Horowitz P., Hill W.:
+The Art of Electronics.
+Cambridge University Press, Cambridge, 2015.
+
+\bibitem{arduino2022}
+Arduino:
+Arduino Uno Rev3 – Technical Documentation.
+Arduino SA, 2022.
+
+\bibitem{corke2017}
+Corke P.:
+Robotics, Vision and Control.
+Springer, Berlin, 2017.
+
+\bibitem{educationalRoboticsOverview}
+Alimisis D.:
+Educational Robotics: Open Questions and New Challenges.
+Themes in Science and Technology Education, Vol. 6, No. 1, 2013, s. 63–71.
+
+\bibitem{campionDifferentialDrive}
+Campion G., Bastin G., D’Andrea-Novel B.:
+Structural properties and classification of kinematic and dynamic models of wheeled mobile robots.
+IEEE Transactions on Robotics and Automation, Vol. 12, No. 1, 1996, s. 47–62.
+
+\bibitem{reactiveNavigation}
+Arkin R. C.:
+Behavior-Based Robotics.
+MIT Press, Cambridge, 1998.
+
+\bibitem{ultrasonicSensorComparison}
+Kurniawan A., Hadiyoso S.:
+Performance Comparison of Ultrasonic Sensors for Obstacle Detection.
+International Journal of Engineering Research, Vol. 7, No. 4, 2018, s. 210–215.
+
+\bibitem{sensorFiltering}
+Welch G., Bishop G.:
+An Introduction to the Kalman Filter.
+University of North Carolina at Chapel Hill, 2006.
+
+\bibitem{slamOverview}
+Durrant-Whyte H., Bailey T.:
+Simultaneous Localization and Mapping: Part I.
+IEEE Robotics \& Automation Magazine, Vol. 13, No. 2, 2006, s. 99–110.
+
+\bibitem{thrunSLAM}
+Thrun S., Burgard W., Fox D.:
+Probabilistic Robotics.
+MIT Press, Cambridge, 2005.
+
+\bibitem{mobileRoboticsClassification}
+Borenstein J., Everett H. R., Feng L.:
+Where am I? Sensors and Methods for Mobile Robot Positioning.
+University of Michigan, 1996.
+
+\bibitem{borensteinMobilePlatforms}
+Borenstein J.:
+Control and kinematic design of multi-degree-of-freedom mobile robots.
+IEEE Transactions on Robotics and Automation, Vol. 14, No. 2, 1998, s. 315–322.
+
+\bibitem{leggedRobotsControl}
+Raibert M.:
+Legged Robots That Balance.
+MIT Press, Cambridge, 1986.
+
+\bibitem{advancedRobotArchitectures}
+Brooks R. A.:
+A Robust Layered Control System for a Mobile Robot.
+IEEE Journal of Robotics and Automation, Vol. 2, No. 1, 1986, s. 14–23.
+
+\bibitem{robotKinematicsDynamics}
+Siciliano B., Sciavicco L., Villani L., Oriolo G.:
+Robotics: Modelling, Planning and Control.
+Springer, London, 2010.
+
+\bibitem{mobileRobotNonlinearModel}
+Canudas-de-Wit C., Siciliano B., Bastin G.:
+Theory of Robot Control.
+Springer, London, 1996.
+
+\bibitem{nonholonomicConstraints}
+Bloch A. M.:
+Nonholonomic Mechanics and Control.
+Springer, New York, 2003.
+
+\bibitem{embeddedMotorControl}
+Kenjo T.:
+Stepping Motors and Their Microprocessor Controls.
+Oxford University Press, Oxford, 1994.
+
+\bibitem{educationalRobotsModeling}
+Eguchi A.:
+Educational Robotics for Promoting 21st Century Skills.
+Journal of Automation, Mobile Robotics \& Intelligent Systems, Vol. 8, No. 1, 2014, s. 5–11.
+
+\bibitem{lavallePlanningAlgorithms}
+LaValle S. M.:
+Planning Algorithms.
+Cambridge University Press, Cambridge, 2006.
+
+\bibitem{motorPowerSupplyIssues}
+Erickson R. W., Maksimović D.:
+Fundamentals of Power Electronics.
+Springer, New York, 2001.
+
+\bibitem{ultrasonicComparison}
+Kurniawan A., Hadiyoso S.:
+Performance Comparison of Ultrasonic Sensors for Obstacle Detection.
+International Journal of Engineering Research, Vol. 7, No. 4, 2018, s. 210–215.
+
+
 \end{thebibliography}
+
+
 
 \clearpage
 
