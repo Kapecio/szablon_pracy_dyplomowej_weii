@@ -117,7 +117,7 @@ Warstwa wykonawcza obejmuje elementy odpowiedzialne za fizyczną realizację ruc
 
 Podsumowując, klasyfikacja oraz architektura robotów mobilnych stanowią fundament analizy i projektowania tego typu systemów. Wybór konkretnego rozwiązania konstrukcyjnego i architektonicznego jest zawsze kompromisem pomiędzy funkcjonalnością, złożonością, kosztami oraz przeznaczeniem robota. W kontekście prac inżynierskich i projektów dydaktycznych szczególnie istotne są rozwiązania proste, modularne i łatwe do modyfikacji, które umożliwiają praktyczne poznanie podstawowych zasad działania robotów mobilnych oraz stanowią punkt wyjścia do dalszego rozwoju bardziej zaawansowanych systemów.
 
-\subsection{Modelowanie ruchu i kinematyka robotów mobilnych}
+\subsection{Modelowanie ruchu robotów mobilnych}
 
 Modelowanie ruchu robota mobilnego stanowi jeden z kluczowych etapów projektowania systemów sterowania oraz nawigacji, gdyż umożliwia formalny, matematyczny opis zależności pomiędzy sygnałami sterującymi a rzeczywistym ruchem platformy. W literaturze robotyki mobilnej wyróżnia się dwa podstawowe podejścia do opisu ruchu: modelowanie kinematyczne oraz dynamiczne. Model kinematyczny koncentruje się na zależnościach geometrycznych i prędkościowych, pomijając wpływ sił oraz momentów działających na robota, natomiast model dynamiczny uwzględnia masę, bezwładność oraz oddziaływania z otoczeniem \cite{robotKinematicsDynamics}. W przypadku większości robotów edukacyjnych i prototypowych stosuje się modele kinematyczne, które zapewniają wystarczającą dokładność przy znacznie mniejszej złożoności obliczeniowej.
 
@@ -158,7 +158,7 @@ W bardziej zaawansowanych konstrukcjach stosuje się enkodery obrotowe, które u
 
 Z punktu widzenia architektury systemowej układ napędowy stanowi interfejs pomiędzy warstwą decyzyjną a fizycznym ruchem robota. Prostota jego realizacji ma istotne znaczenie dla przejrzystości projektu oraz możliwości dalszej rozbudowy systemu. W konstrukcjach opartych na mikrokontrolerach, takich jak Arduino, wykorzystanie standardowych bibliotek do obsługi PWM oraz gotowych sterowników silników pozwala skoncentrować się na zagadnieniach algorytmicznych, zamiast na niskopoziomowych detalach sprzętowych.
 
-\subsection{Percepcja otoczenia i przetwarzanie danych sensorycznych}
+\subsection{Percepcja otoczenia oraz przetwarzanie danych sensorycznych}
 
 Percepcja otoczenia stanowi jeden z fundamentalnych elementów autonomii robota mobilnego, gdyż to na jej podstawie system podejmuje decyzje dotyczące ruchu oraz reakcji na zmieniające się warunki środowiskowe. W przeciwieństwie do systemów sterowanych zdalnie, robot autonomiczny musi samodzielnie interpretować sygnały pochodzące z czujników i przekształcać je w działania zgodne z przyjętą strategią sterowania. W literaturze przedmiotu podkreśla się, że jakość procesu percepcji ma bezpośredni wpływ na bezpieczeństwo oraz skuteczność poruszania się robota, niezależnie od stopnia zaawansowania zastosowanych algorytmów decyzyjnych \cite{jones1999}.
 
@@ -168,7 +168,7 @@ Nawigacja reaktywna opiera się zazwyczaj na zbiorze reguł decyzyjnych typu „
 
 Wśród czujników wykorzystywanych w systemach reaktywnych szczególnie szerokie zastosowanie znajdują czujniki ultradźwiękowe. Ich zasada działania polega na emisji krótkiego impulsu fali akustycznej o wysokiej częstotliwości oraz pomiarze czasu, po którym sygnał powraca do odbiornika po odbiciu od przeszkody. Znając prędkość rozchodzenia się dźwięku w powietrzu, możliwe jest wyznaczenie odległości do obiektu. Popularnym przykładem tego typu rozwiązania jest moduł HC-SR04, który ze względu na niski koszt, prostotę obsługi oraz szeroką dostępność stał się standardem w projektach edukacyjnych.
 
-Badania porównawcze czujników odległości wskazują, że czujniki ultradźwiękowe zapewniają wystarczającą dokładność pomiaru dla podstawowych zadań unikania przeszkód, szczególnie w zakresie odległości od kilkunastu do kilkudziesięciu centymetrów \cite{ultrasonicComparison}. Skuteczność tych czujników zależy jednak w dużym stopniu od właściwości powierzchni odbijającej falę akustyczną. Powierzchnie miękkie, porowate lub ustawione pod znacznym kątem względem osi pomiaru mogą powodować osłabienie lub rozproszenie sygnału odbitego, prowadząc do błędnych odczytów. Na dokładność pomiarów wpływają również warunki środowiskowe, takie jak temperatura powietrza czy obecność zakłóceń akustycznych.
+Badania porównawcze czujników odległości wskazują, że czujniki ultradźwiękowe zapewniają wystarczającą dokładność pomiaru dla podstawowych zadań unikania przeszkód, szczególnie w zakresie odległości od kilkunastu do kilkudziesięciu centymetrów \cite{ultrasonicSensorComparison}. Skuteczność tych czujników zależy jednak w dużym stopniu od właściwości powierzchni odbijającej falę akustyczną. Powierzchnie miękkie, porowate lub ustawione pod znacznym kątem względem osi pomiaru mogą powodować osłabienie lub rozproszenie sygnału odbitego, prowadząc do błędnych odczytów. Na dokładność pomiarów wpływają również warunki środowiskowe, takie jak temperatura powietrza czy obecność zakłóceń akustycznych.
 
 Z tego względu istotnym elementem przetwarzania danych sensorycznych jest odpowiednia filtracja wyników pomiarów. W prostych systemach stosuje się najczęściej uśrednianie kilku kolejnych odczytów lub odrzucanie wartości skrajnych, które mogą być skutkiem chwilowych zakłóceń. W literaturze zaleca się także wprowadzanie progów decyzyjnych, zwiększających odporność algorytmu sterowania na pojedyncze błędne pomiary \cite{sensorFiltering}. Przykładowo, decyzja o zmianie kierunku ruchu może być podejmowana dopiero po kilkukrotnym potwierdzeniu obecności przeszkody w określonym zakresie odległości.
 
@@ -178,7 +178,7 @@ W kontekście mikrokontrolerów, takich jak Arduino UNO, przetwarzanie danych se
 
 Należy również zwrócić uwagę na kompromis pomiędzy częstotliwością odczytu czujników a stabilnością działania algorytmu sterowania. Zbyt częste pomiary mogą prowadzić do nadmiernej liczby decyzji ruchowych i niestabilności toru jazdy, natomiast zbyt rzadkie odczyty zwiększają ryzyko kolizji z przeszkodami. W literaturze podkreśla się konieczność doboru parametrów czasowych w sposób dostosowany do prędkości robota oraz dynamiki środowiska pracy.
 
-\subsection{Zaawansowane metody lokalizacji i nawigacji}
+\subsection{Zaawansowane metody nawigacji}
 
 Postęp w zakresie mocy obliczeniowej systemów wbudowanych oraz rosnąca dostępność zaawansowanych czujników pomiarowych przyczyniły się do dynamicznego rozwoju metod lokalizacji i nawigacji robotów mobilnych. W odróżnieniu od podejść reaktywnych, które bazują wyłącznie na bieżących pomiarach sensorycznych, metody zaawansowane zakładają istnienie wewnętrznej reprezentacji środowiska oraz ciągłą estymację położenia robota w czasie. Centralnym zagadnieniem w tym obszarze jest problem jednoczesnej lokalizacji i mapowania, znany w literaturze jako SLAM (Simultaneous Localization and Mapping).
 
@@ -219,13 +219,13 @@ Introduction to Autonomous Mobile Robots.
 MIT Press, Cambridge, 2011.
 
 \bibitem{elecfreaks}
-Elecfreaks:
+Cytron Technologies:
 HC-SR04 Ultrasonic Sensor User Manual.
-Dokumentacja techniczna, 2022.
+Dokumentacja techniczna, 2013.
 
 \bibitem{cytron2018}
-Cytron Technologies:
-L293D Motor Driver Datasheet.
+Adafruit Industries:
+Adafruit Motor Shield.
 Dokumentacja techniczna, 2018.
 
 \bibitem{jones1999}
@@ -336,12 +336,7 @@ Cambridge University Press, Cambridge, 2006.
 \bibitem{motorPowerSupplyIssues}
 Erickson R. W., Maksimović D.:
 Fundamentals of Power Electronics.
-Springer, New York, 2001.
-
-\bibitem{ultrasonicComparison}
-Kurniawan A., Hadiyoso S.:
-Performance Comparison of Ultrasonic Sensors for Obstacle Detection.
-International Journal of Engineering Research, Vol. 7, No. 4, 2018, s. 210–215.
+Springer, New York, 2020.
 
 
 \end{thebibliography}

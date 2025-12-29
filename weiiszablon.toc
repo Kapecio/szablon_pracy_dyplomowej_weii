@@ -2,8 +2,8 @@
 \contentsline {section}{\numberline {1}Wprowadzenie}{5}{section.1}%
 \contentsline {section}{\numberline {2}Przegląd stanu wiedzy i techniki w zakresie robotów mobilnych}{7}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Klasyfikacja i architektura robotów mobilnych}{9}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Modelowanie ruchu i kinematyka robotów mobilnych}{11}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.2}Modelowanie ruchu robotów mobilnych}{11}{subsection.2.2}%
 \contentsline {subsection}{\numberline {2.3}Układy napędowe i sterowanie silnikami}{14}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Percepcja otoczenia i przetwarzanie danych sensorycznych}{16}{subsection.2.4}%
-\contentsline {subsection}{\numberline {2.5}Zaawansowane metody lokalizacji i nawigacji}{18}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.4}Percepcja otoczenia oraz przetwarzanie danych sensorycznych}{16}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Zaawansowane metody nawigacji}{18}{subsection.2.5}%
 \contentsline {section}{Literatura}{21}{subsection.2.5}%
