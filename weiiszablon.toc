@@ -1,9 +1,19 @@
 \babel@toc {polish}{}\relax 
 \contentsline {section}{\numberline {1}Wprowadzenie}{5}{section.1}%
-\contentsline {section}{\numberline {2}Przegląd stanu wiedzy i techniki w zakresie robotów mobilnych}{7}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Klasyfikacja i architektura robotów mobilnych}{9}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Modelowanie ruchu robotów mobilnych}{11}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Układy napędowe i sterowanie silnikami}{14}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Percepcja otoczenia oraz przetwarzanie danych sensorycznych}{16}{subsection.2.4}%
-\contentsline {subsection}{\numberline {2.5}Zaawansowane metody nawigacji}{18}{subsection.2.5}%
-\contentsline {section}{Literatura}{21}{subsection.2.5}%
+\contentsline {section}{\numberline {2}Zakres teoretyczny z dziedziny robotyki}{7}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Przegląd stanu wiedzy i techniki w zakresie robotów mobilnych}{7}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Modelowanie ruchu robota}{7}{subsubsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.2}Odtwarzanie danych sensorycznych}{8}{subsubsection.2.1.2}%
+\contentsline {subsubsection}{\numberline {2.1.3}Technologia mapowania SLAM}{8}{subsubsection.2.1.3}%
+\contentsline {subsection}{\numberline {2.2}Klasyfikacja i architektura robotów mobilnych}{9}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Klasyfikacja według sposobu lokomocji robota}{9}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}Klasyfikacja według autonomiczności robota}{10}{subsubsection.2.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.3}Klasyfikacja według architektury rozwiązania}{10}{subsubsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.3}Modelowanie ruchu robotów mobilnych}{11}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Układy napędowe i sterowanie silnikami}{13}{subsection.2.4}%
+\contentsline {subsubsection}{\numberline {2.4.1}Sterowanie silnikami robota}{15}{subsubsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.5}Percepcja otoczenia}{15}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Zaawansowane metody nawigacji}{17}{subsection.2.6}%
+\contentsline {section}{\numberline {3}Część Praktyczna/fizyczna - zmień nazwę}{20}{section.3}%
+\contentsline {section}{\numberline {4}Część Praktyczna/kodowa - zmień nazwę}{21}{section.4}%
+\contentsline {section}{Literatura}{22}{section.4}%

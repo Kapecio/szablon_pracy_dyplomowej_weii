@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.12.8)  29 DEC 2025 18:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.12.8)  4 JAN 2026 22:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1020,7 +1020,7 @@ Package hyperref Info: Link coloring OFF on input line 47.
 \@outlinefile=\write5
 \openout5 = `weiiszablon.out'.
 
-<auxiliary/logoweii.jpg, id=37, 400.1349pt x 117.67966pt>
+<auxiliary/logoweii.jpg, id=77, 400.1349pt x 117.67966pt>
 File: auxiliary/logoweii.jpg Graphic file (type jpg)
 <use auxiliary/logoweii.jpg>
 Package pdftex.def Info: auxiliary/logoweii.jpg  used on input line 50.
@@ -1090,87 +1090,90 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 [3] [4
 
 ]
-Underfull \vbox (badness 2662) has occurred while \output is active []
+Underfull \vbox (badness 1365) has occurred while \output is active []
 
  [5
 
 ]
 [6]
-Underfull \vbox (badness 1424) has occurred while \output is active []
+Underfull \vbox (badness 5417) has occurred while \output is active []
 
  [7
 
 ]
-Underfull \vbox (badness 1137) has occurred while \output is active []
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 99.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7.4> on input line 99.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 99.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 99.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 99.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 99.
 
- [8]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Overfull \hbox (22.68394pt too wide) in paragraph at lines 99--100
+\T1/lmr/m/n/12 si¦ z wy-so-kimi wy-ma-ga-niami ob-li-cze-nio-wymi oraz znaczn¡ 
+zªo-»o-no-±ci¡ implementacyjn¡[[]].
+ []
 
- [9]
+[8] [9]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [10]
 [11]
-Overfull \hbox (0.24432pt too wide) in paragraph at lines 130--131
+Overfull \hbox (0.24432pt too wide) in paragraph at lines 137--138
 []\T1/lmr/m/n/12 Konsekwencj¡ wy-st¦-po-wa-nia ogra-ni-cze« nie-ho-lo-no-micz-n
 ych jest ko-niecz-no±¢ sto-
  []
 
 
-Overfull \hbox (1.2401pt too wide) in paragraph at lines 130--131
+Overfull \hbox (1.2401pt too wide) in paragraph at lines 137--138
 \T1/lmr/m/n/12 so-wa-nia od-po-wied-nich stra-te-gii ma-new-ro-wa-nia, szcze-gó
 l-nie pod-czas omi-ja-nia prze-szkód.
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 1137) has occurred while \output is active []
 
  [12]
+[13]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [13]
-Underfull \vbox (badness 6461) has occurred while \output is active []
-
  [14]
-Underfull \vbox (badness 1137) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [15]
-[16]
 Underfull \vbox (badness 1137) has occurred while \output is active []
 
+ [16]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
  [17]
-[18]
-Underfull \vbox (badness 2698) has occurred while \output is active []
+Underfull \vbox (badness 1137) has occurred while \output is active []
 
- [19]
-[20] [21
+ [18]
+[19] [20
+
+] [21
+
+] [22
 
 
-] [22]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 348.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7.4> on input line 348.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 348.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 348.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 348.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 348.
-
-Overfull \hbox (14.2264pt too wide) in paragraph at lines 348--348
+] [23]
+Overfull \hbox (14.2264pt too wide) in paragraph at lines 350--350
 [][]| 
  []
 
 
-Overfull \hbox (14.2264pt too wide) in paragraph at lines 348--348
+Overfull \hbox (14.2264pt too wide) in paragraph at lines 350--350
 [][]| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 348--348
+Underfull \hbox (badness 10000) in paragraph at lines 350--350
 [][]
  []
 
@@ -1182,7 +1185,7 @@ See the caption package documentation for explanation.
 Package caption Warning: Unused \captionsetup[lstlisting] on input line 175.
 See the caption package documentation for explanation.
 
-[23
+[24
 
 ] (weiiszablon.aux)
  ***********
@@ -1190,25 +1193,27 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
 Package rerunfilecheck Info: File `weiiszablon.out' has not changed.
-(rerunfilecheck)             Checksum: F27A5F47E6B8F6023BF84515E90BBB3A;1960.
+(rerunfilecheck)             Checksum: FE931DDACCA09B456422CEB16C06B2C2;4269.
  ) 
 Here is how much of TeX's memory you used:
- 27335 strings out of 474485
- 494587 string characters out of 5743262
+ 27363 strings out of 474485
+ 495043 string characters out of 5743262
  1935542 words of memory out of 5000000
- 49099 multiletter control sequences out of 15000+600000
- 617348 words of font info for 79 fonts, out of 8000000 for 9000
+ 49113 multiletter control sequences out of 15000+600000
+ 623337 words of font info for 81 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,13n,107p,913b,1989s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,13n,107p,906b,1989s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Kacper/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.p
 fb><C:/Users/Kacper/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.
 pfb><C:/Users/Kacper/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.
 pfb><C:/Users/Kacper/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.
 pfb><C:/Users/Kacper/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.
-pfb>
-Output written on weiiszablon.pdf (23 pages, 863151 bytes).
+pfb><C:/Users/Kacper/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.p
+fb><C:/Users/Kacper/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.pf
+b>
+Output written on weiiszablon.pdf (24 pages, 905784 bytes).
 PDF statistics:
- 257 PDF objects out of 1000 (max. 8388607)
- 59 named destinations out of 1000 (max. 500000)
- 82 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 324 PDF objects out of 1000 (max. 8388607)
+ 71 named destinations out of 1000 (max. 500000)
+ 162 words of extra memory for PDF output out of 10000 (max. 10000000)
 
