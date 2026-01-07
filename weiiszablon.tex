@@ -203,6 +203,29 @@ Z tego względu często świadomie rezygnuje się z implementacji pełnych algor
 
 \section{Część Praktyczna/fizyczna - zmień nazwę}
 
+Punktem kulmminacyjnym realizacji całej pracy inżynierskiej jest zbudowanie fizycznej podstawy robota. Zadaniem robota jest omijanie przeszkód, na podstawie wykrywania ich w czasie rzeczywistym. Robot nie tworzy na bieżąco mapy otoczenia, jedynie reaguje na przeszkody pojawiające się w zasięgu czujnika ultradźwiękowego. Cała konstrukcja robota oparta jest na płytce typu plexiglass. Robot składa się z następujących komponentów:
+\begin{itemize}
+\item mikrokontroler Arduino Uno,
+\item osłona płytki L293D,
+\item silniki oraz koła,
+\item czujnik ultradźwiękowy HC-SR04,
+\item części obrotowej MicroServo9G,
+\item baterii litowo-jonowych 18650 3.3V,
+\item przełącznik kołyskowy.
+\end{itemize} 
+
+\subsection{Komponenty robota}
+
+
+\subsection{Budowa prototypu robota}
+
+Przed przystąpieniem do wykonywania właściwego praktycznego projektu zawsze powinno się przygotować prototyp, aby zweryfikować poprawność założeń projektowych oraz uniknąć niepotrzebnych kosztów. Celem pierwszej konstrukcji było spełnienie celu projektu - stworzenie maszyny, która będzie autonomicznie poruszać się w otoczeniu z możliwością omijania przeszkód. Kwestie dokładności wykonania (precyzyjne poziomowanie kół, klejenie komponentów odpowiednią ilością kleju, odpowiednie rozmieszczenie komponentów na płytce) zostały odsunięte do wykonania końcowego projektu robota. W pierwszym prototypie istniały główne założenia:
+\begin{enumerate}
+\item Robot ma spełniać cel projektu.
+\item Rozmieszczenie komponentów na płytce nie może przenosić środka ciężkości robota poza środek geometryczny konstrukcji (mogłoby to doprowadzić do niezachowania równowagi przy wykonywaniu manewrów).
+\end{enumerate}
+
+
 \section{Część Praktyczna/kodowa - zmień nazwę}
 \clearpage
 
