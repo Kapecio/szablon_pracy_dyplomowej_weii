@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.12.8)  4 JAN 2026 22:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.12.8)  10 JAN 2026 19:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1020,7 +1020,7 @@ Package hyperref Info: Link coloring OFF on input line 47.
 \@outlinefile=\write5
 \openout5 = `weiiszablon.out'.
 
-<auxiliary/logoweii.jpg, id=77, 400.1349pt x 117.67966pt>
+<auxiliary/logoweii.jpg, id=117, 400.1349pt x 117.67966pt>
 File: auxiliary/logoweii.jpg Graphic file (type jpg)
 <use auxiliary/logoweii.jpg>
 Package pdftex.def Info: auxiliary/logoweii.jpg  used on input line 50.
@@ -1157,35 +1157,90 @@ Underfull \vbox (badness 1137) has occurred while \output is active []
  [18]
 [19] [20
 
-] [21
+]
+<figures/arduino.png, id=310, 1004.25188pt x 713.66624pt>
+File: figures/arduino.png Graphic file (type png)
+<use figures/arduino.png>
+Package pdftex.def Info: figures/arduino.png  used on input line 229.
+(pdftex.def)             Requested size: 264.61333pt x 188.04257pt.
+ [21{C:/Users/Kacper/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc
+} <./figures/arduino.png>]
+<figures/l293d.png, id=318, 941.01563pt x 709.14937pt>
+File: figures/l293d.png Graphic file (type png)
+<use figures/l293d.png>
+Package pdftex.def Info: figures/l293d.png  used on input line 246.
+(pdftex.def)             Requested size: 264.61333pt x 199.4153pt.
+ [22{C:/Users/Kacper/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit
+.enc} <./figures/l293d.png>]
+<figures/silnikola.png, id=327, 1160.83687pt x 1055.44313pt>
+File: figures/silnikola.png Graphic file (type png)
+<use figures/silnikola.png>
+Package pdftex.def Info: figures/silnikola.png  used on input line 261.
+(pdftex.def)             Requested size: 264.61333pt x 240.58878pt.
 
-] [22
+Underfull \vbox (badness 1946) has occurred while \output is active []
+
+ [23 <./figures/silnikola.png>]
+<figures/hcsr04.png, id=334, 1160.83687pt x 660.96938pt>
+File: figures/hcsr04.png Graphic file (type png)
+<use figures/hcsr04.png>
+Package pdftex.def Info: figures/hcsr04.png  used on input line 276.
+(pdftex.def)             Requested size: 352.81552pt x 200.88432pt.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 2
+85.
+
+(C:\Users\Kacper\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
+File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+) [24 <./figures/hcsr04.png>]
+<figures/servo.png, id=341, 1160.83687pt x 641.39626pt>
+File: figures/servo.png Graphic file (type png)
+<use figures/servo.png>
+Package pdftex.def Info: figures/servo.png  used on input line 289.
+(pdftex.def)             Requested size: 352.81552pt x 194.9356pt.
+ [25{C:/Users/Kacper/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.en
+c} <./figures/servo.png>]
+Overfull \hbox (7.08856pt too wide) in paragraph at lines 300--301
+\T1/lmr/m/n/12 padku za-sto-so-wa-nia nie-wy-star-cza-j¡co wy-daj-nego ¹ró-dªa 
+za-si-la-nia. Ogniwa litowo-jonowe,
+ []
+
+<figures/baterie.png, id=350, 1013.28563pt x 639.89063pt>
+File: figures/baterie.png Graphic file (type png)
+<use figures/baterie.png>
+Package pdftex.def Info: figures/baterie.png  used on input line 306.
+(pdftex.def)             Requested size: 352.81552pt x 222.80316pt.
+[26 <./figures/baterie.png>]
+<figures/przel2.png, id=356, 680.5425pt x 558.58687pt>
+File: figures/przel2.png Graphic file (type png)
+<use figures/przel2.png>
+Package pdftex.def Info: figures/przel2.png  used on input line 317.
+(pdftex.def)             Requested size: 352.81552pt x 289.58894pt.
+ [27 <./figures/przel2.png>] [28] [29
+
+] [30
 
 
-] [23]
-Overfull \hbox (14.2264pt too wide) in paragraph at lines 350--350
+]
+[31]
+Overfull \hbox (14.2264pt too wide) in paragraph at lines 477--477
 [][]| 
  []
 
 
-Overfull \hbox (14.2264pt too wide) in paragraph at lines 350--350
+Overfull \hbox (14.2264pt too wide) in paragraph at lines 477--477
 [][]| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 350--350
+Underfull \hbox (badness 10000) in paragraph at lines 477--477
 [][]
  []
 
 
-Package caption Warning: Unused \captionsetup[figure] on input line 174.
+Package caption Warning: Unused \captionsetup[lstlisting] on input line 177.
 See the caption package documentation for explanation.
 
-
-Package caption Warning: Unused \captionsetup[lstlisting] on input line 175.
-See the caption package documentation for explanation.
-
-[24
+[32
 
 ] (weiiszablon.aux)
  ***********
@@ -1193,27 +1248,29 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
 Package rerunfilecheck Info: File `weiiszablon.out' has not changed.
-(rerunfilecheck)             Checksum: FE931DDACCA09B456422CEB16C06B2C2;4269.
+(rerunfilecheck)             Checksum: E80A53A12B422BDCB16AE696079702E9;6177.
  ) 
 Here is how much of TeX's memory you used:
- 27363 strings out of 474485
- 495043 string characters out of 5743262
- 1935542 words of memory out of 5000000
- 49113 multiletter control sequences out of 15000+600000
- 623337 words of font info for 81 fonts, out of 8000000 for 9000
+ 27503 strings out of 474485
+ 498102 string characters out of 5743262
+ 1936542 words of memory out of 5000000
+ 49219 multiletter control sequences out of 15000+600000
+ 623712 words of font info for 82 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,13n,107p,906b,1989s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,13n,107p,1380b,2002s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Kacper/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.p
 fb><C:/Users/Kacper/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.
-pfb><C:/Users/Kacper/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.
-pfb><C:/Users/Kacper/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.
-pfb><C:/Users/Kacper/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.
-pfb><C:/Users/Kacper/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.p
-fb><C:/Users/Kacper/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.pf
-b>
-Output written on weiiszablon.pdf (24 pages, 905784 bytes).
+pfb><C:/Users/Kacper/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12
+.pfb><C:/Users/Kacper/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi9
+.pfb><C:/Users/Kacper/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10
+.pfb><C:/Users/Kacper/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12
+.pfb><C:/Users/Kacper/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17
+.pfb><C:/Users/Kacper/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.
+pfb><C:/Users/Kacper/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.p
+fb>
+Output written on weiiszablon.pdf (32 pages, 11379438 bytes).
 PDF statistics:
- 324 PDF objects out of 1000 (max. 8388607)
- 71 named destinations out of 1000 (max. 500000)
- 162 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 456 PDF objects out of 1000 (max. 8388607)
+ 98 named destinations out of 1000 (max. 500000)
+ 277 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -155,7 +155,7 @@ Regulacja prędkości obrotowej silników prądu stałego realizowana jest najcz
 
 Istotnym zagadnieniem w sterowaniu napędem robota mobilnego jest możliwość zmiany kierunku obrotów silnika. Wymaga to zastosowania układu umożliwiającego odwrócenie polaryzacji napięcia zasilającego, co najczęściej realizowane jest za pomocą mostka H. Układ ten składa się z zestawu elementów przełączających, takich jak tranzystory bipolarne lub MOSFET\footnote{MOSFET - podstawowa technologia produkcji większości półprzewodników z izolowaną bramką stosowanych w komputerach.}, które pozwalają na sterowanie kierunkiem przepływu prądu przez silnik. W rozwiązaniach edukacyjnych powszechnie stosowane są scalone układy mostków H, integrujące elementy mocy oraz podstawowe zabezpieczenia w jednej obudowie.
 
-Jednym z najczęściej wykorzystywanych układów tego typu jest L293D, który umożliwia niezależne sterowanie czterema silnikami prądu stałego. Układ ten pozwala na realizację zmiany kierunku obrotów poprzez odpowiednie stany logiczne na wejściach sterujących, natomiast regulacja prędkości realizowana jest przez doprowadzenie sygnału PWM do wejścia aktywującego. Takie rozwiązanie jest szczególnie korzystne, gdyż umożliwia prostą i czytelną implementację sterowania ruchem bez konieczności projektowania własnych układów mocy.
+Jednym z najczęściej wykorzystywanych układów tego typu jest L293D, który umożliwia niezależne sterowanie dwoma silnikami prądu stałego. Układ ten pozwala na realizację zmiany kierunku obrotów poprzez odpowiednie stany logiczne na wejściach sterujących, natomiast regulacja prędkości realizowana jest przez doprowadzenie sygnału PWM do wejścia aktywującego. Takie rozwiązanie jest szczególnie korzystne, gdyż umożliwia prostą i czytelną implementację sterowania ruchem bez konieczności projektowania własnych układów mocy.
 
 W robotach mobilnych o niewielkich rozmiarach istotne znaczenie ma również sposób zasilania układu napędowego. Silniki prądu stałego charakteryzują się stosunkowo dużymi prądami rozruchowymi, które mogą prowadzić do chwilowych spadków napięcia oraz zakłóceń pracy układów logicznych. Z tego względu w literaturze zaleca się separację zasilania części wykonawczej i logicznej lub stosowanie odpowiednich filtrów oraz kondensatorów buforujących\cite{motorPowerSupplyIssues}. W prostych konstrukcjach edukacyjnych zagadnienie to bywa często pomijane, jednak jego uwzględnienie znacząco poprawia stabilność i niezawodność całego systemu.
 
@@ -203,19 +203,123 @@ Z tego względu często świadomie rezygnuje się z implementacji pełnych algor
 
 \section{Część Praktyczna/fizyczna - zmień nazwę}
 
-Punktem kulmminacyjnym realizacji całej pracy inżynierskiej jest zbudowanie fizycznej podstawy robota. Zadaniem robota jest omijanie przeszkód, na podstawie wykrywania ich w czasie rzeczywistym. Robot nie tworzy na bieżąco mapy otoczenia, jedynie reaguje na przeszkody pojawiające się w zasięgu czujnika ultradźwiękowego. Cała konstrukcja robota oparta jest na płytce typu plexiglass. Robot składa się z następujących komponentów:
+Punktem kulminacyjnym realizacji całej pracy inżynierskiej jest zbudowanie fizycznej podstawy robota. Zadaniem robota jest omijanie przeszkód, na podstawie wykrywania ich w czasie rzeczywistym. Robot nie tworzy na bieżąco mapy otoczenia, jedynie reaguje na przeszkody pojawiające się w zasięgu czujnika ultradźwiękowego. Cała konstrukcja robota oparta jest na płycie akrylowej. Robot składa się z następujących komponentów:
 \begin{itemize}
 \item mikrokontroler Arduino Uno,
-\item osłona płytki L293D,
+\item sterownik silników L293D,
 \item silniki oraz koła,
 \item czujnik ultradźwiękowy HC-SR04,
 \item części obrotowej MicroServo9G,
-\item baterii litowo-jonowych 18650 3.3V,
+\item baterie litowo-jonowe 18650 3.3V,
 \item przełącznik kołyskowy.
 \end{itemize} 
 
 \subsection{Komponenty robota}
 
+W niniejszej części przedstawiono podstawowe komponenty wykorzystane do budowy robota mobilnego, które wspólnie tworzą kompletny system mechatroniczny zdolny do realizacji założonych funkcji. Dobór poszczególnych elementów został podyktowany wymaganiami funkcjonalnymi projektu, dostępnością podzespołów oraz ich przydatnością w konstrukcjach edukacyjnych i prototypowych. Każdy z zastosowanych komponentów pełni ściśle określoną rolę w systemie robota.
+
+\subsubsection{Mikrokontroler Arduino Uno}
+
+Mikrokontroler Arduino Uno (Rys. \ref{Fig:arduino}) stanowi centralny element elektroniczny konstrukcji robota mobilnego, odpowiadając za przetwarzanie danych sensorycznych oraz generowanie sygnałów sterujących dla elementów wykonawczych. Płytka Arduino Uno dysponuje następującymi właściwościami technicznymi: mikrokontroler ATmega328P pracuje przy napięciu logicznym 5 V oraz częstotliwości taktowania 16 MHz, a jego pamięć obejmuje 32 KB pamięci Flash (z czego część zajmuje zainstalowany bootloader), 2 KB pamięci SRAM oraz 1 KB pamięci EEPROM. Ponadto płytka wyposażona jest w 14 cyfrowych pinów I/O (w tym 6 mogących generować sygnały PWM) oraz 6 wejść analogowych.
+
+Arduino Uno obsługuje popularne standardy komunikacyjne, takie jak UART, SPI oraz I$^{2}$C, co umożliwia komunikację z wyświetlaczami oraz czujnikami. Programowanie odbywa się za pomocą Arduino IDE poprzez port USB, a wgrany bootloader eliminuje konieczność stosowania zewnętrznych programatorów.
+
+\begin{figure}[ht]%
+ \centering%
+ \includegraphics[width=0.6\textwidth]{figures/arduino.png}%
+ \caption{Mikrokontroler Arduino Uno Źródło: opracowanie autora}%
+ \label{Fig:arduino}%
+\end{figure}
+
+\subsubsection{Sterownik silników L293D}
+
+Układ L293D (Rys. \ref{Fig:l293d}) pełni w konstrukcji robota mobilnego rolę pośredniego elementu wykonawczego pomiędzy mikrokontrolerem a silnikami prądu stałego. Jego podstawowym zadaniem jest umożliwienie sterowania kierunkiem obrotów oraz prędkością silników przy jednoczesnym odciążeniu mikrokontrolera od konieczności bezpośredniego dostarczania prądu o odpowiednich parametrach. Zastosowanie dedykowanego sterownika silników jest niezbędne ze względu na ograniczoną wydajność prądową wyjść mikrokontrolera Arduino Uno oraz konieczność separacji obwodów logicznych od obwodów mocy.
+
+L293D jest układem scalonym typu podwójny mostek H, co oznacza, że umożliwia niezależne sterowanie dwoma silnikami prądu stałego lub jednym silnikiem krokowym. Każdy z mostków pozwala na realizację ruchu w obu kierunkach poprzez odpowiednie sterowanie sygnałami logicznymi doprowadzonymi do wejść układu. Zmiana kombinacji stanów logicznych na wejściach sterujących skutkuje zmianą polaryzacji napięcia na wyjściach, a tym samym zmianą kierunku obrotu silnika.
+
+Układ L293D pracuje z dwoma niezależnymi napięciami zasilania. Pierwsze z nich, oznaczane jako $V_{CC1}$, służy do zasilania części logicznej układu i jest zazwyczaj zgodne z poziomem napięcia mikrokontrolera (5 V). Drugie napięcie, $V_{CC2}$, przeznaczone jest do zasilania silników i może osiągać wartość do 36 V, co umożliwia współpracę z szeroką gamą napędów. Maksymalny prąd wyjściowy pojedynczego kanału wynosi około 600 mA, co jest wystarczające dla niewielkich silników użytych w projekcie.
+
+Istotną cechą układu L293D jest obecność wbudowanych diod zabezpieczających, które chronią układ przed przepięciami indukowanymi przez silniki podczas gwałtownych zmian prądu. Dzięki temu możliwe jest uproszczenie schematu elektrycznego oraz zwiększenie niezawodności całego systemu. Dodatkowo układ umożliwia regulację prędkości obrotowej silników poprzez zastosowanie modulacji szerokości impulsu (PWM) na wejściach sterujących, generowanej przez mikrokontroler.
+
+\begin{figure}[ht]%
+ \centering%
+ \includegraphics[width=0.6\textwidth]{figures/l293d.png}%
+ \caption{Układ L293D Źródło: opracowanie autora}%
+ \label{Fig:l293d}%
+\end{figure}
+
+\subsubsection{Silniki oraz koła}
+
+Elementy wykonawcze w postaci silników oraz kół (Rys. \ref{Fig:silnikola}) stanowią podstawowy układ napędowy robota mobilnego i bezpośrednio odpowiadają za jego zdolność do poruszania się w środowisku.
+
+Silniki prądu stałego charakteryzują się prostą zasadą działania, polegającą na wytwarzaniu momentu obrotowego w wyniku oddziaływania pola magnetycznego i prądu płynącego w uzwojeniu wirnika. Zmiana kierunku przepływu prądu powoduje zmianę kierunku obrotów silnika, co umożliwia realizację ruchu robota zarówno do przodu, jak i do tyłu. Regulacja prędkości obrotowej silników realizowana jest poprzez zmianę wartości napięcia zasilającego lub poprzez zastosowanie modulacji szerokości impulsu (PWM).
+
+W celu zwiększenia momentu obrotowego oraz dostosowania charakterystyki napędu do warunków ruchu robota, silniki wyposażone są w przekładnie redukcyjne. Przekładnia umożliwia zmniejszenie prędkości obrotowej przy jednoczesnym zwiększeniu momentu, co jest szczególnie istotne podczas ruszania z miejsca, pokonywania nierówności podłoża oraz manewrowania w ograniczonej przestrzeni. Zastosowanie przekładni wpływa również na poprawę precyzji sterowania ruchem robota.
+
+\begin{figure}[ht]%
+ \centering%
+ \includegraphics[width=0.6\textwidth]{figures/silnikola.png}%
+ \caption{Koło oraz silnik wraz z wyprowadzeniami Źródło: opracowanie autora}%
+ \label{Fig:silnikola}%
+\end{figure}
+
+\subsubsection{Czujnik ultradźwiękowy HC-SR04}
+
+Czujnik ultradźwiękowy HC-SR04 (Rys. \ref{Fig:hcsr04}) stanowi podstawowy element systemu percepcji robota mobilnego i odpowiada za wykrywanie przeszkód znajdujących się w jego bezpośrednim otoczeniu. Zasada działania czujnika HC-SR04 opiera się na pomiarze czasu przelotu fali ultradźwiękowej. Moduł składa się z nadajnika oraz odbiornika akustycznego, pracujących zazwyczaj z częstotliwością około 40~kHz. Po wyzwoleniu pomiaru czujnik emituje krótki impuls ultradźwiękowy, który rozchodzi się w powietrzu, a następnie odbija się od napotkanej przeszkody i powraca do odbiornika. Na podstawie czasu pomiędzy wysłaniem sygnału a jego odebraniem możliwe jest wyznaczenie odległości do obiektu, przy założeniu znanej prędkości rozchodzenia się dźwięku w powietrzu.
+
+Moduł HC-SR04 wyposażony jest w cztery wyprowadzenia: zasilanie, uziemienie, wejście sygnału wyzwalającego (TRIG) oraz wyjście sygnału echa (ECHO). Pomiar realizowany jest poprzez podanie krótkiego impulsu logicznego na pin TRIG, po czym na pinie ECHO generowany jest impuls o długości proporcjonalnej do czasu powrotu fali ultradźwiękowej. Takie rozwiązanie umożliwia łatwą obsługę czujnika za pomocą mikrokontrolera, bez konieczności stosowania skomplikowanych interfejsów komunikacyjnych.
+
+Zakres pomiarowy czujnika HC-SR04 wynosi typowo od kilku centymetrów do około czterech metrów, przy czym najwyższą dokładność uzyskuje się w przedziale od kilkunastu do kilkudziesięciu centymetrów.
+
+\begin{figure}[ht]%
+ \centering%
+ \includegraphics[width=0.8\textwidth]{figures/hcsr04.png}%
+ \caption{Czujnik ultradźwiękowy HC-SR04 Źródło: opracowanie autora}%
+ \label{Fig:hcsr04}%
+\end{figure}
+
+\subsubsection{Element obrotowy MicroServo 9G}
+
+Element obrotowy MicroServo 9G (Rys. \ref{Fig:servo}) stanowi element wykonawczy robota mobilnego, wykorzystywany do realizacji ruchów obrotowych o zadanym zakresie kątowym. W prezentowanej konstrukcji pełni on funkcję mechanizmu pozycjonującego czujnik ultradźwiękowy, umożliwiając zmianę kierunku pomiaru oraz rozszerzenie obszaru percepcji otoczenia bez konieczności stosowania dodatkowych czujników.
+
+MicroServo 9G należy do grupy niewielkich serwomechanizmów modelarskich, charakteryzujących się zwartą konstrukcją, niską masą oraz prostotą sterowania. Wewnątrz obudowy znajduje się silnik prądu stałego, przekładnia redukcyjna oraz układ elektroniczny realizujący sprzężenie zwrotne na podstawie sygnału z potencjometru położenia. Dzięki temu serwomechanizm jest w stanie precyzyjnie ustawić wał wyjściowy w zadanej pozycji kątowej. Sterowanie serwomechanizmem odbywa się za pomocą sygnału PWM o stałej częstotliwości, zazwyczaj wynoszącej około 50~Hz. Informacja o pożądanym położeniu kątowym zawarta jest w szerokości impulsu sterującego, która najczęściej mieści się w zakresie od około 1~ms do 2~ms. Zmiana szerokości impulsu powoduje odpowiednią zmianę kąta obrotu wału serwomechanizmu, zazwyczaj w zakresie od 0° do 180°, w zależności od konkretnego modelu i jego konstrukcji mechanicznej. Serwomechanizm MicroServo 9G zasilany jest napięciem rzędu 4{,}8–6~V i charakteryzuje się stosunkowo niewielkim momentem obrotowym, wystarczającym jednak do napędu lekkich elementów, takich jak czujniki, niewielkie uchwyty czy elementy mechanizmu pomiarowego.
+
+\begin{figure}[ht]%
+ \centering%
+ \includegraphics[width=0.8\textwidth]{figures/servo.png}%
+ \caption{Element obrotowy MicroServo 9G Źródło: opracowanie autora}%
+ \label{Fig:servo}%
+\end{figure}
+
+\subsubsection{Ogniwa litowo-jonowe 18650}
+
+Ogniwa litowo-jonowe typu 18650 (Rys. \ref{Fig:baterie}) stanowią podstawowe źródło zasilania robota mobilnego. Ze względu na korzystny stosunek pojemności do masy oraz szeroką dostępność są one powszechnie stosowane w systemach wbudowanych, urządzeniach przenośnych oraz konstrukcjach robotycznych o niewielkich i średnich wymaganiach energetycznych. Oznaczenie 18650 odnosi się do wymiarów ogniwa, tj. średnicy wynoszącej około 18~mm oraz długości około 65~mm.
+
+Pojedyncze ogniwo litowo-jonowe 18650 charakteryzuje się napięciem nominalnym wynoszącym około 3{,}6–3{,}7~V, przy napięciu maksymalnym rzędu 4{,}2~V oraz minimalnym napięciu rozładowania wynoszącym zazwyczaj około 2{,}5–3{,}0~V, w zależności od producenta i zastosowanego układu zabezpieczeń. Pojemność ogniw tego typu mieści się najczęściej w zakresie od 2000 do 3500~mAh.
+
+Istotną zaletą ogniw 18650 jest możliwość dostarczania stosunkowo dużych prądów. Silniki prądu stałego wykorzystywane w robotach mobilnych generują krótkotrwałe, wysokie prądy rozruchowe, które mogą powodować spadki napięcia w przypadku zastosowania niewystarczająco wydajnego źródła zasilania. Ogniwa litowo-jonowe, w przeciwieństwie do klasycznych baterii alkalicznych, lepiej radzą sobie z takimi obciążeniami dynamicznymi.
+
+Ze względu na specyfikę chemii litowo-jonowej niezbędne jest stosowanie układów zabezpieczających, które chronią ogniwa przed przeładowaniem, nadmiernym rozładowaniem, zwarciem oraz przegrzaniem. W praktyce realizowane jest to poprzez dedykowane moduły BMS (Battery Management System) lub ogniwa wyposażone w zintegrowane układy ochronne. Zastosowanie takich zabezpieczeń ma kluczowe znaczenie dla bezpieczeństwa użytkowania robota oraz trwałości zastosowanego źródła zasilania. W kontekście pracy robota mobilnego istotne znaczenie ma również filtracja i separacja zasilania. Wahania napięcia spowodowane pracą silników mogą negatywnie wpływać na stabilność działania mikrokontrolera oraz czujników. Z tego względu zaleca się stosowanie kondensatorów filtrujących oraz osobnych torów zasilania dla części logicznej i wykonawczej, co zwiększa niezawodność całego systemu.
+
+\begin{figure}[ht]%
+ \centering%
+ \includegraphics[width=0.8\textwidth]{figures/baterie.png}%
+ \caption{Ogniwa litowo-jonowe 18650 Źródło: opracowanie autora}%
+ \label{Fig:baterie}%
+\end{figure}
+
+\subsubsection{Przełącznik kołyskowy}
+
+Przełącznik kołyskowy (Rys. \ref{Fig:baterie}) pełni w konstrukcji robota mobilnego funkcję podstawowego elementu sterowania zasilaniem, umożliwiającego ręczne włączanie i wyłączanie całego układu. Jego zastosowanie pozwala na bezpieczne odłączanie źródła energii od pozostałych komponentów robota bez konieczności fizycznego demontażu baterii, co znacząco zwiększa komfort użytkowania oraz bezpieczeństwo eksploatacji systemu.
+
+\begin{figure}[ht]%
+ \centering%
+ \includegraphics[width=0.8\textwidth]{figures/przel2.png}%
+ \caption{Przełącznik kołyskowy Źródło: opracowanie autora}%
+ \label{Fig:przel2}%
+\end{figure}
+
+\subsection{Wykorzystane materiały}
 
 \subsection{Budowa prototypu robota}
 

@@ -15,5 +15,15 @@
 \contentsline {subsection}{\numberline {2.5}Percepcja otoczenia}{15}{subsection.2.5}%
 \contentsline {subsection}{\numberline {2.6}Zaawansowane metody nawigacji}{17}{subsection.2.6}%
 \contentsline {section}{\numberline {3}Część Praktyczna/fizyczna - zmień nazwę}{20}{section.3}%
-\contentsline {section}{\numberline {4}Część Praktyczna/kodowa - zmień nazwę}{21}{section.4}%
-\contentsline {section}{Literatura}{22}{section.4}%
+\contentsline {subsection}{\numberline {3.1}Komponenty robota}{20}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}Mikrokontroler Arduino Uno}{20}{subsubsection.3.1.1}%
+\contentsline {subsubsection}{\numberline {3.1.2}Sterownik silników L293D}{21}{subsubsection.3.1.2}%
+\contentsline {subsubsection}{\numberline {3.1.3}Silniki oraz koła}{22}{subsubsection.3.1.3}%
+\contentsline {subsubsection}{\numberline {3.1.4}Czujnik ultradźwiękowy HC-SR04}{23}{subsubsection.3.1.4}%
+\contentsline {subsubsection}{\numberline {3.1.5}Element obrotowy MicroServo 9G}{24}{subsubsection.3.1.5}%
+\contentsline {subsubsection}{\numberline {3.1.6}Ogniwa litowo-jonowe 18650}{25}{subsubsection.3.1.6}%
+\contentsline {subsubsection}{\numberline {3.1.7}Przełącznik kołyskowy}{27}{subsubsection.3.1.7}%
+\contentsline {subsection}{\numberline {3.2}Wykorzystane materiały}{27}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Budowa prototypu robota}{27}{subsection.3.3}%
+\contentsline {section}{\numberline {4}Część Praktyczna/kodowa - zmień nazwę}{29}{section.4}%
+\contentsline {section}{Literatura}{30}{section.4}%
