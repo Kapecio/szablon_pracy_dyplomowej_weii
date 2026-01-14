@@ -227,7 +227,7 @@ Arduino Uno obsługuje popularne standardy komunikacyjne, takie jak UART, SPI or
 \begin{figure}[ht]%
  \centering%
  \includegraphics[width=0.6\textwidth]{figures/arduino.png}%
- \caption{Mikrokontroler Arduino Uno Źródło: opracowanie autora}%
+ \caption{Mikrokontroler Arduino Uno}%
  \label{Fig:arduino}%
 \end{figure}
 
@@ -244,7 +244,7 @@ Istotną cechą układu L293D jest obecność wbudowanych diod zabezpieczającyc
 \begin{figure}[ht]%
  \centering%
  \includegraphics[width=0.6\textwidth]{figures/l293d.png}%
- \caption{Układ L293D Źródło: opracowanie autora}%
+ \caption{Układ L293D}%
  \label{Fig:l293d}%
 \end{figure}
 
@@ -259,7 +259,7 @@ W celu zwiększenia momentu obrotowego oraz dostosowania charakterystyki napędu
 \begin{figure}[ht]%
  \centering%
  \includegraphics[width=0.6\textwidth]{figures/silnikola.png}%
- \caption{Koło oraz silnik wraz z wyprowadzeniami Źródło: opracowanie autora}%
+ \caption{Koło oraz silnik wraz z wyprowadzeniami}%
  \label{Fig:silnikola}%
 \end{figure}
 
@@ -274,7 +274,7 @@ Zakres pomiarowy czujnika HC-SR04 wynosi typowo od kilku centymetrów do około 
 \begin{figure}[ht]%
  \centering%
  \includegraphics[width=0.8\textwidth]{figures/hcsr04.png}%
- \caption{Czujnik ultradźwiękowy HC-SR04 Źródło: opracowanie autora}%
+ \caption{Czujnik ultradźwiękowy HC-SR04}%
  \label{Fig:hcsr04}%
 \end{figure}
 
@@ -287,7 +287,7 @@ MicroServo 9G należy do grupy niewielkich serwomechanizmów modelarskich, chara
 \begin{figure}[ht]%
  \centering%
  \includegraphics[width=0.8\textwidth]{figures/servo.png}%
- \caption{Element obrotowy MicroServo 9G Źródło: opracowanie autora}%
+ \caption{Element obrotowy MicroServo 9G}%
  \label{Fig:servo}%
 \end{figure}
 
@@ -304,7 +304,7 @@ Ze względu na specyfikę chemii litowo-jonowej niezbędne jest stosowanie ukła
 \begin{figure}[ht]%
  \centering%
  \includegraphics[width=0.8\textwidth]{figures/baterie.png}%
- \caption{Ogniwa litowo-jonowe 18650 Źródło: opracowanie autora}%
+ \caption{Ogniwa litowo-jonowe 18650}%
  \label{Fig:baterie}%
 \end{figure}
 
@@ -314,21 +314,114 @@ Przełącznik kołyskowy (Rys. \ref{Fig:baterie}) pełni w konstrukcji robota mo
 
 \begin{figure}[ht]%
  \centering%
- \includegraphics[width=0.8\textwidth]{figures/przel2.png}%
- \caption{Przełącznik kołyskowy Źródło: opracowanie autora}%
+ \includegraphics[width=0.5\textwidth]{figures/przel2.png}%
+ \caption{Przełącznik kołyskowy}%
  \label{Fig:przel2}%
 \end{figure}
 
 \subsection{Wykorzystane materiały}
 
+Do budowy robota, oprócz elementów elektronicznych, wykorzystano również materiały konstrukcyjne o charakterze mechanicznym. Podstawę całej konstrukcji stanowi płyta akrylowa (Rys. \ref{Fig:plytka}) o wymiarach 148 × 105 × 3 mm, pełniąca funkcję nośnej platformy montażowej dla pozostałych komponentów systemu. Wybór tego materiału podyktowany był jego niewielką masą, wystarczającą sztywnością, łatwością obróbki oraz brakiem własności przewodzenia prądu.
+
+W celu zapewnienia stabilnego i powtarzalnego położenia czujnika ultradźwiękowego względem osi obrotu serwomechanizmu zastosowano stalowy kątownik montażowy (Rys. \ref{Fig:lacznik}). Element ten został umocowany w odpowiedniej pozycji przy użyciu kleju termotopliwego aplikowanego za pomocą pistoletu do kleju (Rys. \ref{Fig:klej}) oraz dodatkowo zabezpieczony opaską zaciskową. Pomimo zastosowania prostych metod montażu, konstrukcja spełnia założone wymagania funkcjonalne. Klej termotopliwy został wykorzystany również do mocowania silników napędowych, serwomechanizmu oraz czujnika ultradźwiękowego, zapewniając wystarczającą trwałość połączeń przy niewielkim nakładzie czasowym.
+
+Uchwyt na baterie oraz mikrokontroler Arduino Uno zostały zamocowane do płyty akrylowej za pomocą wkrętów. Połączenia elektryczne pomiędzy przewodami zasilającymi a elementami elektronicznymi wykonano przy użyciu bezołowiowej cyny lutowniczej, nanoszonej za pomocą lutownicy ręcznej (Rys. \ref{Fig:lutownica}).
+
+
+\begin{figure}[ht]%
+ \centering%
+ \includegraphics[width=0.5\textwidth]{figures/plytka.png}%
+ \caption{Płytka akrylowa z otworami na wkręty}%
+ \label{Fig:plytka}%
+\end{figure}
+
+\begin{figure}[ht]%
+ \centering%
+ \includegraphics[width=0.5\textwidth]{figures/lacznik.png}%
+ \caption{Stalowy łącznik zamocowany na serwomechanizmie, kątownik zaznaczony czerwonym obramowaniem}%
+ \label{Fig:lacznik}%
+\end{figure}
+
+\begin{figure}[ht]%
+ \centering%
+ \includegraphics[width=0.5\textwidth]{figures/klej.png}%
+ \caption{Pistolet na klej termotopliwy wraz z wkładem}%
+ \label{Fig:klej}%
+\end{figure}
+
+\begin{figure}[ht]%
+ \centering%
+ \includegraphics[width=0.5\textwidth]{figures/lutownica.png}%
+ \caption{Lutownica, cyna bezołowiowa oraz pasta lutownicza}%
+ \label{Fig:lutownica}%
+\end{figure}
+
 \subsection{Budowa prototypu robota}
 
-Przed przystąpieniem do wykonywania właściwego praktycznego projektu zawsze powinno się przygotować prototyp, aby zweryfikować poprawność założeń projektowych oraz uniknąć niepotrzebnych kosztów. Celem pierwszej konstrukcji było spełnienie celu projektu - stworzenie maszyny, która będzie autonomicznie poruszać się w otoczeniu z możliwością omijania przeszkód. Kwestie dokładności wykonania (precyzyjne poziomowanie kół, klejenie komponentów odpowiednią ilością kleju, odpowiednie rozmieszczenie komponentów na płytce) zostały odsunięte do wykonania końcowego projektu robota. W pierwszym prototypie istniały główne założenia:
+Przed przystąpieniem do realizacji właściwego projektu praktycznego zasadnym etapem procesu inżynierskiego jest wykonanie prototypu, którego celem jest weryfikacja przyjętych założeń projektowych oraz identyfikacja potencjalnych problemów konstrukcyjnych na wczesnym etapie prac.
+
+Celem budowy pierwszej wersji robota było potwierdzenie możliwości realizacji głównego założenia projektowego, jakim było stworzenie autonomicznej konstrukcji mobilnej zdolnej do poruszania się w środowisku oraz omijania przeszkód na podstawie danych pozyskiwanych z czujnika ultradźwiękowego. Na etapie prototypowania pominięto zagadnienia związane z estetyką oraz wysoką precyzją wykonania, takie jak dokładne poziomowanie kół, docelowe rozmieszczenie komponentów czy optymalizacja sposobu ich montażu. Elementy te zostały zaplanowane do dopracowania w finalnej wersji robota.
+
+Podczas projektowania i budowy prototypu przyjęto następujące podstawowe założenia:
 \begin{enumerate}
-\item Robot ma spełniać cel projektu.
-\item Rozmieszczenie komponentów na płytce nie może przenosić środka ciężkości robota poza środek geometryczny konstrukcji (mogłoby to doprowadzić do niezachowania równowagi przy wykonywaniu manewrów).
+\item Prototyp robota musi umożliwiać realizację funkcji autonomicznego poruszania się oraz skutecznego omijania przeszkód, zgodnie z celem projektu.
+\item Rozmieszczenie komponentów na płycie konstrukcyjnej nie może powodować przesunięcia środka ciężkości robota poza geometryczny środek konstrukcji, co mogłoby prowadzić do utraty stabilności oraz pogorszenia jakości manewrów ruchu.
 \end{enumerate}
 
+\subsubsection{Lutowanie wyprowadzeń silników}
+
+W pierwszym etapie montażu przeprowadzone zostało łączenie wyprowadzeń silników z kablami (Rys. \ref{Fig:lutowanie1}). Wykonanie tego kroku przed połączeniem silników z podstawą akrylową jest wysoce wskazane ze względu na znacznie większą swobodę wykonywania ruchów lutownicą. 
+
+\begin{figure}[ht]%
+ \centering%
+ \includegraphics[width=0.8\textwidth]{figures/lutowanie1.png}%
+ \caption{Łączenie wyprowadzeń silników z kablami}%
+ \label{Fig:lutowanie1}%
+\end{figure}
+
+\subsubsection{Montaż silników oraz kół}
+
+Silniki zostały zamocowane symetrycznie względem środka geometrycznego robota, przy rogach platformy (Rys. \ref{Fig:kola}). Ich położenie dobrano w taki sposób, aby oś obrotu kół znajdowała się możliwie blisko tylnej krawędzi płyty nośnej, co zwiększa stabilność robota podczas jazdy oraz ułatwia wykonywanie manewrów skrętu. Do mocowania silników wykorzystano klej termotopliwy, który zapewnia wystarczającą sztywność połączenia przy jednoczesnym zachowaniu możliwości względnie łatwego demontażu w przypadku modyfikacji konstrukcji. Koła zostały osadzone bezpośrednio na wałach silników.
+
+\begin{figure}[ht]%
+ \centering%
+ \includegraphics[width=0.8\textwidth]{figures/kola.png}%
+ \caption{Montaż silników z kołami}%
+ \label{Fig:kola}%
+\end{figure}
+
+\subsubsection{Montaż mikrokontrolera Arduino Uno}
+
+Płytka Arduino Uno została zamocowana do płyty akrylowej konstrukcji nośnej za pomocą wkrętów dystansowych, co pozwoliło na jej uniesienie ponad powierzchnię podstawy (Rys. \ref{Fig:arduinomontaz}). Takie rozwiązanie minimalizuje ryzyko zwarć elektrycznych, umożliwia swobodny przepływ powietrza pod płytką oraz ułatwia prowadzenie przewodów połączeniowych. Otwory montażowe znajdujące się w narożnikach płytki mikrokontrolera zostały wykorzystane zgodnie z ich przeznaczeniem, co dodatkowo zwiększyło sztywność całego mocowania.
+
+Orientacja mikrokontrolera została dobrana w sposób umożliwiający wygodny dostęp do portu USB oraz złącza zasilania, co znacząco ułatwiało proces programowania oraz diagnostyki układu bez konieczności demontażu robota. Dodatkowo zachowano odpowiednie odstępy pomiędzy mikrokontrolerem a pozostałymi komponentami elektronicznymi, aby zapewnić przejrzystość połączeń.
+
+\begin{figure}[ht]%
+ \centering%
+ \includegraphics[width=0.8\textwidth]{figures/arduinomontaz.png}%
+ \caption{Montaż mikrokontrolera Arduino Uno}%
+ \label{Fig:arduinomontaz}%
+\end{figure}
+
+\subsubsection{Montaż osłony L293D}
+
+Osłona L293D została zamontowana bezpośrednio na mikrokontrolerze Arduino Uno (Rys. \ref{Fig:l293dmontaz}). Moduł ten został zaprojektowany z myślą o ścisłej współpracy z płytkami Arduino, co umożliwia ich bezpośrednie połączenie bez konieczności stosowania dodatkowych przewodów połączeniowych. Rozmieszczenie wyprowadzeń osłony jednoznacznie determinuje sposób jej instalacji na płytce mikrokontrolera. Podczas montażu należy zwrócić uwagę na prawidłowe dopasowanie złączy pinowych, tak aby gniazda obu płytek pokrywały się ze sobą (Rys. \ref{Fig:l293dlaczenie}).
+
+\begin{figure}[ht]%
+ \centering%
+ \includegraphics[width=0.8\textwidth]{figures/l293dmontaz.png}%
+ \caption{Montaż osłony L293D}%
+ \label{Fig:l293dmontaz}%
+\end{figure}
+
+\begin{figure}[ht]%
+ \centering%
+ \includegraphics[width=0.8\textwidth]{figures/l293dlaczenie.png}%
+ \caption{Sposób łączenia płytki Arduino Uno z L293D}%
+ \label{Fig:l293dlaczenie}%
+\end{figure}
+
+\subsubsection{Montaż osłony L293D}
 
 \section{Część Praktyczna/kodowa - zmień nazwę}
 \clearpage
