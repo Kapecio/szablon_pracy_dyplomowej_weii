@@ -14,7 +14,7 @@
 \contentsline {subsubsection}{\numberline {2.4.1}Sterowanie silnikami robota}{16}{subsubsection.2.4.1}%
 \contentsline {subsection}{\numberline {2.5}Percepcja otoczenia}{16}{subsection.2.5}%
 \contentsline {subsection}{\numberline {2.6}Zaawansowane metody nawigacji}{18}{subsection.2.6}%
-\contentsline {section}{\numberline {3}Część Praktyczna/fizyczna - zmień nazwę}{21}{section.3}%
+\contentsline {section}{\numberline {3}Montaż robota}{21}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Komponenty robota}{21}{subsection.3.1}%
 \contentsline {subsubsection}{\numberline {3.1.1}Mikrokontroler Arduino Uno}{21}{subsubsection.3.1.1}%
 \contentsline {subsubsection}{\numberline {3.1.2}Sterownik silników L293D}{22}{subsubsection.3.1.2}%
@@ -29,5 +29,10 @@
 \contentsline {subsubsection}{\numberline {3.3.2}Montaż silników oraz kół}{31}{subsubsection.3.3.2}%
 \contentsline {subsubsection}{\numberline {3.3.3}Montaż mikrokontrolera Arduino Uno}{31}{subsubsection.3.3.3}%
 \contentsline {subsubsection}{\numberline {3.3.4}Montaż osłony L293D}{33}{subsubsection.3.3.4}%
-\contentsline {section}{\numberline {4}Część Praktyczna/kodowa - zmień nazwę}{35}{section.4}%
-\contentsline {section}{Literatura}{36}{section.4}%
+\contentsline {subsubsection}{\numberline {3.3.5}Montaż uchwytu na baterie}{34}{subsubsection.3.3.5}%
+\contentsline {subsubsection}{\numberline {3.3.6}Montaż ogniw zasilających}{34}{subsubsection.3.3.6}%
+\contentsline {subsubsection}{\numberline {3.3.7}Montaż serwomechanizmu z kątownikiem}{35}{subsubsection.3.3.7}%
+\contentsline {subsubsection}{\numberline {3.3.8}Montaż czujnika ultradźwiękowego odległości}{36}{subsubsection.3.3.8}%
+\contentsline {subsubsection}{\numberline {3.3.9}Schemat połączeń robota}{36}{subsubsection.3.3.9}%
+\contentsline {section}{\numberline {4}Kod programu}{38}{section.4}%
+\contentsline {section}{Literatura}{39}{section.4}%

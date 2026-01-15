@@ -201,7 +201,7 @@ Pomimo licznych zalet, implementacja zaawansowanych metod lokalizacji i nawigacj
 
 Z tego względu często świadomie rezygnuje się z implementacji pełnych algorytmów SLAM na rzecz uproszczonych metod nawigacji. Takie podejście umożliwia koncentrację na zagadnieniach integracji czujników, projektowania algorytmów sterowania ruchem oraz eksperymentalnej analizie zachowania robota w rzeczywistym środowisku. Jednocześnie znajomość zaawansowanych metod lokalizacji i nawigacji stanowi istotne zaplecze teoretyczne, pozwalające właściwie ocenić możliwości oraz ograniczenia prostych rozwiązań stosowanych w systemach o ograniczonych zasobach.
 
-\section{Część Praktyczna/fizyczna - zmień nazwę}
+\section{Montaż robota}
 
 Punktem kulminacyjnym realizacji całej pracy inżynierskiej jest zbudowanie fizycznej podstawy robota. Zadaniem robota jest omijanie przeszkód, na podstawie wykrywania ich w czasie rzeczywistym. Robot nie tworzy na bieżąco mapy otoczenia, jedynie reaguje na przeszkody pojawiające się w zasięgu czujnika ultradźwiękowego. Cała konstrukcja robota oparta jest na płycie akrylowej. Robot składa się z następujących komponentów:
 \begin{itemize}
@@ -409,21 +409,81 @@ Osłona L293D została zamontowana bezpośrednio na mikrokontrolerze Arduino Uno
 
 \begin{figure}[ht]%
  \centering%
- \includegraphics[width=0.8\textwidth]{figures/l293dmontaz.png}%
+ \includegraphics[width=0.6\textwidth]{figures/l293dmontaz.png}%
  \caption{Montaż osłony L293D}%
  \label{Fig:l293dmontaz}%
 \end{figure}
 
 \begin{figure}[ht]%
  \centering%
- \includegraphics[width=0.8\textwidth]{figures/l293dlaczenie.png}%
+ \includegraphics[width=0.6\textwidth]{figures/l293dlaczenie.png}%
  \caption{Sposób łączenia płytki Arduino Uno z L293D}%
  \label{Fig:l293dlaczenie}%
 \end{figure}
 
-\subsubsection{Montaż osłony L293D}
+\subsubsection{Montaż uchwytu na baterie}
 
-\section{Część Praktyczna/kodowa - zmień nazwę}
+Uchwyt na baterie został zamontowany w pobliżu mikrokontrolera Arduino Uno (Rys. \ref{Fig:holdermontaz}), ponieważ zasilanie musi być połączone z nakładką płytki Arduino, skąd energia jest dystrybuowana do pozostałych komponentów. Baterie celowo zostały umieszczone nieintuicyjnie po przeciwnej stronie wejść zasilania, co umożliwiło wykorzystanie kabli o domyślnej długości bez konieczności ówczesnej obróbki złączy. Zastosowanie krótszych kabli w przypadku umieszczenia zasilania po przeciwnej stronie mikrokontrolera jest jak najbardziej zasadne, pod warunkiem poprawnego wykonania połączenia. Należy mieć na uwadze fakt, aby przewody nie były napięte oraz nie były poddawane nadmiernym zgięciom, gdyż może to doprowadzić do przerwania kabli.
+
+\begin{figure}[ht]%
+ \centering%
+ \includegraphics[width=0.6\textwidth]{figures/holdermontaz.png}%
+ \caption{Montaż uchwytu na baterie}%
+ \label{Fig:holdermontaz}%
+\end{figure}
+
+\subsubsection{Montaż ogniw zasilających}
+
+Baterie, zasilające cały układ, zostały umieszczone w uchwycie na baterie (Rys. \ref{Fig:bateriemontaz}). Czerpanie energii z baterii odbywa się za pośrednictwem metalowych blaszek zlokalizowanych na brzegach uchwytu. Technicznie, możliwe jest połączenie bezpośrednio z ogniwami, natomiast jest to silnie odradzana czynność ze względu na możliwe poprzez naruszenie struktury ogniwa nagłe uwolnienie energii w postaci eksplozji. Autor używa ogniw z zabezpieczeniem przepięciowym, co niweluje konsekwencje w przypadku błędnego podłączenia zasilania do układu. Przy wykorzystaniu niezabezpieczonych ogniw, niepoprawne połączenie może skutkować zwarciem. Użyty uchwyt na baterie posiada specjalne oznaczenia, odnoszące się do prawidłowego rozmieszczenia polaryzacji baterii (Rys. \ref{Fig:holderclose}).
+
+\begin{figure}[ht]%
+ \centering%
+ \includegraphics[width=0.6\textwidth]{figures/bateriemontaz.png}%
+ \caption{Montaż baterii}%
+ \label{Fig:bateriemontaz}%
+\end{figure}
+
+\begin{figure}[ht]%
+ \centering%
+ \includegraphics[width=0.6\textwidth]{figures/holderclose.png}%
+ \caption{Oznaczenie biegunów na uchwycie (czerwone symbole dorysowane nad faktycznymi symbolami)}%
+ \label{Fig:holderclose}%
+\end{figure}
+
+\subsubsection{Montaż serwomechanizmu z kątownikiem}
+
+Serwomechanizm z kątownikiem umieszczony został w części, przyjętej przez autora we wstępnym projekcie jako "przednią część robota" (Rys. \ref{Fig:bateriemontaz}). To stwierdzenie jest czysto względne, ponieważ przód mógłby się znajdować po przeciwnej stronie robota. Ważnym założeniem jest, aby serwomechanizm znajdował się w osi poruszania robota oraz był domyślnie zwrócony ku kierunkowi poruszania. W takim przypadku, do poprawnego działania robota koniecznym byłoby odwrócenie polaryzacji silników, tzn. odwrotne połączenie z płytką L293D lub zmiany w kodzie programu. Serwomechanizm przyklejony został do podstawy akrylowej warstwą kleju termotopliwego.
+
+\begin{figure}[ht]%
+ \centering%
+ \includegraphics[width=0.6\textwidth]{figures/servomontaz.png}%
+ \caption{Montaż serwomechanizmu}%
+ \label{Fig:servomontaz}%
+\end{figure}
+
+\subsubsection{Montaż czujnika ultradźwiękowego odległości}
+
+Czujnik ultradźwiękowy odległości HC-SR04 umieszczony został na przygotowanym kątowniku przykręconym do serwomechanizmu (Rys. \ref{Fig:hcsr04montaz}). Czujnik został przyklejony klejem termotopliwym do konstrukcji w miejscu łączenia kabli, ze względu na dużą płaską powierzchnię. Używanie kleju bezpośrednio na czujniku nie jest wskazane. Sposobami montażu czujnika wartymi wspomnienia są również użycie trwalszego kleju, wprowadzenie innej formy podstawy dla czujnika lub wykorzystanie opaski uciskowej.
+
+\begin{figure}[ht]%
+ \centering%
+ \includegraphics[width=0.6\textwidth]{figures/hcsr04montaz.png}%
+ \caption{Montaż czujnika ultradźwiękowego odległości HC-SR04}%
+ \label{Fig:hcsr04montaz}%
+\end{figure}
+
+\subsubsection{Schemat połączeń robota}
+
+Schemat połączeń robota (Rys. \ref{Fig:schemat}) ilustruje wszystkie połączenia wykonane w projekcie. Kolorem czerwonym oznaczone zostały połączenia o dodatnim potencjale, czarnym zaś przewody uziemiające. Ogniwa podłączone zostały poprzez przełącznik kołyskowy do zasilania układu, skąd z portów M1, M2, M3, M4 wychodzą wyprowadzenia silników. Serwomechanizm został wpięty do dedykowanego pinu SER1. Czujnik ultradźwiękowy odległości wpięto do zasilania oraz uziemienia, przy czym ten czujnik posiada dwa dodatkowe wyprowadzenia. Wyzwalacz oznaczony symbolem TRIG został przypisany portowi funkcyjnemu A0, natomiast nasłuch oznaczony jako ECHO do portu A1.
+
+\begin{figure}[ht]%
+ \centering%
+ \includegraphics[width=1\textwidth]{figures/schemat.png}%
+ \caption{Schemat ideowy robota}%
+ \label{Fig:schemat}%
+\end{figure}
+
+\section{Kod programu}
 \clearpage
 
 \addcontentsline{toc}{section}{Literatura}

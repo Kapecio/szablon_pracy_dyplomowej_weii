@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.12.8)  13 JAN 2026 20:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.12.8)  15 JAN 2026 10:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1020,7 +1020,7 @@ Package hyperref Info: Link coloring OFF on input line 47.
 \@outlinefile=\write5
 \openout5 = `weiiszablon.out'.
 
-<auxiliary/logoweii.jpg, id=133, 400.1349pt x 117.67966pt>
+<auxiliary/logoweii.jpg, id=153, 400.1349pt x 117.67966pt>
 File: auxiliary/logoweii.jpg Graphic file (type jpg)
 <use auxiliary/logoweii.jpg>
 Package pdftex.def Info: auxiliary/logoweii.jpg  used on input line 50.
@@ -1082,14 +1082,14 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2.
-)
+
+Underfull \vbox (badness 2302) has occurred while \output is active []
+
+ [3])
 \tf@toc=\write6
 \openout6 = `weiiszablon.toc'.
 
 
-Underfull \vbox (badness 2521) has occurred while \output is active []
-
- [3]
 [4] [5
 
 ]
@@ -1161,21 +1161,21 @@ Underfull \vbox (badness 1137) has occurred while \output is active []
 [20] [21
 
 ]
-<figures/arduino.png, id=334, 1004.25188pt x 713.66624pt>
+<figures/arduino.png, id=359, 1004.25188pt x 713.66624pt>
 File: figures/arduino.png Graphic file (type png)
 <use figures/arduino.png>
 Package pdftex.def Info: figures/arduino.png  used on input line 229.
 (pdftex.def)             Requested size: 264.61333pt x 188.04257pt.
  [22{C:/Users/Kacper/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc
 } <./figures/arduino.png>]
-<figures/l293d.png, id=342, 941.01563pt x 709.14937pt>
+<figures/l293d.png, id=367, 941.01563pt x 709.14937pt>
 File: figures/l293d.png Graphic file (type png)
 <use figures/l293d.png>
 Package pdftex.def Info: figures/l293d.png  used on input line 246.
 (pdftex.def)             Requested size: 264.61333pt x 199.4153pt.
  [23{C:/Users/Kacper/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit
 .enc} <./figures/l293d.png>]
-<figures/silnikola.png, id=351, 1160.83687pt x 1055.44313pt>
+<figures/silnikola.png, id=376, 1160.83687pt x 1055.44313pt>
 File: figures/silnikola.png Graphic file (type png)
 <use figures/silnikola.png>
 Package pdftex.def Info: figures/silnikola.png  used on input line 261.
@@ -1184,7 +1184,7 @@ Package pdftex.def Info: figures/silnikola.png  used on input line 261.
 Underfull \vbox (badness 1946) has occurred while \output is active []
 
  [24 <./figures/silnikola.png>]
-<figures/hcsr04.png, id=358, 1160.83687pt x 660.96938pt>
+<figures/hcsr04.png, id=383, 1160.83687pt x 660.96938pt>
 File: figures/hcsr04.png Graphic file (type png)
 <use figures/hcsr04.png>
 Package pdftex.def Info: figures/hcsr04.png  used on input line 276.
@@ -1195,7 +1195,7 @@ LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 2
 (C:\Users\Kacper\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [25 <./figures/hcsr04.png>]
-<figures/servo.png, id=366, 1160.83687pt x 641.39626pt>
+<figures/servo.png, id=391, 1160.83687pt x 641.39626pt>
 File: figures/servo.png Graphic file (type png)
 <use figures/servo.png>
 Package pdftex.def Info: figures/servo.png  used on input line 289.
@@ -1207,34 +1207,34 @@ Overfull \hbox (7.08856pt too wide) in paragraph at lines 300--301
 za-si-la-nia. Ogniwa litowo-jonowe,
  []
 
-<figures/baterie.png, id=374, 1013.28563pt x 639.89063pt>
+<figures/baterie.png, id=399, 1013.28563pt x 639.89063pt>
 File: figures/baterie.png Graphic file (type png)
 <use figures/baterie.png>
 Package pdftex.def Info: figures/baterie.png  used on input line 306.
 (pdftex.def)             Requested size: 352.81552pt x 222.80316pt.
 [27 <./figures/baterie.png>]
-<figures/przel2.png, id=380, 239.39438pt x 199.49532pt>
+<figures/przel2.png, id=405, 239.39438pt x 199.49532pt>
 File: figures/przel2.png Graphic file (type png)
 <use figures/przel2.png>
 Package pdftex.def Info: figures/przel2.png  used on input line 317.
 (pdftex.def)             Requested size: 220.50887pt x 183.75706pt.
  [28 <./figures/przel2.png>]
-<figures/plytka.png, id=395, 999.735pt x 760.34062pt>
+<figures/plytka.png, id=420, 999.735pt x 760.34062pt>
 File: figures/plytka.png Graphic file (type png)
 <use figures/plytka.png>
 Package pdftex.def Info: figures/plytka.png  used on input line 333.
 (pdftex.def)             Requested size: 220.50887pt x 167.70471pt.
-<figures/lacznik.png, id=396, 1160.83687pt x 641.39626pt>
+<figures/lacznik.png, id=421, 1160.83687pt x 641.39626pt>
 File: figures/lacznik.png Graphic file (type png)
 <use figures/lacznik.png>
 Package pdftex.def Info: figures/lacznik.png  used on input line 340.
 (pdftex.def)             Requested size: 220.50887pt x 121.83719pt.
-<figures/klej.png, id=397, 1540.25438pt x 1118.67938pt>
+<figures/klej.png, id=422, 1540.25438pt x 1118.67938pt>
 File: figures/klej.png Graphic file (type png)
 <use figures/klej.png>
 Package pdftex.def Info: figures/klej.png  used on input line 347.
 (pdftex.def)             Requested size: 220.50887pt x 160.14746pt.
-<figures/lutownica.png, id=398, 1531.22063pt x 912.40875pt>
+<figures/lutownica.png, id=423, 1531.22063pt x 912.40875pt>
 File: figures/lutownica.png Graphic file (type png)
 <use figures/lutownica.png>
 Package pdftex.def Info: figures/lutownica.png  used on input line 354.
@@ -1243,51 +1243,89 @@ Package pdftex.def Info: figures/lutownica.png  used on input line 354.
 Underfull \vbox (badness 4713) has occurred while \output is active []
 
  [30 <./figures/klej.png> <./figures/lutownica.png>]
-<figures/lutowanie1.png, id=412, 713.66624pt x 443.40656pt>
+<figures/lutowanie1.png, id=437, 713.66624pt x 443.40656pt>
 File: figures/lutowanie1.png Graphic file (type png)
 <use figures/lutowanie1.png>
 Package pdftex.def Info: figures/lutowanie1.png  used on input line 377.
 (pdftex.def)             Requested size: 352.81552pt x 219.20613pt.
-<figures/kola.png, id=414, 767.86874pt x 372.64218pt>
+<figures/kola.png, id=439, 767.86874pt x 372.64218pt>
 File: figures/kola.png Graphic file (type png)
 <use figures/kola.png>
 Package pdftex.def Info: figures/kola.png  used on input line 388.
 (pdftex.def)             Requested size: 352.81552pt x 171.22415pt.
  [31 <./figures/lutowanie1.png>]
-<figures/arduinomontaz.png, id=424, 590.205pt x 493.845pt>
+<figures/arduinomontaz.png, id=449, 590.205pt x 493.845pt>
 File: figures/arduinomontaz.png Graphic file (type png)
 <use figures/arduinomontaz.png>
 Package pdftex.def Info: figures/arduinomontaz.png  used on input line 401.
 (pdftex.def)             Requested size: 352.81552pt x 295.21663pt.
 
 [32 <./figures/kola.png> <./figures/arduinomontaz.png>]
-<figures/l293dmontaz.png, id=431, 638.385pt x 487.8225pt>
+<figures/l293dmontaz.png, id=456, 638.385pt x 487.8225pt>
 File: figures/l293dmontaz.png Graphic file (type png)
 <use figures/l293dmontaz.png>
 Package pdftex.def Info: figures/l293dmontaz.png  used on input line 412.
-(pdftex.def)             Requested size: 352.81552pt x 269.60582pt.
-<figures/l293dlaczenie.png, id=432, 1541.76pt x 1160.83687pt>
+(pdftex.def)             Requested size: 264.61333pt x 202.20436pt.
+<figures/l293dlaczenie.png, id=457, 1541.76pt x 1160.83687pt>
 File: figures/l293dlaczenie.png Graphic file (type png)
 <use figures/l293dlaczenie.png>
 Package pdftex.def Info: figures/l293dlaczenie.png  used on input line 419.
-(pdftex.def)             Requested size: 352.81552pt x 265.64067pt.
- [33 <./figures/l293dmontaz.png>] [34 <./figures/l293dlaczenie.png>] [35
+(pdftex.def)             Requested size: 264.61333pt x 199.23494pt.
+ [33 <./figures/l293dmontaz.png> <./figures/l293dlaczenie.png>]
+<figures/holdermontaz.png, id=465, 626.34pt x 565.36218pt>
+File: figures/holdermontaz.png Graphic file (type png)
+<use figures/holdermontaz.png>
+Package pdftex.def Info: figures/holdermontaz.png  used on input line 430.
+(pdftex.def)             Requested size: 264.61333pt x 238.85664pt.
+<figures/bateriemontaz.png, id=468, 575.14874pt x 519.44063pt>
+File: figures/bateriemontaz.png Graphic file (type png)
+<use figures/bateriemontaz.png>
+Package pdftex.def Info: figures/bateriemontaz.png  used on input line 441.
+(pdftex.def)             Requested size: 264.61333pt x 238.98521pt.
+ [34 <./figures/holdermontaz.png>]
+<figures/holderclose.png, id=476, 1541.76pt x 1160.83687pt>
+File: figures/holderclose.png Graphic file (type png)
+<use figures/holderclose.png>
+Package pdftex.def Info: figures/holderclose.png  used on input line 448.
+(pdftex.def)             Requested size: 264.61333pt x 199.23494pt.
 
-] [36
+[35 <./figures/bateriemontaz.png> <./figures/holderclose.png>]
+<figures/servomontaz.png, id=483, 447.92343pt x 385.44pt>
+File: figures/servomontaz.png Graphic file (type png)
+<use figures/servomontaz.png>
+Package pdftex.def Info: figures/servomontaz.png  used on input line 459.
+(pdftex.def)             Requested size: 264.61333pt x 227.70757pt.
+<figures/hcsr04montaz.png, id=485, 584.1825pt x 402.00188pt>
+File: figures/hcsr04montaz.png Graphic file (type png)
+<use figures/hcsr04montaz.png>
+Package pdftex.def Info: figures/hcsr04montaz.png  used on input line 470.
+(pdftex.def)             Requested size: 264.61333pt x 182.0953pt.
+<figures/schemat.png, id=487, 529.22719pt x 338.76563pt>
+File: figures/schemat.png Graphic file (type png)
+<use figures/schemat.png>
+Package pdftex.def Info: figures/schemat.png  used on input line 481.
+(pdftex.def)             Requested size: 441.01773pt x 282.30226pt.
+
+Underfull \vbox (badness 2351) has occurred while \output is active []
+
+ [36 <./figures/servomontaz.png>] [37 <./figures/hcsr04montaz.png> <./figures/s
+chemat.png>] [38
+
+] [39
 
 
-] [37]
-Overfull \hbox (14.2264pt too wide) in paragraph at lines 568--568
+] [40]
+Overfull \hbox (14.2264pt too wide) in paragraph at lines 630--630
 [][]| 
  []
 
 
-Overfull \hbox (14.2264pt too wide) in paragraph at lines 568--568
+Overfull \hbox (14.2264pt too wide) in paragraph at lines 630--630
 [][]| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 568--568
+Underfull \hbox (badness 10000) in paragraph at lines 630--630
 [][]
  []
 
@@ -1295,28 +1333,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 568--568
 Package caption Warning: Unused \captionsetup[lstlisting] on input line 176.
 See the caption package documentation for explanation.
 
-[38
+[41
 
 ] (weiiszablon.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `weiiszablon.out' has not changed.
-(rerunfilecheck)             Checksum: 47D5F3A82A4A45B11B6FD55309B86EF5;7041.
+(rerunfilecheck)             Checksum: A05EE9987E2B4739561BD85CC5754F06;7919.
  ) 
 Here is how much of TeX's memory you used:
- 27599 strings out of 474485
- 500326 string characters out of 5743262
+ 27673 strings out of 474485
+ 502095 string characters out of 5743262
  1938542 words of memory out of 5000000
- 49296 multiletter control sequences out of 15000+600000
+ 49356 multiletter control sequences out of 15000+600000
  623712 words of font info for 82 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,13n,107p,1380b,1989s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,13n,107p,1380b,2025s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Kacper/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.p
 fb><C:/Users/Kacper/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.
 pfb><C:/Users/Kacper/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12
@@ -1327,9 +1361,9 @@ pfb><C:/Users/Kacper/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12
 .pfb><C:/Users/Kacper/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.
 pfb><C:/Users/Kacper/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.p
 fb>
-Output written on weiiszablon.pdf (38 pages, 26087879 bytes).
+Output written on weiiszablon.pdf (41 pages, 34016815 bytes).
 PDF statistics:
- 537 PDF objects out of 1000 (max. 8388607)
- 117 named destinations out of 1000 (max. 500000)
- 354 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 595 PDF objects out of 1000 (max. 8388607)
+ 131 named destinations out of 1000 (max. 500000)
+ 424 words of extra memory for PDF output out of 10000 (max. 10000000)
 
