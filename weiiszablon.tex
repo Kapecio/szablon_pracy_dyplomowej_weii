@@ -41,7 +41,7 @@
 \abstractEN{Objective: To create a mobile robot that can avoid obstacles and navigate autonomously within its environment. Scope of work: Designing a robot platform with motors and ultrasonic sensors for obstacle detection; programming an algorithm for obstacle avoidance and navigation within the environment; and the potential for expansion with target tracking or return-to-base functionality. Testing the robot in various scenarios, such as obstacle avoidance and navigating along a defined route.}
 
 \keywords{Arduino Uno, Robot mobilny, Czujnik HC-SR04, Czujnik Ultradźwiękowy Odległości}
-\keywordsEN{Arduino Uno, Mobile robot, HC-SR04 sensor, Ultrasonic distance sensor}
+\keywordsEN{Arduino Uno, Mobile robot, HC-SR04 sensor, Ultrasonic Distance Sensor}
 
 
 \begin{document}
@@ -77,9 +77,11 @@ Celem niniejszej pracy jest zaprojektowanie i wykonanie autonomicznego robota mo
 
 \section{Zakres teoretyczny z dziedziny robotyki}
 
-Coś tam
+Robotyka mobilna stanowi jedną z kluczowych dziedzin współczesnej automatyki i mechatroniki, łącząc zagadnienia z zakresu mechaniki, elektroniki, informatyki oraz teorii sterowania. Jej przedmiotem są systemy zdolne do samodzielnego przemieszczania się w przestrzeni oraz podejmowania decyzji na podstawie informacji pozyskiwanych z otoczenia. W zależności od stopnia autonomii oraz złożoności środowiska pracy roboty mobilne mogą realizować zarówno proste zadania reaktywne, jak i zaawansowane algorytmy nawigacji i planowania ruchu.
 
-\subsection{Przegląd stanu wiedzy i techniki w zakresie robotów mobilnych}
+Zakres teoretyczny niniejszej pracy obejmuje wybrane zagadnienia niezbędne do zrozumienia zasad działania autonomicznego robota mobilnego o prostej strukturze sprzętowej. Szczególny nacisk położono na aspekty związane z kinematyką ruchu, podstawowymi metodami sterowania napędem oraz wykorzystaniem czujników odległości w procesie omijania przeszkód. Omówione zagadnienia stanowią teoretyczne uzasadnienie przyjętych rozwiązań konstrukcyjnych i programowych, a jednocześnie wyznaczają ramy dla dalszych rozważań projektowych i implementacyjnych.
+
+\subsection{Przegląd stanu wiedzy w zakresie robotów mobilnych}
 
 Postęp technologiczny w obszarze robotyki mobilnej, obserwowany w ostatnich dekadach, doprowadził do wykształcenia się wielu zróżnicowanych podejść konstrukcyjnych oraz algorytmicznych. Dobór konkretnego rozwiązania zależy przede wszystkim od przeznaczenia robota, charakterystyki środowiska pracy oraz dostępnych zasobów sprzętowych i obliczeniowych. Jak podkreśla się w literaturze przedmiotu, pomimo dynamicznego rozwoju systemów autonomicznych i algorytmów sztucznej inteligencji, w dalszym ciągu istotną rolę odgrywają rozwiązania proste i deterministyczne, szczególnie w systemach o charakterze edukacyjnym oraz prototypowym \cite{educationalRoboticsOverview}.
 
@@ -96,7 +98,7 @@ Istotnym elementem wpływającym na skuteczność autonomii robota mobilnego jes
 W algorytmach nawigacji reaktywnej powszechnie stosowane są czujniki ultradźwiękowe, cenione za prostą zasadę działania oraz łatwość integracji z popularnymi mikrokontrolerami. Badania porównawcze czujników odległości wskazują, że dokładność pomiarów ultradźwiękowych jest wystarczająca do wykrywania przeszkód o rozmiarach porównywalnych z wymiarami robota, jednak ulega pogorszeniu w przypadku powierzchni pochłaniających fale akustyczne lub ustawionych pod znacznym kątem względem osi pomiaru\cite{ultrasonicSensorComparison}. Z tego względu zaleca się stosowanie odpowiednich marginesów bezpieczeństwa w algorytmach decyzyjnych oraz filtrację wyników pomiarów w celu zwiększenia odporności systemu na błędne odczyty\cite{sensorFiltering}.
 
 \subsubsection{Technologia mapowania SLAM}
-W bardziej zaawansowanych systemach robotów mobilnych stosowane są techniki lokalizacji i mapowania jednoczesnego (SLAM), wykorzystujące dane z czujników LiDARowych\footnote{LiDAR (Light Detection and Ranging) - metoda pomiarowa używana do określania precyzyjnego dystansu obiektu.}, kamer wizyjnych oraz jednostek inercyjnych. Metody te umożliwiają jednoczesną budowę mapy otoczenia oraz precyzyjne określanie położenia robota, jednak wiążą się z wysokimi wymaganiami obliczeniowymi oraz znaczną złożonością implementacyjną\cite{slamOverview}. Jak podkreśla Thrun, implementacja algorytmów SLAM w systemach edukacyjnych jest często nieuzasadniona, gdyż poziom skomplikowania może przesłaniać podstawowe zagadnienia inżynierskie, takie jak sterowanie ruchem czy integracja czujników\cite{thrunSLAM}.
+W bardziej zaawansowanych systemach robotów mobilnych stosowane są techniki lokalizacji i mapowania jednoczesnego (SLAM), wykorzystujące dane z czujników LiDARowych\footnote{LiDAR (Light Detection and Ranging) - metoda pomiarowa używana do określania precyzyjnego dystansu obiektu.}, kamer wizyjnych oraz jednostek inercyjnych. Metody te umożliwiają jednoczesną budowę mapy otoczenia oraz precyzyjne określanie położenia robota, jednak wiążą się z wysokimi wymaganiami obliczeniowymi oraz znaczną złożonością implementacyjną \cite{slamOverview}. Jak podkreśla Thrun, implementacja algorytmów SLAM w systemach edukacyjnych jest często nieuzasadniona, gdyż poziom skomplikowania może przesłaniać podstawowe zagadnienia inżynierskie, takie jak sterowanie ruchem czy integracja czujników\cite{thrunSLAM}.
 
 \subsection{Klasyfikacja i architektura robotów mobilnych}
 
@@ -297,7 +299,7 @@ Ogniwa litowo-jonowe typu 18650 (Rys. \ref{Fig:baterie}) stanowią podstawowe ź
 
 Pojedyncze ogniwo litowo-jonowe 18650 charakteryzuje się napięciem nominalnym wynoszącym około 3{,}6–3{,}7~V, przy napięciu maksymalnym rzędu 4{,}2~V oraz minimalnym napięciu rozładowania wynoszącym zazwyczaj około 2{,}5–3{,}0~V, w zależności od producenta i zastosowanego układu zabezpieczeń. Pojemność ogniw tego typu mieści się najczęściej w zakresie od 2000 do 3500~mAh.
 
-Istotną zaletą ogniw 18650 jest możliwość dostarczania stosunkowo dużych prądów. Silniki prądu stałego wykorzystywane w robotach mobilnych generują krótkotrwałe, wysokie prądy rozruchowe, które mogą powodować spadki napięcia w przypadku zastosowania niewystarczająco wydajnego źródła zasilania. Ogniwa litowo-jonowe, w przeciwieństwie do klasycznych baterii alkalicznych, lepiej radzą sobie z takimi obciążeniami dynamicznymi.
+Istotną zaletą ogniw 18650 jest możliwość dostarczania stosunkowo dużych prądów. Silniki prądu stałego wykorzystywane w robotach mobilnych generują krótkotrwałe, wysokie prądy rozruchowe, które mogą powodować spadki napięcia w przypadku zastosowania niewystarczająco wydajnego źródła zasilania. Wykorzystane ogniwa litowo-jonowe, w przeciwieństwie do klasycznych baterii alkalicznych, lepiej radzą sobie z takimi obciążeniami dynamicznymi.
 
 Ze względu na specyfikę chemii litowo-jonowej niezbędne jest stosowanie układów zabezpieczających, które chronią ogniwa przed przeładowaniem, nadmiernym rozładowaniem, zwarciem oraz przegrzaniem. W praktyce realizowane jest to poprzez dedykowane moduły BMS (Battery Management System) lub ogniwa wyposażone w zintegrowane układy ochronne. Zastosowanie takich zabezpieczeń ma kluczowe znaczenie dla bezpieczeństwa użytkowania robota oraz trwałości zastosowanego źródła zasilania. W kontekście pracy robota mobilnego istotne znaczenie ma również filtracja i separacja zasilania. Wahania napięcia spowodowane pracą silników mogą negatywnie wpływać na stabilność działania mikrokontrolera oraz czujników. Z tego względu zaleca się stosowanie kondensatorów filtrujących oraz osobnych torów zasilania dla części logicznej i wykonawczej, co zwiększa niezawodność całego systemu.
 
@@ -356,17 +358,11 @@ Uchwyt na baterie oraz mikrokontroler Arduino Uno zostały zamocowane do płyty 
  \label{Fig:lutownica}%
 \end{figure}
 
-\subsection{Budowa prototypu robota}
+\subsection{Budowa robota}
 
 Przed przystąpieniem do realizacji właściwego projektu praktycznego zasadnym etapem procesu inżynierskiego jest wykonanie prototypu, którego celem jest weryfikacja przyjętych założeń projektowych oraz identyfikacja potencjalnych problemów konstrukcyjnych na wczesnym etapie prac.
 
-Celem budowy pierwszej wersji robota było potwierdzenie możliwości realizacji głównego założenia projektowego, jakim było stworzenie autonomicznej konstrukcji mobilnej zdolnej do poruszania się w środowisku oraz omijania przeszkód na podstawie danych pozyskiwanych z czujnika ultradźwiękowego. Na etapie prototypowania pominięto zagadnienia związane z estetyką oraz wysoką precyzją wykonania, takie jak dokładne poziomowanie kół, docelowe rozmieszczenie komponentów czy optymalizacja sposobu ich montażu. Elementy te zostały zaplanowane do dopracowania w finalnej wersji robota.
-
-Podczas projektowania i budowy prototypu przyjęto następujące podstawowe założenia:
-\begin{enumerate}
-\item Prototyp robota musi umożliwiać realizację funkcji autonomicznego poruszania się oraz skutecznego omijania przeszkód, zgodnie z celem projektu.
-\item Rozmieszczenie komponentów na płycie konstrukcyjnej nie może powodować przesunięcia środka ciężkości robota poza geometryczny środek konstrukcji, co mogłoby prowadzić do utraty stabilności oraz pogorszenia jakości manewrów ruchu.
-\end{enumerate}
+Celem budowy robota było potwierdzenie możliwości realizacji głównego założenia projektowego, jakim było stworzenie autonomicznej konstrukcji mobilnej zdolnej do poruszania się w środowisku oraz omijania przeszkód na podstawie danych pozyskiwanych z czujnika ultradźwiękowego.
 
 \subsubsection{Lutowanie wyprowadzeń silników}
 
@@ -484,6 +480,377 @@ Schemat połączeń robota (Rys. \ref{Fig:schemat}) ilustruje wszystkie połącz
 \end{figure}
 
 \section{Kod programu}
+
+Integralnym elementem realizacji projektu robota mobilnego jest warstwa programowa, która odpowiada za interpretację danych sensorycznych, podejmowanie decyzji sterujących oraz bezpośrednie zarządzanie elementami wykonawczymi. Kod programu stanowi zatem kluczowy komponent systemu, determinujący stopień autonomii robota, jego reakcję na zmienne warunki otoczenia oraz stabilność działania całej konstrukcji.
+
+Cały kod znajduje się w załączonych plikach: Robot\_arduino\_kod.ino oraz \newline Robot\_arduino\_kod.txt. Kod programu został zaprojektowany w sposób modularny i czytelny, co ułatwia zarówno jego analizę, jak i dalszą rozbudowę. Strukturę programu można podzielić na kilka logicznych bloków funkcjonalnych, z których każdy odpowiada za inny aspekt działania robota mobilnego.
+
+\subsection{Opis fragmentów kodu}
+
+Opracowane oprogramowanie zostało zaimplementowane na mikrokontrolerze Arduino Uno i napisane w języku C/C++ z wykorzystaniem środowiska Arduino IDE. Program realizuje podstawowy algorytm nawigacji reaktywnej, w którym decyzje ruchowe podejmowane są na podstawie bieżących pomiarów odległości uzyskiwanych z czujnika ultradźwiękowego. Robot nie tworzy mapy otoczenia ani nie zapamiętuje wcześniejszych stanów środowiska, lecz reaguje w czasie rzeczywistym na pojawiające się przeszkody, co jest zgodne z założeniami projektowymi oraz charakterem konstrukcji prototypowej.
+
+\subsubsection{Inicjalizacja komponentów}
+
+Początkowy etap programu obejmuje inicjalizację podstawowych elementów sprzętowych robota, niezbędnych do prawidłowego działania algorytmu sterowania. W tym celu wykorzystano bibliotekę AFMotor, która umożliwia sterowanie silnikami prądu stałego za pośrednictwem osłony L293D, oraz bibliotekę Servo, służącą do obsługi serwomechanizmu odpowiedzialnego za zmianę położenia czujnika ultradźwiękowego. Zastosowanie gotowych bibliotek upraszcza implementację oraz zwiększa czytelność kodu. W dalszej części zdefiniowane zostały cztery silniki napędowe, przypisane do odpowiednich kanałów osłony oraz częstotliwości sygnału PWM, co pozwala na niezależne sterowanie każdym z nich i realizację manewrów ruchu robota. Następnie określono wyprowadzenia mikrokontrolera Arduino Uno, do których podłączony jest czujnik ultradźwiękowy HC-SR04, umożliwiający pomiar odległości do przeszkód. Ostatnim krokiem inicjalizacji jest konfiguracja serwomechanizmu, który pozwala na skanowanie otoczenia w różnych kierunkach. Przedstawione definicje stanowią podstawę poprawnej komunikacji programu z warstwą sprzętową robota (listing \ref{lst:hardware}).
+
+\begin{lstlisting}[caption={Definicje sprzętowe i inicjalizacja komponentów}, label={lst:hardware}]
+#include <AFMotor.h>
+#include <Servo.h>
+
+// --- Definicje silnikow ---
+AF_DCMotor motor1(1, MOTOR12_1KHZ);
+AF_DCMotor motor2(2, MOTOR12_1KHZ);
+AF_DCMotor motor3(3, MOTOR34_1KHZ);
+AF_DCMotor motor4(4, MOTOR34_1KHZ);
+
+// --- Czujnik ultradzwiekowy ---
+#define TRIG_PIN A0
+#define ECHO_PIN A1
+
+// --- Serwo ---
+#define SERVO_PIN 10
+Servo myServo;
+\end{lstlisting}
+
+\subsubsection{Funkcja pomiaru odległości}
+Kolejną grupę elementów programu stanowią stałe konfiguracyjne oraz funkcje pomocnicze, które w istotny sposób wpływają na zachowanie robota w trakcie pracy (listing \ref{lst:distance}). Stałe definiują kluczowe parametry algorytmu sterowania, takie jak minimalna odległość uznawana za bezpieczną, prędkość obrotowa silników napędowych oraz zakres wychyleń serwomechanizmu odpowiedzialnego za zmianę kierunku pomiaru. Dzięki ich zastosowaniu możliwa jest łatwa modyfikacja charakterystyki ruchu robota bez konieczności ingerowania w główną logikę programu.
+
+Szczególnie ważną rolę w tej części kodu pełni funkcja readDistance(), która realizuje pomiar odległości przy użyciu czujnika ultradźwiękowego HC-SR04. Funkcja ta generuje impuls wyzwalający na pinie TRIG, a następnie mierzy czas trwania sygnału powrotnego na pinie ECHO, co pozwala na obliczenie dystansu do przeszkody. W celu ograniczenia wpływu zakłóceń oraz przypadkowych błędów pomiarowych zastosowano prostą metodę filtracji polegającą na uśrednianiu kilku kolejnych odczytów oraz odrzucaniu wartości spoza fizycznie dopuszczalnego zakresu pracy czujnika. Takie rozwiązanie zwiększa stabilność i powtarzalność pomiarów, jednocześnie nie obciążając nadmiernie mikrokontrolera.
+
+\begin{lstlisting}[caption={Funkcja pomiaru odległości czujnikiem ultradźwiękowym}, label={lst:distance}]
+const int DISTANCE_THRESHOLD = 20;
+const int SERVO_CENTER = 90;
+const int SCAN_ANGLE = 45;
+const int MOTOR_SPEED = 170;
+
+long readDistance() {
+  const int samples = 2;
+  long total = 0;
+  int validSamples = 0;
+
+  for (int i = 0; i < samples; i++) {
+    digitalWrite(TRIG_PIN, LOW);
+    delayMicroseconds(3);
+    digitalWrite(TRIG_PIN, HIGH);
+    delayMicroseconds(10);
+    digitalWrite(TRIG_PIN, LOW);
+
+    long duration = pulseIn(ECHO_PIN, HIGH, 30000);
+    if (duration <= 0) continue;
+
+    long distance = duration * 0.0343 / 2;
+    if (distance >= 2 && distance <= 400) {
+      total += distance;
+      validSamples++;
+    }
+  }
+
+  if (validSamples == 0) return -1;
+  return total / validSamples;
+}
+\end{lstlisting}
+
+\subsubsection{Funkcje ruchu robota}
+
+Następnym etapem implementacji programu jest zdefiniowanie zestawu funkcji odpowiedzialnych za bezpośrednie sterowanie napędem robota. Funkcje te enkapsulują podstawowe operacje ruchu, takie jak jazda do przodu, cofanie oraz zatrzymanie pojazdu, i stanowią warstwę pośrednią pomiędzy algorytmem decyzyjnym a sprzętową realizacją napędu. Każda z funkcji przyjmuje jako parametr wartość prędkości, co pozwala na dynamiczne dostosowanie zachowania robota do aktualnej sytuacji w otoczeniu.
+
+W przedstawionych procedurach sterowanie odbywa się poprzez jednoczesne ustawienie prędkości wszystkich silników oraz nadanie im odpowiedniego kierunku obrotu. Zapewnia to synchroniczną pracę napędu i stabilny ruch robota po linii prostej. Funkcja zatrzymania realizowana jest poprzez przejście silników w stan zwolnienia (RELEASE), co skutkuje ich natychmiastowym wyłączeniem bez wymuszania kierunku obrotu. Takie rozwiązanie zwiększa bezpieczeństwo pracy układu oraz ogranicza niepotrzebne zużycie energii.
+
+Wyodrębnienie funkcji sterujących napędem do osobnych procedur znacząco poprawia czytelność i modularność kodu. Umożliwia to również łatwą rozbudowę programu, na przykład o bardziej zaawansowane profile prędkości lub dodatkowe manewry, bez konieczności modyfikowania głównej pętli sterującej robota. Implementację podstawowych funkcji ruchu przedstawiono w listingu \ref{lst:motors}.
+
+\begin{lstlisting}[caption={Funkcje sterowania napędem robota}, label={lst:motors}]
+void forward(int speed) {
+  motor1.setSpeed(speed); motor2.setSpeed(speed);
+  motor3.setSpeed(speed); motor4.setSpeed(speed);
+  motor1.run(FORWARD); motor2.run(FORWARD);
+  motor3.run(FORWARD); motor4.run(FORWARD);
+}
+
+void backward(int speed) {
+  motor1.setSpeed(speed); motor2.setSpeed(speed);
+  motor3.setSpeed(speed); motor4.setSpeed(speed);
+  motor1.run(BACKWARD); motor2.run(BACKWARD);
+  motor3.run(BACKWARD); motor4.run(BACKWARD);
+}
+
+void stopMotors() {
+  motor1.run(RELEASE); motor2.run(RELEASE);
+  motor3.run(RELEASE); motor4.run(RELEASE);
+}
+\end{lstlisting}
+
+Uzupełnieniem podstawowych funkcji ruchu są procedury odpowiedzialne za zmianę kierunku jazdy robota, które wykorzystują zasadę różnicowego sterowania napędem. Wykonanie skrętu realizowane jest poprzez jednoczesne nadanie jednakowej prędkości wszystkim silnikom oraz wymuszenie przeciwnych kierunków ich obrotu po obu stronach konstrukcji. Takie sterowanie powoduje obrót robota wokół własnej osi, co jest rozwiązaniem powszechnie stosowanym w mobilnych platformach kołowych pozbawionych mechanicznego układu skrętnego.
+
+Zachowanie symetrii prędkości silników wpływa na powtarzalność i stabilność manewru, natomiast rozdzielenie kierunków obrotu pomiędzy lewą i prawą stroną napędu jednoznacznie determinuje kierunek skrętu. Czas trwania manewru ograniczony jest poprzez wprowadzenie stałego opóźnienia, które pełni rolę prostego regulatora kąta obrotu. Pozwala to uniknąć nadmiernego skrętu oraz zapewnia płynne przejście do kolejnej fazy ruchu.
+
+Przyjęte rozwiązanie charakteryzuje się niewielką złożonością implementacyjną i obliczeniową, a jednocześnie spełnia wymagania funkcjonalne stawiane przed robotem poruszającym się w środowisku o umiarkowanej zmienności. Implementację procedur odpowiedzialnych za skręt robota przedstawiono w listingu \ref{lst:turn}.
+
+\begin{lstlisting}[caption={Funkcje realizujące manewr skrętu robota}, label={lst:turn}]
+void turnLeft(int speed) {
+  motor1.setSpeed(speed); motor2.setSpeed(speed);
+  motor3.setSpeed(speed); motor4.setSpeed(speed);
+  motor1.run(BACKWARD); motor2.run(BACKWARD);
+  motor3.run(FORWARD);  motor4.run(FORWARD);
+  delay(150);
+}
+
+void turnRight(int speed) {
+  motor1.setSpeed(speed); motor2.setSpeed(speed);
+  motor3.setSpeed(speed); motor4.setSpeed(speed);
+  motor1.run(FORWARD);  motor2.run(FORWARD);
+  motor3.run(BACKWARD); motor4.run(BACKWARD);
+  delay(150);
+}
+\end{lstlisting}
+
+\subsubsection{Pętla główna programu}
+
+Zasadniczą częścią oprogramowania jest pętla główna loop(), w której skupiona została cała logika decyzyjna odpowiedzialna za autonomiczne zachowanie robota. Każde jej wykonanie rozpoczyna się od odczytu aktualnej odległości przeszkody znajdującej się przed pojazdem, po czym uzyskana wartość porównywana jest z wcześniej zdefiniowanym progiem decyzyjnym. Jeżeli w polu detekcji nie zostanie wykryty obiekt, robot kontynuuje jazdę na wprost z ustaloną prędkością.
+
+W sytuacji wykrycia przeszkody w odległości mniejszej od wartości granicznej algorytm przechodzi w tryb reaktywny. Robot zatrzymuje się, wykonuje krótki manewr cofania w celu zwiększenia przestrzeni manewrowej, a następnie dokonuje analizy otoczenia po obu stronach. Skanowanie realizowane jest poprzez wychylenie czujnika ultradźwiękowego w lewo oraz w prawo przy użyciu serwomechanizmu, co pozwala na ocenę dostępnej przestrzeni w każdym z kierunków. Porównanie uzyskanych pomiarów stanowi podstawę do wyboru kierunku skrętu, w którym robot dysponuje większą swobodą ruchu. Implementację pętli głównej programu przedstawiono w listingu \ref{lst:loop}.
+
+\begin{lstlisting}[caption={Pętla główna programu i algorytm omijania przeszkód}, label={lst:loop}]
+void loop() {
+  int distCenter = readDistance();
+
+  if (distCenter < DISTANCE_THRESHOLD) {
+    stopMotors();
+    backward(140);
+    delay(250);
+    stopMotors();
+
+    myServo.write(SERVO_CENTER + SCAN_ANGLE);
+    delay(500);
+    int distLeft = readDistance();
+
+    myServo.write(SERVO_CENTER - SCAN_ANGLE);
+    delay(500);
+    int distRight = readDistance();
+
+    myServo.write(SERVO_CENTER);
+
+    if (distLeft > distRight) {
+      turnLeft(MOTOR_SPEED);
+    } else {
+      turnRight(MOTOR_SPEED);
+    }
+  } else {
+    forward(MOTOR_SPEED);
+  }
+}
+\end{lstlisting}
+
+W trakcie tworzenia oprogramowania napotkano szereg problemów typowych dla systemów wbudowanych. Jednym z nich była niestabilność pomiarów czujnika ultradźwiękowego, objawiająca się sporadycznymi błędnymi odczytami lub brakiem odpowiedzi. Problem ten został częściowo rozwiązany poprzez ograniczenie liczby próbek pomiarowych, wprowadzenie filtracji wartości skrajnych oraz zastosowanie limitu czasowego funkcji pulseIn. Kolejnym wyzwaniem było dobranie odpowiednich opóźnień czasowych, które z jednej strony zapewniały poprawne działanie serwomechanizmu i silników oraz pozwalały jednoznacznie określić punkt w kodzie, w którym robot obecnie się znajduje, a z drugiej nie powodowały nadmiernego spowolnienia reakcji robota.
+
+Przyjęte rozwiązania nie są jedynymi możliwymi. Alternatywnie możliwe byłoby zastosowanie bardziej zaawansowanych algorytmów sterowania, takich jak regulatory rozmyte, algorytmy behawioralne o większej liczbie stanów czy też wykorzystanie enkoderów do precyzyjnej kontroli ruchu. Inną możliwością byłoby również zastosowanie technik lokalizacji i mapowania (SLAM), jednak wiązałoby się to ze znacznym wzrostem złożoności systemu oraz przekroczeniem możliwości sprzętowych zastosowanego mikrokontrolera. Z tego względu świadomie ograniczono zakres funkcjonalny programu, koncentrując się na czytelności kodu oraz niezawodności działania.
+
+\section{Testy robota w środowisku}
+
+Proces projektowania robota mobilnego nie kończy się na etapie implementacji sprzętowej oraz programowej, lecz wymaga również szczegółowej weryfikacji działania systemu w warunkach zbliżonych do rzeczywistego użytkowania. Testy środowiskowe robota stanowią o skuteczności zastosowanych algorytmów sterowania i percepcji otoczenia. Ich celem jest sprawdzenie, w jakim stopniu robot jest w stanie funkcjonować autonomicznie w zróżnicowanych warunkach oraz reagować na sytuacje, które nie zawsze mogą zostać jednoznacznie przewidziane na etapie projektowania.
+
+Środowisko pracy robota mobilnego charakteryzuje się dużą zmiennością, zarówno pod względem właściwości podłoża, jak i rodzaju oraz rozmieszczenia napotykanych przeszkód. Nawet w pozornie prostych warunkach domowych lub laboratoryjnych mogą występować czynniki wpływające na stabilność ruchu, dokładność pomiarów czujników czy skuteczność algorytmu omijania przeszkód. Z tego względu istotne jest przeprowadzenie serii testów, które pozwolą ocenić zachowanie robota w sytuacjach typowych, a także w warunkach granicznych, ujawniających ograniczenia zastosowanych rozwiązań.
+
+Szczególną uwagę podczas badań poświęcono współpracy pomiędzy układem napędowym a systemem percepcji otoczenia. Stabilność jazdy, zdolność do pokonywania drobnych nierówności oraz reakcja na zmiany oporu ruchu mają bezpośredni wpływ na skuteczność realizowanego algorytmu sterowania. Równocześnie istotna jest analiza działania czujnika ultradźwiękowego, którego charakterystyka pomiarowa zależy od kształtu, orientacji oraz właściwości materiałowych napotykanych obiektów. Testy pozwalają zweryfikować, w jakim stopniu uproszczony model percepcji otoczenia jest wystarczający do bezpiecznego i przewidywalnego poruszania się robota. Przeprowadzone próby umożliwiają również ocenę odporności systemu na sytuacje niejednoznaczne decyzyjnie, w których robot może otrzymywać sprzeczne lub niepełne informacje z czujników. W takich przypadkach znamienne znaczenie ma sposób, w jaki algorytm reaguje na brak jednoznacznej drogi przejazdu oraz czy zachowanie robota pozostaje stabilne i powtarzalne. Analiza tych scenariuszy pozwala wskazać potencjalne obszary wymagające dalszej optymalizacji, zarówno na poziomie oprogramowania, jak i konstrukcji mechanicznej.
+
+\subsection{Jazda po prostej linii}
+
+Celem przeprowadzenia testu jazdy w prostej linii była weryfikacja poprawności działania układu napędowego robota oraz sprawdzenie, czy zastosowany algorytm sterowania umożliwia stabilne poruszanie się bez konieczności wykonywania korekt kierunku (Rys. \ref{Fig:test1}). Próba ta stanowi podstawowy test funkcjonalny, pozwalający ocenić symetrię pracy silników, równomierność przeniesienia napędu na koła oraz poprawność konfiguracji parametrów prędkości obrotowej.
+
+Oczekiwanym rezultatem testu było poruszanie się robota po możliwie prostym torze, bez wyraźnych odchyleń w lewo lub w prawo, przy zachowaniu stałej prędkości jazdy. Zakładano również brak niepożądanych drgań konstrukcji oraz płynne rozpędzanie i hamowanie, wynikające z jednoczesnego sterowania wszystkimi silnikami napędowymi. Taki rezultat świadczyłby o poprawnym doborze parametrów sterowania oraz właściwym zamocowaniu elementów mechanicznych.
+
+W trakcie realizacji testu robot poruszał się po prostym torze ruchu, zgodnie z przyjętymi założeniami. Nie zaobserwowano istotnych odchyleń od kierunku jazdy ani tendencji do skręcania, co potwierdza poprawną synchronizację pracy silników oraz prawidłowe rozłożenie masy konstrukcji. Uzyskany wynik pozwala uznać, że układ napędowy robota działa stabilnie i stanowi solidną podstawę do realizacji bardziej złożonych manewrów w kolejnych testach środowiskowych.
+
+\begin{figure}[ht]%
+ \centering%
+ \includegraphics[width=0.6\textwidth]{figures/test1.png}%
+ \caption{Jazda po prostej linii}%
+ \label{Fig:test1}%
+\end{figure}
+
+\subsection{Pokonywanie nierówności podłoża}
+
+Celem niniejszego testu była ocena zdolności robota do poruszania się po podłożu o zmiennej charakterystyce oraz sprawdzenie, w jaki sposób konstrukcja mechaniczna i układ napędowy reagują na występowanie niewielkich nierówności terenowych (Rys. \ref{Fig:test2}). Test ten pozwala zweryfikować nie tylko przyczepność kół do nawierzchni, lecz również wpływ zmiany oporów toczenia na stabilność jazdy oraz ciągłość realizacji algorytmu sterowania.
+
+Oczekiwanym rezultatem było zachowanie płynności ruchu robota podczas przejazdu pomiędzy powierzchniami o różnej strukturze, bez utraty trakcji, zatrzymania lub niekontrolowanej zmiany kierunku jazdy. Zakładano, że zastosowany układ napędowy, przy odpowiednio dobranej prędkości silników, umożliwi pokonanie niewielkiej przeszkody terenowej wynikającej z różnicy wysokości oraz zwiększonego oporu podłoża, bez konieczności ingerencji w algorytm sterujący.
+
+W trakcie testu robot poprawnie pokonał nierówność terenową, polegającą na wjeździe z twardej, gładkiej powierzchni podłogi na miękkie i bardziej oporowe podłoże w postaci dywanu. Manewr został zrealizowany płynnie, bez zatrzymania napędu ani destabilizacji konstrukcji. Uzyskany wynik potwierdza wystarczającą moc układu napędowego oraz odpowiednią przyczepność kół, co umożliwia eksploatację robota w środowiskach o umiarkowanie zróżnicowanej nawierzchni.
+
+\begin{figure}[ht]%
+ \centering%
+ \includegraphics[width=0.6\textwidth]{figures/test2.png}%
+ \caption{Pokonywanie nierówności podłoża}%
+ \label{Fig:test2}%
+\end{figure}
+
+\subsection{Omijanie przeszkód w polu wykrywania czujnika}
+
+Celem tego testu była weryfikacja skuteczności algorytmu omijania przeszkód w sytuacji, gdy obiekt znajduje się w bezpośrednim polu widzenia czujnika ultradźwiękowego robota. Sprawdzano poprawność detekcji przeszkody, adekwatność reakcji decyzyjnej oraz wpływ przyjętego manewru skrętu na dalszy tor jazdy robota. Istotnym aspektem testu była również ocena powtarzalności zachowania robota przy identycznych parametrach sterowania, lecz nieznacznie zmienionych warunkach początkowych.
+
+Oczekiwanym efektem było jednoznaczne wykrycie przeszkody po przekroczeniu zdefiniowanego progu odległości, zatrzymanie ruchu postępowego oraz wykonanie manewru skrętu umożliwiającego bezkolizyjne jej ominięcie. Zakładano, że obrót robota wokół własnej osi oraz wybór kierunku skrętu na podstawie skanowania otoczenia pozwolą na wyznaczenie nowego, bezpiecznego kierunku jazdy i kontynuację ruchu bez kontaktu z przeszkodą.
+
+W trakcie pierwszej próby robot prawidłowo zidentyfikował przeszkodę i rozpoczął procedurę omijania. Wykonany manewr skrętu spowodował jednak takie ustawienie robota, w którym przeszkoda znalazła się poza aktualnym polem detekcji czujnika ultradźwiękowego, mimo że wciąż znajdowała się na torze jazdy (Rys. \ref{Fig:test31}). W konsekwencji w kolejnym cyklu algorytmu przeszkoda nie została ponownie wykryta, co doprowadziło do fizycznego kontaktu robota z obiektem.
+
+\begin{figure}[ht]%
+ \centering%
+ \includegraphics[width=0.6\textwidth]{figures/test31.png}%
+ \caption{Omijanie przeszkód w polu wykrywania czujnika, przeszkoda została zahaczona}%
+ \label{Fig:test31}%
+\end{figure}
+
+Test powtórzono przy nieznacznie zmienionej pozycji startowej robota. W drugim przypadku, pomimo zastosowania tego samego promienia skrętu oraz identycznych parametrów sterowania, robot zdołał poprawnie ominąć przeszkodę i kontynuować jazdę (Rys. \ref{Fig:test32}). Uzyskane wyniki wskazują na ograniczenia wynikające z wąskiego pola widzenia pojedynczego czujnika ultradźwiękowego. Jednocześnie potwierdzają one poprawność działania logiki decyzyjnej w sprzyjających warunkach geometrycznych.
+
+\begin{figure}[ht]%
+ \centering%
+ \includegraphics[width=0.6\textwidth]{figures/test32.png}%
+ \caption{Omijanie przeszkód w polu wykrywania czujnika, przeszkoda została ominięta}%
+ \label{Fig:test32}%
+\end{figure}
+
+\subsection{Omijanie przeszkód poza polem wykrywania czujnika}
+
+Celem niniejszego testu była ocena zachowania robota w sytuacji, gdy przeszkoda nie znajduje się w polu detekcji czujnika ultradźwiękowego, a zatem nie jest uwzględniana przez algorytm decyzyjny odpowiedzialny za omijanie obiektów. Badanie to miało na celu określenie wpływu takich przeszkód na stabilność ruchu robota oraz przewidywalność jego trajektorii w warunkach braku informacji sensorycznej.
+
+Oczekiwanym efektem testu była utrata zdolności świadomego reagowania na przeszkodę, przy jednoczesnym zachowaniu możliwie stabilnego toru jazdy. Zakładano, że ewentualny kontakt robota z obiektem spowoduje jedynie krótkotrwałe zakłócenie ruchu, bez istotnego wpływu na dalszy kierunek poruszania się. Taki scenariusz mógłby świadczyć o odpowiedniej sztywności konstrukcji oraz symetrycznym rozkładzie sił działających na układ jezdny.
+
+W ramach testu przeprowadzono dwie próby z wykorzystaniem przeszkód o różnej grubości. W pierwszej próbie zastosowano cienką książkę, która po kontakcie z robotem spowodowała jedynie niewielką zmianę trajektorii ruchu (Rys. \ref{Fig:test41}). Odchylenie to miało charakter krótkotrwały i nie doprowadziło do znaczącej dezorientacji robota, jednak jego wartość była trudna do jednoznacznego przewidzenia.
+
+\begin{figure}[ht]%
+ \centering%
+ \includegraphics[width=0.6\textwidth]{figures/test41.png}%
+ \caption{Omijanie przeszkód poza polem wykrywania czujnika, przeszkoda została ominięta, strzałka pokazuje pierwotny kierunek poruszania robota}%
+ \label{Fig:test41}%
+\end{figure}
+
+W drugiej próbie wykorzystano książkę o znacznie większej grubości, co skutkowało gwałtowną i wyraźną zmianą kierunku jazdy robota po kontakcie z przeszkodą (Rys. \ref{Fig:test42}). Zmiana ta miała charakter losowy i była bezpośrednio zależna od miejsca oraz kąta uderzenia, a nie od zaprogramowanej logiki sterowania. Nawet w przypadku minimalnych odchyleń kursu obserwowane zachowanie robota było niepowtarzalne i niemożliwe do kontrolowania, co jednoznacznie wskazuje na niedopuszczalność takich warunków pracy w kontekście systemów autonomicznych.
+
+\begin{figure}[ht]%
+ \centering%
+ \includegraphics[width=0.6\textwidth]{figures/test42.png}%
+ \caption{Omijanie przeszkód poza polem wykrywania czujnika, przeszkoda została ominięta, kierunek jazdy robota został zauważalnie zmieniony, strzałka pokazuje pierwotny kierunek poruszania robota}%
+ \label{Fig:test42}%
+\end{figure}
+
+Uzyskane wyniki potwierdzają, że brak detekcji przeszkód znajdujących się poza polem widzenia czujnika prowadzi do nieprzewidywalnych reakcji robota i stanowi istotne ograniczenie zaprojektowanego systemu percepcji. W praktyce oznacza to konieczność rozszerzenia systemu sensorycznego lub zastosowania dodatkowych mechanizmów zabezpieczających, jeśli robot ma poruszać się w środowisku o podwyższonym stopniu nieuporządkowania.
+
+\subsection{Omijanie przeszkód o nieregularnym kształcie}
+
+Celem przeprowadzonego testu była ocena skuteczności systemu detekcji przeszkód w przypadku obiektów o nieregularnym kształcie oraz analiza wpływu właściwości fizycznych przeszkody na zdolność jej wykrywania przez czujnik ultradźwiękowy. Szczególną uwagę poświęcono rozróżnieniu, czy kluczowym czynnikiem ograniczającym detekcję jest przezroczystość materiału, czy raczej geometria obiektu i sposób odbicia fali ultradźwiękowej.
+
+Oczekiwanym efektem testu było wykrycie przeszkody niezależnie od jej kształtu i właściwości optycznych, przy założeniu, że znajduje się ona w polu widzenia czujnika i w zasięgu jego pracy. Zakładano, że robot zareaguje zgodnie z zaimplementowanym algorytmem, tj. zatrzyma się, wykona cofanie oraz podejmie próbę ominięcia obiektu. W idealnym przypadku przezroczystość przeszkody nie powinna mieć znaczenia, ponieważ czujnik ultradźwiękowy opiera swoje działanie na emisji i odbiorze fal akustycznych, a nie promieniowania świetlnego. Istotnym czynnikiem pozostaje natomiast kształt powierzchni przeszkody, który może powodować rozproszenie fali i jej odbicie w kierunku innym niż czujnik.
+
+W ramach badań przeprowadzono trzy próby eksperymentalne. W pierwszej z nich jako przeszkodę zastosowano szklankę. Robot zareagował dopiero po fizycznym kontakcie z obiektem, co sugeruje, że fala ultradźwiękowa nie została skutecznie odbita w stronę czujnika (Rys. \ref{Fig:test51}). Po kontakcie algorytm zadziałał poprawnie — robot wycofał się, a następnie ominął przeszkodę zgodnie z założeniami programu.
+
+\begin{figure}[ht]%
+ \centering%
+ \includegraphics[width=0.6\textwidth]{figures/test51.png}%
+ \caption{Omijanie przeszkód o nieregularnym kształcie, przeszkoda pomimo kontaktu została ominięta}%
+ \label{Fig:test51}%
+\end{figure}
+
+W drugiej próbie ponownie wykorzystano szklankę, jednak w tym przypadku robot całkowicie zignorował jej obecność i nie podjął żadnej reakcji, nawet po kontakcie (Rys. \ref{Fig:test52}). Oznacza to, że detekcja obiektu nie była powtarzalna i zależała od położenia przeszkody względem czujnika oraz kąta padania fali ultradźwiękowej.
+
+\begin{figure}[ht]%
+ \centering%
+ \includegraphics[width=0.6\textwidth]{figures/test52.png}%
+ \caption{Omijanie przeszkód o nieregularnym kształcie, przeszkoda została zignorowana}%
+ \label{Fig:test52}%
+\end{figure}
+
+W trzeciej próbie zastosowano butelkę o nieregularnym kształcie, wypełnioną wodą. Pomimo większych rozmiarów obiektu i jego masy, przeszkoda również nie została wykryta przez system sensoryczny robota (Rys. \ref{Fig:test53}). Wskazuje to jednoznacznie, że czynnikiem wpływającym na brak detekcji była geometria powierzchni obiektu, powodująca rozproszenie lub pochłanianie fali ultradźwiękowej.
+
+\begin{figure}[ht]%
+ \centering%
+ \includegraphics[width=0.6\textwidth]{figures/test53.png}%
+ \caption{Omijanie przeszkód o nieregularnym kształcie, przeszkoda została zignorowana i spowodowała przewrócenie robota}%
+ \label{Fig:test53}%
+\end{figure}
+
+\subsection{Omijanie przeszkód o chropowatej powierzchni}
+
+Celem niniejszego testu było sprawdzenie skuteczności detekcji przeszkód o powierzchni nieregularnej i chropowatej, która z punktu widzenia czujnika ultradźwiękowego powinna sprzyjać odbiciu fali akustycznej w kierunku nadajnika. Test ten stanowił uzupełnienie wcześniejszych badań, w których analizowano zachowanie robota w kontakcie z obiektami o gładkich i zaokrąglonych powierzchniach, charakteryzujących się obniżoną skutecznością odbicia ultradźwięków.
+
+Oczekiwanym efektem było poprawne wykrycie przeszkody znajdującej się w polu widzenia czujnika oraz uruchomienie standardowej sekwencji reakcji robota. Zakładano, że chropowata struktura powierzchni obiektu spowoduje wielokrotne, rozproszone odbicia fali ultradźwiękowej, co zwiększy prawdopodobieństwo jej powrotu do odbiornika czujnika, niezależnie od właściwości optycznych materiału.
+
+W ramach testu jako przeszkodę zastosowano przezroczyste pudełko o wyraźnie chropowatej strukturze powierzchni (Rys. \ref{Fig:test6}). Pomimo przezroczystości materiału, przeszkoda została wykryta w sposób jednoznaczny i powtarzalny. Robot prawidłowo zareagował na obecność obiektu, inicjując procedurę omijania zgodnie z założeniami algorytmu sterowania.
+
+\begin{figure}[ht]%
+ \centering%
+ \includegraphics[width=0.6\textwidth]{figures/test6.png}%
+ \caption{Omijanie przeszkody o chropowatej powierzchni}%
+ \label{Fig:test6}%
+\end{figure}
+
+\subsection{Omijanie przeszkód o gąbczastej strukturze}
+
+Celem przeprowadzonego testu była analiza zachowania robota w obecności przeszkód wykonanych z materiałów o wysokiej porowatości i zdolności pochłaniania energii fali ultradźwiękowej. Tego typu obiekty stanowią szczególne wyzwanie dla systemów detekcji opartych na czujnikach ultradźwiękowych, ponieważ struktura materiału może w istotny sposób wpływać na propagację oraz odbicie sygnału akustycznego.
+
+Oczekiwanym efektem testu było wykrycie przeszkody znajdującej się w polu pomiarowym czujnika oraz uruchomienie standardowej procedury omijania. Zakładano jednak możliwość obniżonej skuteczności detekcji ze względu na właściwości fizyczne gąbczastego materiału.
+
+W ramach badań przeprowadzono dwa testy różniące się orientacją przeszkody względem robota. W pierwszym przypadku gąbka została ustawiona stroną gładszą w kierunku czujnika (Rys. \ref{Fig:test71}). W takiej konfiguracji robot reagował na przeszkodę w sposób niestabilny – w części prób obiekt był poprawnie wykrywany, natomiast w pozostałych przypadkach pomiar odległości nie inicjował reakcji algorytmu sterowania. 
+
+\begin{figure}[ht]%
+ \centering%
+ \includegraphics[width=0.6\textwidth]{figures/test71.png}%
+ \caption{Omijanie przeszkody o gąbczastej strukturze zwróconej gładką stroną}%
+ \label{Fig:test71}%
+\end{figure}
+
+W drugim teście gąbka została odwrócona stroną bardziej porowatą i nieregularną w stronę robota (Rys. \ref{Fig:test72}). W tej konfiguracji reakcja robota była sporadyczna lub nie występowała wcale, co skutkowało brakiem uruchomienia procedury omijania.
+
+\begin{figure}[ht]%
+ \centering%
+ \includegraphics[width=0.6\textwidth]{figures/test72.png}%
+ \caption{Omijanie przeszkody o gąbczastej strukturze zwróconej porowatą stroną}%
+ \label{Fig:test72}%
+\end{figure}
+
+\subsection{Zachowanie robota w sytuacji całkowitego otoczenia przeszkodami}
+
+Celem przeprowadzonego testu była ocena zachowania robota w skrajnie niekorzystnym scenariuszu, w którym platforma mobilna zostaje otoczona przeszkodami z każdej strony, uniemożliwiając swobodny przejazd w dowolnym kierunku (Rys. \ref{Fig:test81}). Tego typu sytuacja stanowi istotny przypadek graniczny dla prostych algorytmów reaktywnych, które nie wykorzystują globalnej mapy otoczenia ani pamięci wcześniejszych stanów środowiska.
+
+\begin{figure}[ht]%
+ \centering%
+ \includegraphics[width=0.6\textwidth]{figures/test81.png}%
+ \caption{Robot otoczony przeszkodami}%
+ \label{Fig:test81}%
+\end{figure}
+
+Oczekiwanym efektem testu było wykrycie przeszkody znajdującej się bezpośrednio przed robotem oraz podjęcie próby zmiany trajektorii ruchu zgodnie z zaimplementowanym algorytmem omijania. Zakładano jednak, że w przypadku braku dostępnej wolnej przestrzeni robot nie będzie w stanie wyznaczyć bezpiecznego kierunku jazdy i jego zachowanie może odbiegać od poprawnego scenariusza omijania pojedynczej przeszkody. Test ten miał na celu weryfikację odporności algorytmu na sytuacje, w których lokalna percepcja nie dostarcza wystarczających informacji do podjęcia jednoznacznej decyzji ruchowej.
+
+W trakcie próby robot poprawnie wykrył przeszkodę znajdującą się przed nim i zgodnie z logiką programu wykonał manewr cofania. Ruch wsteczny, realizowany bez dodatkowej weryfikacji otoczenia za robotem, doprowadził do kontaktu z przeszkodami znajdującymi się z tyłu konstrukcji, w wyniku czego część z nich została przewrócona (Rys. \ref{Fig:test82}). Po zakończeniu manewru cofania robot powrócił do standardowego trybu pracy i kontynuował działanie algorytmu omijania przeszkód, nie identyfikując sytuacji jako stanu krytycznego.
+
+Uzyskane rezultaty wskazują na istotne ograniczenie zastosowanego rozwiązania sterowania reaktywnego. Algorytm, oparty wyłącznie na pomiarze odległości w jednym kierunku oraz prostym skanowaniu bocznym, nie posiada mechanizmów pozwalających na rozpoznanie sytuacji pełnego otoczenia ani na bezpieczne planowanie ruchu cofania. Brak czujników monitorujących przestrzeń za robotem oraz brak globalnej oceny sytuacji prowadzą do zachowań przypadkowych, które w rzeczywistych warunkach mogłyby skutkować uszkodzeniem robota lub elementów otoczenia. Test ten jednoznacznie pokazuje, że w bardziej wymagających scenariuszach niezbędne jest zastosowanie dodatkowych czujników, pamięci stanu lub bardziej zaawansowanych algorytmów decyzyjnych.
+
+\begin{figure}[ht]%
+ \centering%
+ \includegraphics[width=0.6\textwidth]{figures/test82.png}%
+ \caption{Przewrócenie przeszkód znajdujących się poza obszarem wykrywania robota}%
+ \label{Fig:test82}%
+\end{figure}
+\section{Podsumowanie}
+
+Celem niniejszej pracy było zaprojektowanie, wykonanie oraz przetestowanie prostego robota mobilnego zdolnego do autonomicznego poruszania się i omijania przeszkód z wykorzystaniem mikrokontrolera Arduino. Realizacja zadania obejmowała zarówno część teoretyczną, dotyczącą podstaw robotyki mobilnej i sterowania ruchem, jak i część praktyczną, obejmującą montaż konstrukcji mechanicznej, implementację oprogramowania sterującego oraz przeprowadzenie testów w zróżnicowanych warunkach środowiskowych.
+
+W części teoretycznej omówiono podstawowe zagadnienia związane z robotami mobilnymi, w szczególności modele ruchu platform z napędem różnicowym oraz proste, reaktywne algorytmy omijania przeszkód. Zaprezentowane podstawy stanowiły bezpośrednie odniesienie do przyjętych rozwiązań projektowych, umożliwiając świadomy dobór komponentów oraz metod sterowania adekwatnych do charakteru zadania i ograniczeń sprzętowych.
+
+Montaż robota obejmował integrację elementów mechanicznych, napędowych oraz sensorycznych. Konstrukcja została oparta na gotowym podwoziu z silnikami prądu stałego. Czujnik ultradźwiękowy, zamontowany na serwomechanizmie, umożliwił skanowanie otoczenia w ograniczonym zakresie kątowym, co znacząco zwiększyło funkcjonalność robota w porównaniu do rozwiązania z nieruchomym sensorem.
+
+Część programistyczna projektu obejmowała implementację algorytmu decyzyjnego w pętli głównej programu, obsługę czujnika ultradźwiękowego, sterowanie serwomechanizmem oraz kontrolę silników. Zastosowane rozwiązania charakteryzowały się prostotą i czytelnością, co jest szczególnie istotne w projektach edukacyjnych. Jednocześnie w trakcie prac ujawniły się typowe problemy systemów wbudowanych, takie jak niestabilność pomiarów odległości, konieczność doboru odpowiednich opóźnień czasowych oraz brak informacji o stanie otoczenia poza aktualnym polem widzenia czujnika.
+
+Przeprowadzone testy środowiskowe pozwoliły na kompleksową ocenę działania robota w różnych warunkach. Robot poprawnie poruszał się po prostym torze oraz był w stanie pokonać niewielkie nierówności terenu. W przypadku przeszkód znajdujących się w polu wykrywania czujnika algorytm omijania działał poprawnie, choć ujawniono jego wrażliwość na pozycję startową oraz promień skrętu. Testy z przeszkodami niewidocznymi dla czujnika, obiektami przezroczystymi, o nieregularnych kształtach lub wykonanymi z materiałów pochłaniających fale ultradźwiękowe wykazały liczne ograniczenia zastosowanego rozwiązania sensorycznego. Szczególnie istotnym przypadkiem była sytuacja całkowitego otoczenia robota przeszkodami, w której brak informacji o przestrzeni za robotem doprowadził do kolizji podczas manewru cofania. Na podstawie uzyskanych wyników można sformułować następujące wnioski:
+\begin{enumerate}
+    \item Zastosowanie pojedynczego czujnika ultradźwiękowego znacząco ogranicza zdolność robota do poprawnej percepcji otoczenia, zwłaszcza w przypadku obiektów o nieregularnym kształcie, przezroczystych lub wykonanych z materiałów dźwiękochłonnych,
+    \item Algorytm reaktywny, pozbawiony pamięci stanu oraz globalnej reprezentacji otoczenia, jest podatny na zachowania losowe i nie radzi sobie w sytuacjach skrajnych, takich jak pełne otoczenie przeszkodami.
+    \item W części montażowej istotnym problemem okazał się brak czujników monitorujących przestrzeń za robotem oraz brak elementów zabezpieczających przed kolizją podczas cofania.
+    \item W części programowej możliwe byłoby zwiększenie niezawodności poprzez filtrację pomiarów, uśrednianie wyników, dynamiczny dobór promienia skrętu oraz wprowadzenie prostych mechanizmów wykrywania stanu „utknięcia”.
+    \item Alternatywnym rozwiązaniem mogłoby być zastosowanie dodatkowych czujników (np. kilku czujników ultradźwiękowych, czujników podczerwieni lub zderzaków mechanicznych) bądź implementacja bardziej zaawansowanych algorytmów decyzyjnych.
+\end{enumerate}
+
+Pomimo wskazanych ograniczeń i niedoskonałości należy stwierdzić, że główny cel projektu został osiągnięty. Zbudowany robot mobilny jest zdolny do autonomicznego poruszania się oraz omijania przeszkód w typowych, nieskomplikowanych warunkach środowiskowych. Projekt spełnił również swoje założenia edukacyjne, umożliwiając praktyczne zapoznanie się z problemami projektowania systemów robotycznych, integracji sprzętu z oprogramowaniem oraz analizy zachowania robota w rzeczywistym środowisku.
+
+
+
+
 \clearpage
 
 \addcontentsline{toc}{section}{Literatura}

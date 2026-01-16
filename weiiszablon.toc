@@ -1,18 +1,18 @@
 \babel@toc {polish}{}\relax 
 \contentsline {section}{\numberline {1}Wprowadzenie}{6}{section.1}%
 \contentsline {section}{\numberline {2}Zakres teoretyczny z dziedziny robotyki}{8}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Przegląd stanu wiedzy i techniki w zakresie robotów mobilnych}{8}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.1}Przegląd stanu wiedzy w zakresie robotów mobilnych}{8}{subsection.2.1}%
 \contentsline {subsubsection}{\numberline {2.1.1}Modelowanie ruchu robota}{8}{subsubsection.2.1.1}%
 \contentsline {subsubsection}{\numberline {2.1.2}Odtwarzanie danych sensorycznych}{9}{subsubsection.2.1.2}%
-\contentsline {subsubsection}{\numberline {2.1.3}Technologia mapowania SLAM}{9}{subsubsection.2.1.3}%
+\contentsline {subsubsection}{\numberline {2.1.3}Technologia mapowania SLAM}{10}{subsubsection.2.1.3}%
 \contentsline {subsection}{\numberline {2.2}Klasyfikacja i architektura robotów mobilnych}{10}{subsection.2.2}%
 \contentsline {subsubsection}{\numberline {2.2.1}Klasyfikacja według sposobu lokomocji robota}{10}{subsubsection.2.2.1}%
 \contentsline {subsubsection}{\numberline {2.2.2}Klasyfikacja według autonomiczności robota}{11}{subsubsection.2.2.2}%
 \contentsline {subsubsection}{\numberline {2.2.3}Klasyfikacja według architektury rozwiązania}{11}{subsubsection.2.2.3}%
 \contentsline {subsection}{\numberline {2.3}Modelowanie ruchu robotów mobilnych}{12}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Układy napędowe i sterowanie silnikami}{14}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.4}Układy napędowe i sterowanie silnikami}{15}{subsection.2.4}%
 \contentsline {subsubsection}{\numberline {2.4.1}Sterowanie silnikami robota}{16}{subsubsection.2.4.1}%
-\contentsline {subsection}{\numberline {2.5}Percepcja otoczenia}{16}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.5}Percepcja otoczenia}{17}{subsection.2.5}%
 \contentsline {subsection}{\numberline {2.6}Zaawansowane metody nawigacji}{18}{subsection.2.6}%
 \contentsline {section}{\numberline {3}Montaż robota}{21}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Komponenty robota}{21}{subsection.3.1}%
@@ -24,15 +24,30 @@
 \contentsline {subsubsection}{\numberline {3.1.6}Ogniwa litowo-jonowe 18650}{26}{subsubsection.3.1.6}%
 \contentsline {subsubsection}{\numberline {3.1.7}Przełącznik kołyskowy}{28}{subsubsection.3.1.7}%
 \contentsline {subsection}{\numberline {3.2}Wykorzystane materiały}{28}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Budowa prototypu robota}{29}{subsection.3.3}%
-\contentsline {subsubsection}{\numberline {3.3.1}Lutowanie wyprowadzeń silników}{31}{subsubsection.3.3.1}%
-\contentsline {subsubsection}{\numberline {3.3.2}Montaż silników oraz kół}{31}{subsubsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3}Budowa robota}{29}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.1}Lutowanie wyprowadzeń silników}{30}{subsubsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.2}Montaż silników oraz kół}{30}{subsubsection.3.3.2}%
 \contentsline {subsubsection}{\numberline {3.3.3}Montaż mikrokontrolera Arduino Uno}{31}{subsubsection.3.3.3}%
-\contentsline {subsubsection}{\numberline {3.3.4}Montaż osłony L293D}{33}{subsubsection.3.3.4}%
-\contentsline {subsubsection}{\numberline {3.3.5}Montaż uchwytu na baterie}{34}{subsubsection.3.3.5}%
-\contentsline {subsubsection}{\numberline {3.3.6}Montaż ogniw zasilających}{34}{subsubsection.3.3.6}%
-\contentsline {subsubsection}{\numberline {3.3.7}Montaż serwomechanizmu z kątownikiem}{35}{subsubsection.3.3.7}%
-\contentsline {subsubsection}{\numberline {3.3.8}Montaż czujnika ultradźwiękowego odległości}{36}{subsubsection.3.3.8}%
-\contentsline {subsubsection}{\numberline {3.3.9}Schemat połączeń robota}{36}{subsubsection.3.3.9}%
+\contentsline {subsubsection}{\numberline {3.3.4}Montaż osłony L293D}{32}{subsubsection.3.3.4}%
+\contentsline {subsubsection}{\numberline {3.3.5}Montaż uchwytu na baterie}{32}{subsubsection.3.3.5}%
+\contentsline {subsubsection}{\numberline {3.3.6}Montaż ogniw zasilających}{33}{subsubsection.3.3.6}%
+\contentsline {subsubsection}{\numberline {3.3.7}Montaż serwomechanizmu z kątownikiem}{34}{subsubsection.3.3.7}%
+\contentsline {subsubsection}{\numberline {3.3.8}Montaż czujnika ultradźwiękowego odległości}{35}{subsubsection.3.3.8}%
+\contentsline {subsubsection}{\numberline {3.3.9}Schemat połączeń robota}{35}{subsubsection.3.3.9}%
 \contentsline {section}{\numberline {4}Kod programu}{38}{section.4}%
-\contentsline {section}{Literatura}{39}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Opis fragmentów kodu}{38}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}Inicjalizacja komponentów}{38}{subsubsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.2}Funkcja pomiaru odległości}{39}{subsubsection.4.1.2}%
+\contentsline {subsubsection}{\numberline {4.1.3}Funkcje ruchu robota}{40}{subsubsection.4.1.3}%
+\contentsline {subsubsection}{\numberline {4.1.4}Pętla główna programu}{42}{subsubsection.4.1.4}%
+\contentsline {section}{\numberline {5}Testy robota w środowisku}{44}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Jazda po prostej linii}{45}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Pokonywanie nierówności podłoża}{46}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Omijanie przeszkód w polu wykrywania czujnika}{47}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Omijanie przeszkód poza polem wykrywania czujnika}{48}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5.5}Omijanie przeszkód o nieregularnym kształcie}{50}{subsection.5.5}%
+\contentsline {subsection}{\numberline {5.6}Omijanie przeszkód o chropowatej powierzchni}{52}{subsection.5.6}%
+\contentsline {subsection}{\numberline {5.7}Omijanie przeszkód o gąbczastej strukturze}{53}{subsection.5.7}%
+\contentsline {subsection}{\numberline {5.8}Zachowanie robota w sytuacji całkowitego otoczenia przeszkodami}{54}{subsection.5.8}%
+\contentsline {section}{\numberline {6}Podsumowanie}{57}{section.6}%
+\contentsline {section}{Literatura}{59}{Item.5}%

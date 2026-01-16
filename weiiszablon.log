@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.12.8)  15 JAN 2026 10:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.12.8)  16 JAN 2026 16:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -680,6 +680,14 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
 )
+(C:\Users\Kacper\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count312
+\float@exts=\toks40
+\float@box=\box67
+\@float@everytoks=\toks41
+\@floatcapt=\box68
+)
 (C:\Users\Kacper\AppData\Local\Programs\MiKTeX\tex/latex/tocloft\tocloft.sty
 Package: tocloft 2017/08/31 v2.3i parameterised ToC, etc., typesetting
 Package tocloft Info: The document has section divisions on input line 51.
@@ -709,8 +717,8 @@ Package tocloft Info: The document has section divisions on input line 51.
 \cftbeforefigskip=\skip77
 \cftfigindent=\skip78
 \cftfignumwidth=\skip79
-\c@lofdepth=\count312
-\c@lotdepth=\count313
+\c@lofdepth=\count313
+\c@lotdepth=\count314
 \cftbeforelottitleskip=\skip80
 \cftafterlottitleskip=\skip81
 \cftbeforetabskip=\skip82
@@ -730,12 +738,12 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 ))
 (C:\Users\Kacper\AppData\Local\Programs\MiKTeX\tex/latex/titlesec\titlesec.sty
 Package: titlesec 2025/01/04 v2.17 Sectioning titles
-\ttl@box=\box67
+\ttl@box=\box69
 \beforetitleunit=\skip85
 \aftertitleunit=\skip86
 \ttl@plus=\dimen280
 \ttl@minus=\dimen281
-\ttl@toksa=\toks40
+\ttl@toksa=\toks42
 \titlewidth=\dimen282
 \titlewidthlast=\dimen283
 \titlewidthfirst=\dimen284
@@ -759,15 +767,15 @@ ng of objects, relative to a reference object or in absolute terms
 
 (C:\Users\Kacper\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty
 Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count314
-\calc@Bcount=\count315
+\calc@Acount=\count315
+\calc@Bcount=\count316
 \calc@Adimen=\dimen285
 \calc@Bdimen=\dimen286
 \calc@Askip=\skip87
 \calc@Bskip=\skip88
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count316
+\calc@Ccount=\count317
 \calc@Cskip=\skip89
 )
 \thesrwidth=\skip90
@@ -782,13 +790,13 @@ LaTeX Info: Redefining \addtolength on input line 81.
 Package: fancybox 2010/05/15 1.4
 
 Style option: `fancybox' v1.4 <2010/05/15> (tvz)
-\@fancybox=\box68
+\@fancybox=\box70
 \shadowsize=\dimen287
-\@Sbox=\box69
-\do@VerbBox=\toks41
-\the@fancyput=\toks42
-\this@fancyput=\toks43
-\EndVerbatimTokens=\toks44
+\@Sbox=\box71
+\do@VerbBox=\toks43
+\the@fancyput=\toks44
+\this@fancyput=\toks45
+\EndVerbatimTokens=\toks46
 \Verbatim@Outfile=\write4
 \Verbatim@Infile=\read4
 ) (C:\Users\Kacper\AppData\Local\Programs\MiKTeX\tex/latex/environ\environ.sty
@@ -825,11 +833,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 tlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count317
+\c@section@level=\count318
 )
 \@linkdim=\dimen288
-\Hy@linkcounter=\count318
-\Hy@pagecounter=\count319
+\Hy@linkcounter=\count319
+\Hy@pagecounter=\count320
 
 (C:\Users\Kacper\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
 File: pd1enc.def 2023-11-26 v7.01g Hyperref: PDFDocEncoding definition (HO)
@@ -839,7 +847,7 @@ Now handling font encoding PD1 ...
 (C:\Users\Kacper\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count320
+\Hy@SavedSpaceFactor=\count321
 (C:\Users\Kacper\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
 File: puenc.def 2023-11-26 v7.01g Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
@@ -859,7 +867,7 @@ Package hyperref Info: Plain pages OFF on input line 4196.
 Package hyperref Info: Backreferencing OFF on input line 4201.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4448.
-\c@Hy@tempcnt=\count321
+\c@Hy@tempcnt=\count322
 LaTeX Info: Redefining \url on input line 4786.
 \XeTeXLinkMargin=\dimen289
 (C:\Users\Kacper\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
@@ -870,7 +878,7 @@ c.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count322
+\Fld@menulength=\count323
 \Field@Width=\dimen290
 \Fld@charsize=\dimen291
 Package hyperref Info: Hyper figures OFF on input line 6065.
@@ -885,9 +893,9 @@ Package hyperref Info: PDF/A mode OFF on input line 6095.
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count323
-\c@Item=\count324
-\c@Hfootnote=\count325
+\Hy@abspage=\count324
+\c@Item=\count325
+\c@Hfootnote=\count326
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
  (C:\Users\Kacper\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
@@ -898,8 +906,8 @@ Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
 kage
 with kernel methods
 )
-\Fld@listcount=\count326
-\c@bookmark@seq@number=\count327
+\Fld@listcount=\count327
+\c@bookmark@seq@number=\count328
 
 (C:\Users\Kacper\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfi
 lecheck.sty
@@ -916,7 +924,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \old@cftbeforesecskip=\skip98
 \mylen=\skip99
-\fooboxMU=\box70
+\fooboxMU=\box72
 )
 LaTeX Font Info:    Trying to load font information for T1+lmr on input line 47
 .
@@ -927,9 +935,21 @@ File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 (C:\Users\Kacper\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pd
 ftex.def
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count328
-\l__pdf_internal_box=\box71
+\l__color_backend_stack_int=\count329
+\l__pdf_internal_box=\box73
 ) (weiiszablon.aux)
+Runaway argument?
+{\contentsline {figure}{\numberline {5.5}{\ignorespaces Omijanie prze\ETC.
+! File ended while scanning use of \@writefile.
+<inserted text> 
+                \par 
+l.47 \begin{document}
+                     
+I suspect you have forgotten a `}', causing me
+to read past where you wanted me to stop.
+I'll try to recover; but if the error is serious,
+you'd better type `E' or `X' now and fix your file.
+
 \openout1 = `weiiszablon.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
@@ -950,7 +970,6 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 47.
 LaTeX Font Info:    ... okay on input line 47.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 47.
 LaTeX Font Info:    ... okay on input line 47.
-
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -989,17 +1008,17 @@ LaTeX Font Info:    ... okay on input line 47.
 (C:\Users\Kacper\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.m
 kii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count329
+\scratchcounter=\count330
 \scratchdimen=\dimen292
-\scratchbox=\box72
-\nofMPsegments=\count330
-\nofMParguments=\count331
-\everyMPshowfont=\toks45
-\MPscratchCnt=\count332
+\scratchbox=\box74
+\nofMPsegments=\count331
+\nofMParguments=\count332
+\everyMPshowfont=\toks47
+\MPscratchCnt=\count333
 \MPscratchDim=\dimen293
-\MPnumerator=\count333
-\makeMPintoPDFobject=\count334
-\everyMPtoPDFconversion=\toks46
+\MPnumerator=\count334
+\makeMPintoPDFobject=\count335
+\everyMPtoPDFconversion=\toks48
 )
 (C:\Users\Kacper\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-
 base.sty
@@ -1011,8 +1030,9 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-\c@lstlisting=\count335
+\c@lstlisting=\count336
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
 Package hyperref Info: Link coloring OFF on input line 47.
@@ -1020,7 +1040,7 @@ Package hyperref Info: Link coloring OFF on input line 47.
 \@outlinefile=\write5
 \openout5 = `weiiszablon.out'.
 
-<auxiliary/logoweii.jpg, id=153, 400.1349pt x 117.67966pt>
+<auxiliary/logoweii.jpg, id=214, 400.1349pt x 117.67966pt>
 File: auxiliary/logoweii.jpg Graphic file (type jpg)
 <use auxiliary/logoweii.jpg>
 Package pdftex.def Info: auxiliary/logoweii.jpg  used on input line 50.
@@ -1093,264 +1113,1043 @@ Underfull \vbox (badness 2302) has occurred while \output is active []
 [4] [5
 
 ]
+
+LaTeX Warning: Citation `ifr2023' on page 6 undefined on input line 62.
+
+
+LaTeX Warning: Citation `monk2016' on page 6 undefined on input line 64.
+
+
+LaTeX Warning: Citation `siegwart2011' on page 6 undefined on input line 66.
+
+
+LaTeX Warning: Citation `arduino2022' on page 6 undefined on input line 68.
+
+
+LaTeX Warning: Citation `elecfreaks' on page 6 undefined on input line 70.
+
+
+LaTeX Warning: Citation `cytron2018' on page 6 undefined on input line 70.
+
+
 Underfull \vbox (badness 1365) has occurred while \output is active []
 
  [6
 
 ]
-[7]
-Underfull \vbox (badness 5417) has occurred while \output is active []
 
- [8
+LaTeX Warning: Citation `jones1999' on page 7 undefined on input line 72.
+
+
+LaTeX Warning: Citation `horowitz2015' on page 7 undefined on input line 72.
+
+[7]
+
+LaTeX Warning: Citation `educationalRoboticsOverview' on page 8 undefined on in
+put line 86.
+
+
+LaTeX Warning: Citation `campionDifferentialDrive' on page 8 undefined on input
+ line 90.
+
+[8
 
 ]
+
+LaTeX Warning: Citation `horowitz2015' on page 9 undefined on input line 92.
+
+
+LaTeX Warning: Citation `reactiveNavigation' on page 9 undefined on input line 
+96.
+
+
+LaTeX Warning: Citation `ultrasonicSensorComparison' on page 9 undefined on inp
+ut line 98.
+
+
+LaTeX Warning: Citation `sensorFiltering' on page 9 undefined on input line 98.
+
+
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 99.
+(Font)              <10> on input line 101.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7.4> on input line 99.
+(Font)              <7.4> on input line 101.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 99.
+(Font)              <6> on input line 101.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 99.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 101.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 99.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 101.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 99.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 101.
 
-Overfull \hbox (22.68394pt too wide) in paragraph at lines 99--100
-\T1/lmr/m/n/12 si¦ z wy-so-kimi wy-ma-ga-niami ob-li-cze-nio-wymi oraz znaczn¡ 
-zªo-»o-no-±ci¡ implementacyjn¡[[]].
- []
+LaTeX Warning: Citation `slamOverview' on page 9 undefined on input line 101.
 
-[9] [10]
+
+LaTeX Warning: Citation `thrunSLAM' on page 9 undefined on input line 101.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [9]
+
+LaTeX Warning: Citation `mobileRoboticsClassification' on page 10 undefined on 
+input line 105.
+
+
+LaTeX Warning: Citation `siegwart2011' on page 10 undefined on input line 109.
+
+
+LaTeX Warning: Citation `borensteinMobilePlatforms' on page 10 undefined on inp
+ut line 111.
+
+
+Underfull \vbox (badness 1533) has occurred while \output is active []
+
+ [10]
+
+LaTeX Warning: Citation `leggedRobotsControl' on page 11 undefined on input lin
+e 113.
+
+
+LaTeX Warning: Citation `reactiveNavigation' on page 11 undefined on input line
+ 117.
+
+
+LaTeX Warning: Citation `jones1999' on page 11 undefined on input line 121.
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [11]
-[12]
-Overfull \hbox (0.24432pt too wide) in paragraph at lines 137--138
+
+LaTeX Warning: Citation `advancedRobotArchitectures' on page 12 undefined on in
+put line 125.
+
+
+LaTeX Warning: Citation `jones1999' on page 12 undefined on input line 127.
+
+
+LaTeX Warning: Citation `robotKinematicsDynamics' on page 12 undefined on input
+ line 131.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [12]
+
+LaTeX Warning: Citation `campionDifferentialDrive' on page 13 undefined on inpu
+t line 133.
+
+
+LaTeX Warning: Citation `mobileRobotNonlinearModel' on page 13 undefined on inp
+ut line 135.
+
+
+LaTeX Warning: Citation `nonholonomicConstraints' on page 13 undefined on input
+ line 137.
+
+
+LaTeX Warning: Citation `thrunSLAM' on page 13 undefined on input line 139.
+
+
+Overfull \hbox (0.24432pt too wide) in paragraph at lines 139--140
 []\T1/lmr/m/n/12 Konsekwencj¡ wy-st¦-po-wa-nia ogra-ni-cze« nie-ho-lo-no-micz-n
 ych jest ko-niecz-no±¢ sto-
  []
 
 
-Overfull \hbox (1.2401pt too wide) in paragraph at lines 137--138
+Overfull \hbox (1.2401pt too wide) in paragraph at lines 139--140
 \T1/lmr/m/n/12 so-wa-nia od-po-wied-nich stra-te-gii ma-new-ro-wa-nia, szcze-gó
 l-nie pod-czas omi-ja-nia prze-szkód.
  []
 
 
-Underfull \vbox (badness 1137) has occurred while \output is active []
-
- [13]
-[14]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+ [13]
+
+LaTeX Warning: Citation `embeddedMotorControl' on page 14 undefined on input li
+ne 141.
+
+
+LaTeX Warning: Citation `educationalRobotsModeling' on page 14 undefined on inp
+ut line 143.
+
+
+LaTeX Warning: Citation `lavallePlanningAlgorithms' on page 14 undefined on inp
+ut line 145.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [14]
+
+LaTeX Warning: Citation `horowitz2015' on page 15 undefined on input line 156.
+
+
+Underfull \vbox (badness 1565) has occurred while \output is active []
+
  [15]
+
+LaTeX Warning: Citation `motorPowerSupplyIssues' on page 16 undefined on input 
+line 162.
+
+
+LaTeX Warning: Citation `horowitz2015' on page 16 undefined on input line 166.
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [16]
-Underfull \vbox (badness 1137) has occurred while \output is active []
 
- [17]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+LaTeX Warning: Citation `jones1999' on page 17 undefined on input line 174.
 
- [18]
+
+LaTeX Warning: Citation `ultrasonicSensorComparison' on page 17 undefined on in
+put line 178.
+
+
+LaTeX Warning: Citation `sensorFiltering' on page 17 undefined on input line 18
+0.
+
+[17] [18]
+
+LaTeX Warning: Citation `thrunSLAM' on page 19 undefined on input line 192.
+
+
+LaTeX Warning: Citation `siegwart2011' on page 19 undefined on input line 194.
+
+
+LaTeX Warning: Citation `siegwart2011' on page 19 undefined on input line 198.
+
+
 Underfull \vbox (badness 1137) has occurred while \output is active []
 
  [19]
+
+LaTeX Warning: Citation `thrunSLAM' on page 20 undefined on input line 202.
+
 [20] [21
 
 ]
-<figures/arduino.png, id=359, 1004.25188pt x 713.66624pt>
+<figures/arduino.png, id=367, 1004.25188pt x 713.66624pt>
 File: figures/arduino.png Graphic file (type png)
 <use figures/arduino.png>
-Package pdftex.def Info: figures/arduino.png  used on input line 229.
+Package pdftex.def Info: figures/arduino.png  used on input line 231.
 (pdftex.def)             Requested size: 264.61333pt x 188.04257pt.
  [22{C:/Users/Kacper/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc
 } <./figures/arduino.png>]
-<figures/l293d.png, id=367, 941.01563pt x 709.14937pt>
+<figures/l293d.png, id=375, 941.01563pt x 709.14937pt>
 File: figures/l293d.png Graphic file (type png)
 <use figures/l293d.png>
-Package pdftex.def Info: figures/l293d.png  used on input line 246.
+Package pdftex.def Info: figures/l293d.png  used on input line 248.
 (pdftex.def)             Requested size: 264.61333pt x 199.4153pt.
  [23{C:/Users/Kacper/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit
 .enc} <./figures/l293d.png>]
-<figures/silnikola.png, id=376, 1160.83687pt x 1055.44313pt>
+<figures/silnikola.png, id=384, 1160.83687pt x 1055.44313pt>
 File: figures/silnikola.png Graphic file (type png)
 <use figures/silnikola.png>
-Package pdftex.def Info: figures/silnikola.png  used on input line 261.
+Package pdftex.def Info: figures/silnikola.png  used on input line 263.
 (pdftex.def)             Requested size: 264.61333pt x 240.58878pt.
 
 Underfull \vbox (badness 1946) has occurred while \output is active []
 
  [24 <./figures/silnikola.png>]
-<figures/hcsr04.png, id=383, 1160.83687pt x 660.96938pt>
+<figures/hcsr04.png, id=391, 1160.83687pt x 660.96938pt>
 File: figures/hcsr04.png Graphic file (type png)
 <use figures/hcsr04.png>
-Package pdftex.def Info: figures/hcsr04.png  used on input line 276.
+Package pdftex.def Info: figures/hcsr04.png  used on input line 278.
 (pdftex.def)             Requested size: 352.81552pt x 200.88432pt.
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 2
-85.
+87.
 
 (C:\Users\Kacper\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [25 <./figures/hcsr04.png>]
-<figures/servo.png, id=391, 1160.83687pt x 641.39626pt>
+<figures/servo.png, id=399, 1160.83687pt x 641.39626pt>
 File: figures/servo.png Graphic file (type png)
 <use figures/servo.png>
-Package pdftex.def Info: figures/servo.png  used on input line 289.
+Package pdftex.def Info: figures/servo.png  used on input line 291.
 (pdftex.def)             Requested size: 352.81552pt x 194.9356pt.
  [26{C:/Users/Kacper/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.en
 c} <./figures/servo.png>]
-Overfull \hbox (7.08856pt too wide) in paragraph at lines 300--301
+Overfull \hbox (2.9063pt too wide) in paragraph at lines 302--303
 \T1/lmr/m/n/12 padku za-sto-so-wa-nia nie-wy-star-cza-j¡co wy-daj-nego ¹ró-dªa 
-za-si-la-nia. Ogniwa litowo-jonowe,
+za-si-la-nia. Wy-ko-rzy-stane ogniwa
  []
 
-<figures/baterie.png, id=399, 1013.28563pt x 639.89063pt>
+<figures/baterie.png, id=407, 1013.28563pt x 639.89063pt>
 File: figures/baterie.png Graphic file (type png)
 <use figures/baterie.png>
-Package pdftex.def Info: figures/baterie.png  used on input line 306.
+Package pdftex.def Info: figures/baterie.png  used on input line 308.
 (pdftex.def)             Requested size: 352.81552pt x 222.80316pt.
 [27 <./figures/baterie.png>]
-<figures/przel2.png, id=405, 239.39438pt x 199.49532pt>
+<figures/przel2.png, id=413, 239.39438pt x 199.49532pt>
 File: figures/przel2.png Graphic file (type png)
 <use figures/przel2.png>
-Package pdftex.def Info: figures/przel2.png  used on input line 317.
+Package pdftex.def Info: figures/przel2.png  used on input line 319.
 (pdftex.def)             Requested size: 220.50887pt x 183.75706pt.
  [28 <./figures/przel2.png>]
-<figures/plytka.png, id=420, 999.735pt x 760.34062pt>
+<figures/plytka.png, id=428, 999.735pt x 760.34062pt>
 File: figures/plytka.png Graphic file (type png)
 <use figures/plytka.png>
-Package pdftex.def Info: figures/plytka.png  used on input line 333.
+Package pdftex.def Info: figures/plytka.png  used on input line 335.
 (pdftex.def)             Requested size: 220.50887pt x 167.70471pt.
-<figures/lacznik.png, id=421, 1160.83687pt x 641.39626pt>
+<figures/lacznik.png, id=429, 1160.83687pt x 641.39626pt>
 File: figures/lacznik.png Graphic file (type png)
 <use figures/lacznik.png>
-Package pdftex.def Info: figures/lacznik.png  used on input line 340.
+Package pdftex.def Info: figures/lacznik.png  used on input line 342.
 (pdftex.def)             Requested size: 220.50887pt x 121.83719pt.
-<figures/klej.png, id=422, 1540.25438pt x 1118.67938pt>
+<figures/klej.png, id=430, 1540.25438pt x 1118.67938pt>
 File: figures/klej.png Graphic file (type png)
 <use figures/klej.png>
-Package pdftex.def Info: figures/klej.png  used on input line 347.
+Package pdftex.def Info: figures/klej.png  used on input line 349.
 (pdftex.def)             Requested size: 220.50887pt x 160.14746pt.
-<figures/lutownica.png, id=423, 1531.22063pt x 912.40875pt>
+<figures/lutownica.png, id=431, 1531.22063pt x 912.40875pt>
 File: figures/lutownica.png Graphic file (type png)
 <use figures/lutownica.png>
-Package pdftex.def Info: figures/lutownica.png  used on input line 354.
+Package pdftex.def Info: figures/lutownica.png  used on input line 356.
 (pdftex.def)             Requested size: 220.50887pt x 131.38397pt.
  [29 <./figures/plytka.png> <./figures/lacznik.png>]
-Underfull \vbox (badness 4713) has occurred while \output is active []
-
- [30 <./figures/klej.png> <./figures/lutownica.png>]
-<figures/lutowanie1.png, id=437, 713.66624pt x 443.40656pt>
+<figures/lutowanie1.png, id=439, 713.66624pt x 443.40656pt>
 File: figures/lutowanie1.png Graphic file (type png)
 <use figures/lutowanie1.png>
-Package pdftex.def Info: figures/lutowanie1.png  used on input line 377.
+Package pdftex.def Info: figures/lutowanie1.png  used on input line 373.
 (pdftex.def)             Requested size: 352.81552pt x 219.20613pt.
-<figures/kola.png, id=439, 767.86874pt x 372.64218pt>
+<figures/kola.png, id=441, 767.86874pt x 372.64218pt>
 File: figures/kola.png Graphic file (type png)
 <use figures/kola.png>
-Package pdftex.def Info: figures/kola.png  used on input line 388.
+Package pdftex.def Info: figures/kola.png  used on input line 384.
 (pdftex.def)             Requested size: 352.81552pt x 171.22415pt.
- [31 <./figures/lutowanie1.png>]
-<figures/arduinomontaz.png, id=449, 590.205pt x 493.845pt>
+
+Underfull \vbox (badness 1383) has occurred while \output is active []
+
+ [30 <./figures/klej.png> <./figures/lutownica.png>] [31 <./figures/lutowanie1.
+png> <./figures/kola.png>]
+<figures/arduinomontaz.png, id=455, 590.205pt x 493.845pt>
 File: figures/arduinomontaz.png Graphic file (type png)
 <use figures/arduinomontaz.png>
-Package pdftex.def Info: figures/arduinomontaz.png  used on input line 401.
+Package pdftex.def Info: figures/arduinomontaz.png  used on input line 397.
 (pdftex.def)             Requested size: 352.81552pt x 295.21663pt.
-
-[32 <./figures/kola.png> <./figures/arduinomontaz.png>]
-<figures/l293dmontaz.png, id=456, 638.385pt x 487.8225pt>
+<figures/l293dmontaz.png, id=458, 638.385pt x 487.8225pt>
 File: figures/l293dmontaz.png Graphic file (type png)
 <use figures/l293dmontaz.png>
-Package pdftex.def Info: figures/l293dmontaz.png  used on input line 412.
+Package pdftex.def Info: figures/l293dmontaz.png  used on input line 408.
 (pdftex.def)             Requested size: 264.61333pt x 202.20436pt.
-<figures/l293dlaczenie.png, id=457, 1541.76pt x 1160.83687pt>
+<figures/l293dlaczenie.png, id=459, 1541.76pt x 1160.83687pt>
 File: figures/l293dlaczenie.png Graphic file (type png)
 <use figures/l293dlaczenie.png>
-Package pdftex.def Info: figures/l293dlaczenie.png  used on input line 419.
+Package pdftex.def Info: figures/l293dlaczenie.png  used on input line 415.
 (pdftex.def)             Requested size: 264.61333pt x 199.23494pt.
- [33 <./figures/l293dmontaz.png> <./figures/l293dlaczenie.png>]
-<figures/holdermontaz.png, id=465, 626.34pt x 565.36218pt>
+ [32 <./figures/arduinomontaz.png>]
+<figures/holdermontaz.png, id=468, 626.34pt x 565.36218pt>
 File: figures/holdermontaz.png Graphic file (type png)
 <use figures/holdermontaz.png>
-Package pdftex.def Info: figures/holdermontaz.png  used on input line 430.
+Package pdftex.def Info: figures/holdermontaz.png  used on input line 426.
 (pdftex.def)             Requested size: 264.61333pt x 238.85664pt.
-<figures/bateriemontaz.png, id=468, 575.14874pt x 519.44063pt>
+ [33 <./figures/l293dmontaz.png> <./figures/l293dlaczenie.png>]
+<figures/bateriemontaz.png, id=476, 575.14874pt x 519.44063pt>
 File: figures/bateriemontaz.png Graphic file (type png)
 <use figures/bateriemontaz.png>
-Package pdftex.def Info: figures/bateriemontaz.png  used on input line 441.
+Package pdftex.def Info: figures/bateriemontaz.png  used on input line 437.
 (pdftex.def)             Requested size: 264.61333pt x 238.98521pt.
- [34 <./figures/holdermontaz.png>]
-<figures/holderclose.png, id=476, 1541.76pt x 1160.83687pt>
+<figures/holderclose.png, id=477, 1541.76pt x 1160.83687pt>
 File: figures/holderclose.png Graphic file (type png)
 <use figures/holderclose.png>
-Package pdftex.def Info: figures/holderclose.png  used on input line 448.
+Package pdftex.def Info: figures/holderclose.png  used on input line 444.
 (pdftex.def)             Requested size: 264.61333pt x 199.23494pt.
-
-[35 <./figures/bateriemontaz.png> <./figures/holderclose.png>]
-<figures/servomontaz.png, id=483, 447.92343pt x 385.44pt>
+<figures/servomontaz.png, id=479, 447.92343pt x 385.44pt>
 File: figures/servomontaz.png Graphic file (type png)
 <use figures/servomontaz.png>
-Package pdftex.def Info: figures/servomontaz.png  used on input line 459.
+Package pdftex.def Info: figures/servomontaz.png  used on input line 455.
 (pdftex.def)             Requested size: 264.61333pt x 227.70757pt.
-<figures/hcsr04montaz.png, id=485, 584.1825pt x 402.00188pt>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [34 <./figures/holdermontaz.png>]
+<figures/hcsr04montaz.png, id=487, 584.1825pt x 402.00188pt>
 File: figures/hcsr04montaz.png Graphic file (type png)
 <use figures/hcsr04montaz.png>
-Package pdftex.def Info: figures/hcsr04montaz.png  used on input line 470.
+Package pdftex.def Info: figures/hcsr04montaz.png  used on input line 466.
 (pdftex.def)             Requested size: 264.61333pt x 182.0953pt.
-<figures/schemat.png, id=487, 529.22719pt x 338.76563pt>
+<figures/schemat.png, id=489, 529.22719pt x 338.76563pt>
 File: figures/schemat.png Graphic file (type png)
 <use figures/schemat.png>
-Package pdftex.def Info: figures/schemat.png  used on input line 481.
+Package pdftex.def Info: figures/schemat.png  used on input line 477.
 (pdftex.def)             Requested size: 441.01773pt x 282.30226pt.
+ [35 <./figures/bateriemontaz.png>] [36 <./figures/holderclose.png> <./figures/
+servomontaz.png>] [37 <./figures/hcsr04montaz.png> <./figures/schemat.png>] [38
 
-Underfull \vbox (badness 2351) has occurred while \output is active []
+]
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
+nput line 496.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 4
+96.
 
- [36 <./figures/servomontaz.png>] [37 <./figures/hcsr04montaz.png> <./figures/s
-chemat.png>] [38
+(C:\Users\Kacper\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
+File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+) [39
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1})
+ has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.526 long 
+           readDistance() {
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.2})
+ has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.526 long 
+           readDistance() {
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.3})
+ has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.526 long 
+           readDistance() {
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.4})
+ has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.526 long 
+           readDistance() {]
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.6})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.526 long 
+           readDistance() {
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.7})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.527  
+        const int samples = 2;
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.8})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.528  
+        long total = 0;
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.9})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.529  
+        int validSamples = 0;
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.10}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.531  
+        for (int i = 0; i < samples; i++) {
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.11}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.531  
+        for (int i = 0; i < samples; i++) {
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.12}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.532  
+          digitalWrite(TRIG_PIN, LOW);
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.13}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.533  
+          delayMicroseconds(3);
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.14}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.534  
+          digitalWrite(TRIG_PIN, HIGH);
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.15}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.535  
+          delayMicroseconds(10);
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.16}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.536  
+          digitalWrite(TRIG_PIN, LOW); [40
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.5})
+ has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.561 ...nia napÄ™dem robota}, label={lst:motors}]
+                                                  ]
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.562 void 
+           forward(int speed) {
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.2})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.563  
+        motor1.setSpeed(speed); motor2.setSpeed(speed);
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.3})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.564  
+        motor3.setSpeed(speed); motor4.setSpeed(speed);
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.4})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.565  
+        motor1.run(FORWARD); motor2.run(FORWARD);
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.5})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.566  
+        motor3.run(FORWARD); motor4.run(FORWARD);
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.6})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.567 }
+       
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.7})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.569 void 
+           backward(int speed) {
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.8})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.569 void 
+           backward(int speed) {
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.9})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.570  
+        motor1.setSpeed(speed); motor2.setSpeed(speed);
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.10}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.571  
+        motor3.setSpeed(speed); motor4.setSpeed(speed);
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.11}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.572  
+        motor1.run(BACKWARD); motor2.run(BACKWARD);
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.12}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.573  
+        motor3.run(BACKWARD); motor4.run(BACKWARD);
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.13}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.574 }
+       
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.14}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.576 void 
+           stopMotors() {
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.15}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.576 void 
+           stopMotors() {
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.16}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.577  
+        motor1.run(RELEASE); motor2.run(RELEASE);
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.17}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.578  
+        motor3.run(RELEASE); motor4.run(RELEASE);
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.18}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.579 }
+       
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.589 void 
+           turnLeft(int speed) {
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.2})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.590  
+        motor1.setSpeed(speed); motor2.setSpeed(speed);
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.3})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.591  
+        motor3.setSpeed(speed); motor4.setSpeed(speed);
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.4})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.592  
+        motor1.run(BACKWARD); motor2.run(BACKWARD);
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.5})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.593  
+        motor3.run(FORWARD);  motor4.run(FORWARD);
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.6})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.594  
+        delay(150);
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.7})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.595 }
+       
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.8})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.597 void 
+           turnRight(int speed) {
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.9})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.597 void 
+           turnRight(int speed) {
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.10}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.598  
+        motor1.setSpeed(speed); motor2.setSpeed(speed);
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.11}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.599  
+        motor3.setSpeed(speed); motor4.setSpeed(speed); [41]
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.12}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.600  
+        motor1.run(FORWARD);  motor2.run(FORWARD);
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.13}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.601  
+        motor3.run(BACKWARD); motor4.run(BACKWARD);
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.14}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.602  
+        delay(150);
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.15}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.603 }
+       
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.1})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.613 void 
+           loop() {
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.2})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.614  
+        int distCenter = readDistance();
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.3})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.616  
+        if (distCenter < DISTANCE_THRESHOLD) {
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.4})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.616  
+        if (distCenter < DISTANCE_THRESHOLD) {
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.5})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.617  
+          stopMotors();
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.6})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.618  
+          backward(140);
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.7})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.619  
+          delay(250);
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.8})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.620  
+          stopMotors();
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.9})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.622  
+          myServo.write(SERVO_CENTER + SCAN_ANGLE);
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.10}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.622  
+          myServo.write(SERVO_CENTER + SCAN_ANGLE);
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.11}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.623  
+          delay(500);
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.12}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.624  
+          int distLeft = readDistance();
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.13}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.626  
+          myServo.write(SERVO_CENTER - SCAN_ANGLE);
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.14}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.626  
+          myServo.write(SERVO_CENTER - SCAN_ANGLE);
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.15}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.627  
+          delay(500);
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.16}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.628  
+          int distRight = readDistance();
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.17}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.630  
+          myServo.write(SERVO_CENTER);
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.18}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.630  
+          myServo.write(SERVO_CENTER);
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.19}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.632  
+          if (distLeft > distRight) {
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.20}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.632  
+          if (distLeft > distRight) {
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.21}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.633  
+            turnLeft(MOTOR_SPEED);
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.22}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.634  
+          } else {
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.23}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.635  
+            turnRight(MOTOR_SPEED);
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.24}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.636  
+          }
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.25}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.637  
+        } else {
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.26}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.638  
+          forward(MOTOR_SPEED);
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.27}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.639  
+        }
+pdfTeX warning (ext4): destination with the same identifier (name{lstnumber.28}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.640 }
+        [42] [43]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-] [39
+ [44
+
+]
+<figures/test1.png, id=578, 1118.67938pt x 730.22812pt>
+File: figures/test1.png Graphic file (type png)
+<use figures/test1.png>
+Package pdftex.def Info: figures/test1.png  used on input line 665.
+(pdftex.def)             Requested size: 264.61333pt x 172.729pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [45 <./figures/test1.png>]
+<figures/test2.png, id=585, 578.16pt x 423.08063pt>
+File: figures/test2.png Graphic file (type png)
+<use figures/test2.png>
+Package pdftex.def Info: figures/test2.png  used on input line 680.
+(pdftex.def)             Requested size: 264.61333pt x 193.63173pt.
+
+Underfull \vbox (badness 8132) has occurred while \output is active []
+
+ [46 <./figures/test2.png>]
+<figures/test31.png, id=592, 541.27219pt x 454.69875pt>
+File: figures/test31.png Graphic file (type png)
+<use figures/test31.png>
+Package pdftex.def Info: figures/test31.png  used on input line 695.
+(pdftex.def)             Requested size: 264.61333pt x 222.29785pt.
+
+Underfull \vbox (badness 6859) has occurred while \output is active []
+
+ [47 <./figures/test31.png>]
+<figures/test32.png, id=600, 528.47438pt x 442.65375pt>
+File: figures/test32.png Graphic file (type png)
+<use figures/test32.png>
+Package pdftex.def Info: figures/test32.png  used on input line 704.
+(pdftex.def)             Requested size: 264.61333pt x 221.63702pt.
 
 
-] [40]
-Overfull \hbox (14.2264pt too wide) in paragraph at lines 630--630
+LaTeX Warning: Reference `Fig:test41' on page 48 undefined on input line 715.
+
+
+Underfull \vbox (badness 2401) has occurred while \output is active []
+
+ [48 <./figures/test32.png>]
+<figures/test41.png, id=606, 700.86844pt x 525.46312pt>
+File: figures/test41.png Graphic file (type png)
+<use figures/test41.png>
+Package pdftex.def Info: figures/test41.png  used on input line 719.
+(pdftex.def)             Requested size: 264.61333pt x 198.39519pt.
+
+
+LaTeX Warning: Reference `Fig:test42' on page 49 undefined on input line 724.
+
+<figures/test42.png, id=607, 739.26187pt x 489.32813pt>
+File: figures/test42.png Graphic file (type png)
+<use figures/test42.png>
+Package pdftex.def Info: figures/test42.png  used on input line 728.
+(pdftex.def)             Requested size: 264.61333pt x 175.15pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [49 <./figures/test41.png>]
+
+LaTeX Warning: Reference `Fig:test51' on page 50 undefined on input line 741.
+
+<figures/test51.png, id=614, 513.41812pt x 408.77719pt>
+File: figures/test51.png Graphic file (type png)
+<use figures/test51.png>
+Package pdftex.def Info: figures/test51.png  used on input line 745.
+(pdftex.def)             Requested size: 264.61333pt x 210.68166pt.
+
+LaTeX Warning: Reference `Fig:test52' on page 50 undefined on input line 750.
+
+
+Underfull \vbox (badness 1436) has occurred while \output is active []
+
+ [50 <./figures/test42.png>]
+<figures/test52.png, id=620, 520.19344pt x 438.13687pt>
+File: figures/test52.png Graphic file (type png)
+<use figures/test52.png>
+Package pdftex.def Info: figures/test52.png  used on input line 754.
+(pdftex.def)             Requested size: 264.61333pt x 222.87189pt.
+
+
+LaTeX Warning: Reference `Fig:test53' on page 51 undefined on input line 759.
+
+<figures/test53.png, id=621, 537.50812pt x 405.01312pt>
+File: figures/test53.png Graphic file (type png)
+<use figures/test53.png>
+Package pdftex.def Info: figures/test53.png  used on input line 763.
+(pdftex.def)             Requested size: 264.61333pt x 199.38515pt.
+
+Underfull \vbox (badness 2680) has occurred while \output is active []
+
+ [51 <./figures/test51.png> <./figures/test52.png>]
+
+LaTeX Warning: Reference `Fig:test6' on page 52 undefined on input line 774.
+
+<figures/test6.png, id=628, 529.22719pt x 488.57532pt>
+File: figures/test6.png Graphic file (type png)
+<use figures/test6.png>
+Package pdftex.def Info: figures/test6.png  used on input line 778.
+(pdftex.def)             Requested size: 264.61333pt x 244.28706pt.
+[52 <./figures/test53.png>]
+
+LaTeX Warning: Reference `Fig:test71' on page 53 undefined on input line 789.
+
+<figures/test71.png, id=634, 745.28438pt x 505.89pt>
+File: figures/test71.png Graphic file (type png)
+<use figures/test71.png>
+Package pdftex.def Info: figures/test71.png  used on input line 793.
+(pdftex.def)             Requested size: 264.61333pt x 179.6115pt.
+
+LaTeX Warning: Reference `Fig:test72' on page 53 undefined on input line 798.
+
+<figures/test72.png, id=635, 592.46344pt x 528.47438pt>
+File: figures/test72.png Graphic file (type png)
+<use figures/test72.png>
+Package pdftex.def Info: figures/test72.png  used on input line 802.
+(pdftex.def)             Requested size: 264.61333pt x 236.03722pt.
+
+LaTeX Warning: Reference `Fig:test81' on page 53 undefined on input line 809.
+
+
+Underfull \vbox (badness 7030) has occurred while \output is active []
+
+ [53 <./figures/test6.png>]
+<figures/test81.png, id=641, 415.5525pt x 457.71pt>
+File: figures/test81.png Graphic file (type png)
+<use figures/test81.png>
+Package pdftex.def Info: figures/test81.png  used on input line 813.
+(pdftex.def)             Requested size: 264.61333pt x 291.46675pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [54 <./figures/test71.png> <./figures/test72.png>]
+
+LaTeX Warning: Reference `Fig:test82' on page 55 undefined on input line 820.
+
+
+Underfull \vbox (badness 4316) has occurred while \output is active []
+
+ [55 <./figures/test81.png>]
+<figures/test82.png, id=654, 567.62062pt x 469.00218pt>
+File: figures/test82.png Graphic file (type png)
+<use figures/test82.png>
+Package pdftex.def Info: figures/test82.png  used on input line 826.
+(pdftex.def)             Requested size: 264.61333pt x 218.64911pt.
+ [56 <./figures/test82.png>]
+Underfull \vbox (badness 1365) has occurred while \output is active []
+
+ [57
+
+]
+[58] [59
+
+
+] [60]
+Overfull \hbox (14.2264pt too wide) in paragraph at lines 997--997
 [][]| 
  []
 
 
-Overfull \hbox (14.2264pt too wide) in paragraph at lines 630--630
+Overfull \hbox (14.2264pt too wide) in paragraph at lines 997--997
 [][]| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 630--630
+Underfull \hbox (badness 10000) in paragraph at lines 997--997
 [][]
  []
 
-
-Package caption Warning: Unused \captionsetup[lstlisting] on input line 176.
-See the caption package documentation for explanation.
-
-[41
+[61
 
 ] (weiiszablon.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `weiiszablon.out' has not changed.
-(rerunfilecheck)             Checksum: A05EE9987E2B4739561BD85CC5754F06;7919.
+(rerunfilecheck)             Checksum: E99D1780ED87CD3B750C2F8059680A23;11324.
  ) 
 Here is how much of TeX's memory you used:
- 27673 strings out of 474485
- 502095 string characters out of 5743262
- 1938542 words of memory out of 5000000
- 49356 multiletter control sequences out of 15000+600000
- 623712 words of font info for 82 fonts, out of 8000000 for 9000
+ 28255 strings out of 474485
+ 509742 string characters out of 5743262
+ 2144542 words of memory out of 5000000
+ 49842 multiletter control sequences out of 15000+600000
+ 627019 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,13n,107p,1380b,2025s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,13n,107p,1380b,3392s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Kacper/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.p
 fb><C:/Users/Kacper/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.
 pfb><C:/Users/Kacper/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12
@@ -1358,12 +2157,14 @@ pfb><C:/Users/Kacper/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12
 .pfb><C:/Users/Kacper/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10
 .pfb><C:/Users/Kacper/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12
 .pfb><C:/Users/Kacper/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17
-.pfb><C:/Users/Kacper/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.
-pfb><C:/Users/Kacper/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.p
+.pfb><C:/Users/Kacper/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.
+pfb><C:/Users/Kacper/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.p
+fb><C:/Users/Kacper/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.pf
+b><C:/Users/Kacper/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.p
 fb>
-Output written on weiiszablon.pdf (41 pages, 34016815 bytes).
+Output written on weiiszablon.pdf (61 pages, 41023251 bytes).
 PDF statistics:
- 595 PDF objects out of 1000 (max. 8388607)
- 131 named destinations out of 1000 (max. 500000)
- 424 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 818 PDF objects out of 1000 (max. 8388607)
+ 218 named destinations out of 1000 (max. 500000)
+ 614 words of extra memory for PDF output out of 10000 (max. 10000000)
 
